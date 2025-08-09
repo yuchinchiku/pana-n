@@ -1,0 +1,42 @@
+.u-overlay{
+  background: linear-gradient(90deg, rgba(37, 36, 36, 0.6), rgba(139, 135, 135, 0));
+}
+
+.u-hero-lead{
+  line-height: 1.8;
+  top: 42%;
+  left: 33%;
+  z-index: 0;
+}
+
+.u-scroll-text{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: -130px;
+    left: 50%;
+    width: 1px;
+    height: 120px;
+    background: #fff;
+    transform-origin: top;
+    animation: scrollline 3s ease-in-out infinite;
+    opacity: 0;
+    transform: translateX(-50%) scaleY(0);
+  }
+}
+
+@keyframes scrollline {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scaleY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scaleY(0);
+  }
+}

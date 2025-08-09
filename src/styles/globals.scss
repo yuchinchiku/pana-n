@@ -1,0 +1,33 @@
+/* styles/globals.scss */
+// @use './config/reset.scss' as *;
+// @use './critical/+' as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-garamond: 'EB Garamond', serif;
+  --font-shippori: 'Shippori Mincho B1', serif;
+}
+
+.garamond {
+  font-family: var(--font-garamond);
+}
+
+.shippori {
+  font-family: var(--font-shippori);
+}
+
+body{
+  line-height: 1.8;
+}
+
+.u-content{
+  width: calc(100vw - 180px - 80px);
+  padding-left: 180px;
+}

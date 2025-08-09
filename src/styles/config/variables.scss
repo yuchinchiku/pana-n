@@ -1,0 +1,154 @@
+// $dir: '/assets';
+$dir: '/wp-content/themes/himawari/assets';
+// $dir: '/static/assets';
+
+/**
+ * Colors
+==================== */
+/// List of Colors
+
+$colors: (
+  // pana
+  'pana': #1D1112,
+  'salmon-pink': #F093A0,
+  'pink': #F3A3C5,
+  'light-pink': #FEECF4,
+  'blue-lagoon': #00B0C7,
+  'blue': #A2D9F3,
+  'light-blue': #E6F7FF,
+  'gray01': #8B8787,
+  'gray02': #E9E9E9,
+  'gray03': #F4F4F4,
+  'gray04': #E1DDD7,
+
+  // gray
+  'gray-light': #f4f4f4,
+  'gray-mid': #e9e9e9,
+  'gray-dark': #bcbcbc,
+  'white': #fff,
+  'black': #212121,
+
+  // state
+  'success': #a3ca60,
+  'info': #0650cb,
+  'warning': #eaba5d,
+  'error': #dd3e34
+) !default;
+
+/**
+ * Breakpoints
+ ==================== */
+/// List of Breakpoints
+$breakpoints: (
+  xsm: 430,
+  sm: 768,
+  nav: 895,
+  md: 1020,
+  lg: 1400,
+  navlg: 1408,
+) !default;
+
+/**
+ * Design Sizes
+==================== */
+/// List of Design sizes
+$design-sizes: (
+  sp: 375,
+  tb: 992,
+  pc: 1440,
+) !default;
+
+/**
+ * Content Sizes
+==================== */
+/// List of Content sizes
+$content-sizes: (
+  sp: 100%,
+  md: 49.4%,
+  pc: 75%,
+) !default;
+
+/**
+ * Spacing Units
+==================== */
+/// List of Spacing Units
+
+$spacing-units: (
+  xxs: 8,
+  xs: 16,
+  md: 24,
+  md: 32,
+  def: 40,
+  lg: 64,
+  xl: 80,
+  xxl: 160,
+) !default;
+
+$spacing-units-sp: (
+  md: 5.3%,
+  md: 10.6%,
+  lg: 21.2%,
+  side: 24.2%,
+) !default;
+
+/**
+ * Font sizes
+==================== */
+/// List of Font Sizes
+$font-sizes: (
+  'xsm': em(11),
+  'sm': em(12),
+  'md': em(14),
+  'def': 1em,
+  '18': em(18),
+  '20': em(20),
+  '24': em(24),
+  '32': em(32),
+  '38': em(38),
+  '40': em(40),
+  '48': em(48),
+  '72': em(72),
+  '80': em(80),
+  'strong': em(18),
+  'title': em(28),
+  'title-s': em(24),
+  'title-l': em(40),
+  'spH5': em(18),
+  'spH4': em(20),
+  'spH3': em(24),
+  'spH2': em(32),
+  'spH1': em(40),
+  'spHero': em(68),
+  'spNum': em(64),
+  'pcH5': em(18),
+  'pcH4': em(24),
+  'pcH3': em(32),
+  'pcH2': em(48),
+  'pcH1': em(64),
+  'pcHero': em(104),
+  'pcNum': em(144),
+) !default;
+
+/**
+ * Font Families
+==================== */
+/// List of Font Families
+
+$font-families: (
+  'base': 'Zen Maru Gothic, sans-serif',
+  'en': 'Caveat, sans-serif',
+) !default;
+
+$font-weight: (
+  'regular': 400,
+  'mid': 500,
+  'bold': 700,
+) !default;
+
+/**
+ * Transition
+==================== */
+/// List of Font Transition
+$transitions: (
+  'def': 0.3s ease-in-out,
+) !default;
