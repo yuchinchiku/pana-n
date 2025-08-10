@@ -7,7 +7,7 @@ import '@/styles/pages/top/store.scss';
 
 export default function Store() {
   return (
-    <section className='u-store-wrapper relative z-10 md:pb-24'>
+    <section className='u-store-wrapper sec-black relative z-10 md:pb-24'>
       <div className='flex md:block'>
         <div className='u-store-titleArea pl-[80px]'>
           <SectionTitle

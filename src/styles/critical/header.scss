@@ -1,0 +1,40 @@
+.u-header-logo svg path{
+  transition: 4s ease-in-out;
+}
+.u-nav-item{
+  &:nth-child(1){
+    .u-nav-link,i path{
+      transition: 3.5s ease-in-out;
+    }
+  }
+  &:nth-child(2){
+    .u-nav-link,i path{
+      transition: 3s ease-in-out;
+    }
+  }
+  &:nth-child(3){
+    .u-nav-link,i path{
+      transition: 2.5s ease-in-out;
+    }
+  }
+  &:nth-child(4){
+    .u-nav-link,i path{
+      transition: 2s ease-in-out;
+    }
+  }
+  &:nth-child(5){
+    .u-nav-link,i path{
+      transition: 1.5s ease-in-out;
+    }
+  }
+  &:nth-child(6){
+    .u-nav-link,i path{
+      transition: 1s ease-in-out;
+    }
+  }
+  &:nth-child(7){
+    .u-nav-link,i path{
+      transition: 0.5s ease-in-out;
+    }
+  }
+}

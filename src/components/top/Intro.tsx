@@ -2,7 +2,7 @@ import '@/styles/pages/top/intro.scss';
 
 export default function Intro() {
   return (
-    <div className="u-intro relative shippori text-base w-full md:text-lg font-medium tracking-[2px] z-10 md:pt-[320px] md:pl-[180px] md:pr-20">
+    <section className="u-intro sec-white relative shippori text-base w-full md:text-lg font-medium tracking-[2px] z-10 md:mt-[200px] md:pt-[320px] md:pl-[180px] md:pr-20">
       <div className="md:flex md:justify-center md:gap-12">
         <div className="u-intro-textBlock writing-vertical">
           <p className='px-1'>かつて琉球王国の時代、</p>
@@ -53,7 +53,7 @@ export default function Intro() {
           <p className='px-1'>取り戻してみませんか。</p>
         </div>
       </div>
-    </div>
+    </section>
 
   );
 }

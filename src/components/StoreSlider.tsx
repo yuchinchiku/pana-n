@@ -23,7 +23,7 @@ const stores = [
 
 export default function StoreSlider() {
   return (
-    <div className='md:ml-[187px] md:mr-24'>
+    <div className='md:ml-[185px] md:mr-24'>
       <Swiper
         modules={[Autoplay]}
         loop={true} // 無限ループを有効に

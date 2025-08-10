@@ -8,7 +8,7 @@ export default function CV() {
   return (
     <div className='u-cv fixed top-0 right-0 bg-white w-[80px] h-fit min-h-screen z-20'>
       <Link href="/" className='u-cv-link block h-fit min-h-screen py-10 px-8'>
-        <p className="u-cv-text shippori font-medium tracking-[6px] writing-vertical mx-auto">
+        <p className="u-cv-text shippori font-medium tracking-[6px] writing-vertical ml-[-6px]">
           <i className='inline-block mx-auto'>
             <Pana color="#1D1112" className='w-5 h-5' />
           </i>

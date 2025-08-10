@@ -20,8 +20,8 @@ const sliderHealing = [
 
 export default function Story() {
   return (
-    <section className='u-story-wrapper relative z-10 bg-white md:pr-32 md:pt-52 md:pb-[300px]'>
-      <section className='u-story h-screen md:flex md:justify-start md:ml-[180px]'>
+    <section className='u-story-wrapper sec-white relative z-10 bg-white md:pr-32 md:pt-52 md:pb-[300px]'>
+      <section className='u-story h-screen md:flex md:justify-start md:ml-[185px]'>
         <Swiper
           modules={[Autoplay, EffectFade]}
           effect="fade"
@@ -69,7 +69,7 @@ export default function Story() {
           />
         </div>
       </section>
-      <section className='u-healing h-screen md:flex md:justify-start md:ml-[180px]'>
+      <section className='u-healing h-screen md:flex md:justify-start md:ml-[185px]'>
         <Swiper
           modules={[Autoplay, EffectFade]}
           effect="fade"

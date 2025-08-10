@@ -39,7 +39,7 @@ const navItems = [
 
 export default function Footer() {
   return (
-    <div className='u-footer z-10 md:mt-[250px] md:pt-[80vh] md:pb-10 md:pr-[14.5%]'>
+    <div className='u-footer sec-black z-10 md:mt-[250px] md:pt-[55vh] md:pb-10 md:pr-[14.5%]'>
       <nav className='u-Fnav-wrapper'>
         <ul className='u-Fnav flex justify-start flex-row-reverse gap-8'>
           {navItems.map((item) => (
@@ -67,7 +67,7 @@ export default function Footer() {
         </ul>
       </nav>
       <div>
-        <div className='flex justify-end gap-10 md:mt-20'>
+        <div className='flex justify-end gap-10 md:mt-32'>
           <Link href='privacy-policy'className='block text-white'>
             <p className="shippori text-sm">プライバシーポリシー</p>
           </Link>
