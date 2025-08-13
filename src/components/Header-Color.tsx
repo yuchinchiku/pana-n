@@ -37,6 +37,11 @@ export default function Header() {
           )}
         </Link>
       </div>
+      <div className='fixed top-3 right-5 block md:hidden '>
+        <span className='inline-block w-[45px] h-[1px] bg-white'></span>
+        <span className='inline-block w-[45px] h-[1px] bg-white'></span>
+        <span className='inline-block w-[45px] h-[1px] bg-white'></span>
+      </div>
       <nav>
         <ul className='u-nav'>
           {navItems.map((item) => (

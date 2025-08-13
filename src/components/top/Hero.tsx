@@ -2,7 +2,7 @@ import '@/styles/pages/top/hero.scss';
 
 export default function Hero() {
   return (
-    <section className="u-hero sec-black relative w-full h-screen">
+    <section className="u-hero sec-black relative w-full h-screen" data-header-color="#fff">
       <video
         className="u-video fixed inset-0 w-full h-full object-cover"
         autoPlay

@@ -2,18 +2,15 @@
   background: linear-gradient(90deg, rgba(37, 36, 36, 0.6), rgba(139, 135, 135, 0));
 }
 
-// .u-nav-link {
-//   color: #fff !important;
-// }
-// .u-nav-item i path,.u-header-logo svg path{
-//   fill: white;
-// }
-
 .u-hero-lead{
   line-height: 1.8;
   top: 42%;
   left: 33%;
   z-index: 0;
+  @media screen and (max-width: 640px) {
+    top: 42%;
+    left: 20px;
+  }
 }
 
 .u-scroll-text{

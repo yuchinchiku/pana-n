@@ -66,6 +66,9 @@
     &::before{
       width: 32px;
       background-color: white;
+      @media screen and (max-width: 640px) {
+        width: 12px;
+      }
     }
     &::after{
       background-color: white;

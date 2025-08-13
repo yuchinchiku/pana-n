@@ -23,6 +23,13 @@
   font-family: var(--font-shippori);
 }
 
+html{
+  &.js-open{
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
 body{
   line-height: 1.8;
 }

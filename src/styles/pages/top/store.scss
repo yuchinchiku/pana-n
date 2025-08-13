@@ -40,6 +40,12 @@
     transform: translateX(-50%);
     display: block;
     background: url('/images/top/bg-wh-blk_top_pc.png') no-repeat top center / cover;
+    @media screen and (max-width: 640px) {
+      top: -140px;
+      left: 50%;
+      width: 100%;
+      height: 140px;
+    }
   }
   &::after{
     position: absolute;
@@ -59,4 +65,25 @@
   background: url('/images/top/bg_store_pc.jpg') no-repeat top center;
   background-size: cover;
   padding: 40px 0;
+  @media screen and (max-width: 640px) {
+    background: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .u-store-head{
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 200px;
+      background: url('/images/top/bg_store_sp.jpg') no-repeat top center;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
 }

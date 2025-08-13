@@ -7,8 +7,8 @@ import '@/styles/pages/top/store.scss';
 
 export default function Store() {
   return (
-    <section className='u-store-wrapper sec-black relative z-10 md:pb-24'>
-      <div className='flex md:block'>
+    <section className='u-store-wrapper sec-black relative z-10 md:pb-24' data-header-color="#fff">
+      <div className='u-store-head flex flex-row-reverse md:block px-5 md:px-0'>
         <div className='u-store-titleArea pl-[80px]'>
           <SectionTitle
             mainTitle="パナ・ンの店舗"
@@ -16,30 +16,42 @@ export default function Store() {
             color="white"
             className='mx-auto'
             subTitleTop="75px"
-            subTitleRight="-38px"
+            subTitleRight="-37px"
+            subTitleTopSP="57px"
+            subTitleRightSP="-33px"
           />
         </div>
-        <div className="u-story-intro flex justify-center gap-6 shippori text-base text-white md:text-lg font-medium tracking-[2px] mx-auto mb-5 md:mb-10 pt-10">
-          <div className="u-story-textBlock writing-vertical">
+        <div className="u-store-intro flex justify-center flex-row-reverse gap-3 md:gap-6 shippori text-base text-white md:text-lg font-medium tracking-[2px] mx-auto mb-5 md:mb-10 pt-24 md:pt-10">
+          <div className="u-store-textBlock writing-vertical">
             <p className='px-1'>パナ・ンの店舗は、</p>
-            <p className='px-1'>ただ癒しを提供する</p>
-            <p className='px-1'>場所ではありません。</p>
+            <p className='px-0'>
+              <span className='px-1 md:block'>ただ癒しを提供する</span>
+              <span className='px-1 md:block'>場所ではありません。</span>
+            </p>
           </div>
-          <div className="u-story-textBlock writing-vertical">
-            <p className='px-1'>島々の豊かな自然と、</p>
-            <p className='px-1'>琉球に息づく先人たちの</p>
-            <p className='px-1'>知恵と祈りに包まれた、</p>
-            <p className='px-1'>静かであたたかな空間です。</p>
+          <div className="u-store-textBlock writing-vertical">
+            <p className='px-0'>
+              <span className='px-1 md:block'>島々の豊かな自然と、</span>
+              <span className='px-1 md:block'>琉球に息づく先人たちの</span>
+            </p>
+            <p className='px-0'>
+              <span className='px-1 md:block'>知恵と祈りに包まれた、</span>
+              <span className='px-1 md:block'>静かであたたかな空間です。</span>
+            </p>
           </div>
-          <div className="u-story-textBlock writing-vertical">
+          <div className="u-store-textBlock writing-vertical">
             <p className='px-1'>訪れる人の心がふとほどけ、</p>
             <p className='px-1'>深い呼吸を取り戻せるように。</p>
           </div>
-          <div className="u-story-textBlock writing-vertical">
-            <p className='px-1'>この土地ならではの</p>
-            <p className='px-1'>エネルギーとともに、</p>
-            <p className='px-1'>あなたの内なる輝きを</p>
-            <p className='px-1'>そっと呼び覚まします。</p>
+          <div className="u-store-textBlock writing-vertical">
+            <p className='px-0'>
+              <span className='px-1 md:block'>この土地ならではの</span>
+              <span className='px-1 md:block'>エネルギーとともに、</span>
+            </p>
+            <p className='px-0'>
+              <span className='px-1 md:block'>あなたの内なる輝きを</span>
+              <span className='px-1 md:block'>そっと呼び覚まします。</span>
+            </p>
           </div>
         </div>
       </div>

@@ -13,10 +13,10 @@ export default function NewsList() {
   return (
     <ul className='u-newsList pt-4 max-w-[603px]'>
       {newsList.map((item) => (
-        <li key={item.href} className='u-news-item py-3'>
-          <Link href={item.href} className='u-news-link text-center text-white block md:flex md:gap-6'>
-            <p className="shippori text-sm font-medium leading-none md:flex-shrink-0">{item.date}</p>
-            <p className="shippori font-medium leading-none">{item.text}</p>
+        <li key={item.href} className='u-news-item py-2 md:py-3'>
+          <Link href={item.href} className='u-news-link text-white block md:flex md:gap-6'>
+            <p className="shippori text-sm font-medium leading-relaxed md:leading-none md:flex-shrink-0">{item.date}</p>
+            <p className="shippori font-medium leading-relaxed md:leading-none">{item.text}</p>
           </Link>
         </li>
       ))}

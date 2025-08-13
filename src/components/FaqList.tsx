@@ -20,11 +20,11 @@ export default function FaqList() {
     <ul className='u-faqList pt-4 max-w-[603px]'>
       {faqlist.map((item) => (
         <li key={item.question} className='u-faq-item shippori font-medium py-3 border-b border-pana-gray01'>
-          <div className="text-lg flex justify-start align-top gap-4 pb-6">
+          <div className="md:text-lg flex justify-start align-top gap-3 md:gap-4 pb-2 md:pb-6">
             <p className="flex-shrink-0">Q</p>
             <p>{item.question}</p>
           </div>
-          <div className="text-lg flex justify-start align-top gap-4">
+          <div className="md:text-lg flex justify-start align-top gap-3 md:gap-4">
             <p className="flex-shrink-0">A</p>
             <p className="shippori font-medium" dangerouslySetInnerHTML={{ __html: item.answer }}></p>
           </div>

@@ -55,11 +55,14 @@ export default function StoreSlider() {
                   sizes="(max-width: 768px) 280px, 384px"
                 />
               </div>
-              <div className='u-store-text shippori font-medium text-white text-left flex justify-between items-end mt-4'>
-                <h3 className='text-lg pl-4'>{store.cat}<span className='text-sm block mt-2'>{store.name}</span></h3>
-                <div className='u-button u-button-store block w-[104px] h-[29px] border border-white flex-shrink-0 py-[2px] pl-1'>
-                  <p className='u-button-text shippori font-medium text-sm'>店舗詳細</p>
+              <div className='u-store-text shippori font-medium text-white text-left mt-4'>
+                <div className='u-store-textHead flex justify-between pl-2 md:pl-4'>
+                  <h3 className='text-base md:text-lg'>{store.cat}</h3>
+                  <div className='u-button u-button-store absolute top-0 right-0 block w-[80px] md:w-[104px] h-[29px] border border-white flex-shrink-0 pt-[2px] pl-[4px]'>
+                    <p className='u-button-text shippori font-medium text-sm'>店舗詳細</p>
+                  </div>
                 </div>
+                <p className='text-sm block mt-[6px] md:mt-2 pl-2 md:pl-4'>{store.name}</p>
               </div>
             </Link>
           </SwiperSlide>

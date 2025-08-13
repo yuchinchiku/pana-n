@@ -1,5 +1,8 @@
 .u-header-logo svg path{
   transition: 4s ease-in-out;
+  @media screen and (max-width: 640px) {
+    transition: 0.4s ease-in-out;
+  }
 }
 .u-nav-item{
   &:nth-child(1){
@@ -38,3 +41,49 @@
     }
   }
 }
+
+.u-navIcon{
+  span{
+    transition: 0.4s all;
+  }
+  &.js-open{
+    span {
+      &:nth-child(1) {
+        transform: rotate(-28deg);
+        margin: 12px auto 0;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        transform: rotate(28deg);
+        margin: 0;
+      }
+    }
+  }
+}
+
+.u-top{
+  .u-nav-link{
+    @media screen and (max-width: 640px) {
+      color: white !important;
+    }
+  }
+  .u-navIcon{
+    &.js-open{
+      span{
+        @media screen and (max-width: 640px) {
+          background-color: white !important;
+        }
+      }
+    }
+  }
+  .js-open &{
+    .u-header-logo svg path{
+      @media screen and (max-width: 640px) {
+        fill: white !important;
+      }
+    }
+  }
+}
+

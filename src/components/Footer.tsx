@@ -39,23 +39,23 @@ const navItems = [
 
 export default function Footer() {
   return (
-    <div className='u-footer sec-black z-10 md:mt-[250px] md:pt-[55vh] md:pb-10 md:pr-[14.5%]'>
+    <div className='u-footer sec-black z-10 mt-[147px] px-5 pt-10 pb-10 md:mt-[250px] md:pt-[55vh] md:pr-[14.5%] md:pl-0' data-header-color="#fff">
       <nav className='u-Fnav-wrapper'>
-        <ul className='u-Fnav flex justify-start flex-row-reverse gap-8'>
+        <ul className='u-Fnav md:flex justify-start md:flex-row-reverse gap-8'>
           {navItems.map((item) => (
-            <li key={item.href} className='u-Fnav-item flex justify-start flex-row-reverse gap-4'>
-              <Link href={item.href} className='u-Fnav-link block text-white writing-vertical'>
-                <i className='block mx-auto mb-2 w-2 h-2 ml-[-18px]'>
+            <li key={item.href} className='u-Fnav-item md:flex justify-start md:flex-row-reverse gap-4 mb-4 md:mb-0'>
+              <Link href={item.href} className='u-Fnav-link text-white md:writing-vertical flex md:block items-center justify-start gap-2'>
+                <i className='block w-2 h-2 md:mb-2 md:mx-auto md:ml-[-18px]'>
                   <Pana color={'#ffffff'} className="w-2 h-2" />
                 </i>
-                <p className="shippori font-medium pt-4">{item.ja}</p>
+                <p className="shippori font-medium md:pt-4">{item.ja}</p>
               </Link>
               {/* サブメニューの表示 */}
               {item.subMenu && item.subMenu.length > 0 && (
-                <ul className='u-submenu flex justify-start flex-row-reverse gap-4 md:pt-6'>
+                <ul className='u-submenu md:flex justify-start md:flex-row-reverse gap-4 pt-2 md:pt-6'>
                   {item.subMenu.map((subItem) => (
-                    <li key={subItem.href} className='u-submenu-item'>
-                      <Link href={subItem.href} className='u-submenu-link text-white writing-vertical'>
+                    <li key={subItem.href} className='u-submenu-item mb-2 md:mb-0'>
+                      <Link href={subItem.href} className='u-submenu-link text-white md:writing-vertical'>
                         <p className="shippori text-sm">{subItem.ja}</p>
                       </Link>
                     </li>
@@ -67,7 +67,7 @@ export default function Footer() {
         </ul>
       </nav>
       <div>
-        <div className='flex justify-end gap-10 md:mt-32'>
+        <div className='flex justify-start md:justify-end gap-10 mt-8 md:mt-32'>
           <Link href='privacy-policy'className='block text-white'>
             <p className="shippori text-sm">プライバシーポリシー</p>
           </Link>

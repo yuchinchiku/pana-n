@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className='overflow-x-hidden'>
       <body className={`${garamond.variable} ${shippori.variable} overflow-x-hidden`}>
         <div className='layout relative text-pana'>
           <Header />
