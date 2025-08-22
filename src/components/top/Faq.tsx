@@ -11,7 +11,7 @@ export default function Faq() {
         <SectionTitle
           mainTitle="よくあるご質問"
           subTitle="faq"
-          className="mr-6 md:mr-32"
+          className="u-fade-in mr-6 md:mr-32"
           subTitleTop="29px"
           subTitleRight="1px"
           subTitleTopSP="29px"
@@ -22,7 +22,7 @@ export default function Faq() {
           <Button
             href="/faq"
             text="ご質問一覧へ"
-            className="u-bottun-md mt-10 md:mt-16"
+            className="u-fade-in u-bottun-md mt-10 md:mt-16"
           />
         </div>
       </div>

@@ -17,7 +17,7 @@ const faqlist = [
 
 export default function FaqList() {
   return (
-    <ul className='u-faqList pt-4 max-w-[603px]'>
+    <ul className='u-faqList u-fade-in pt-4 max-w-[603px]'>
       {faqlist.map((item) => (
         <li key={item.question} className='u-faq-item shippori font-medium py-3 border-b border-pana-gray01'>
           <div className="md:text-lg flex justify-start align-top gap-3 md:gap-4 pb-2 md:pb-6">

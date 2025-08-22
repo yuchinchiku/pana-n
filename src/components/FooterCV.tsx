@@ -6,7 +6,7 @@ import '@/styles/component/link.scss';
 
 export default function FooterCV() {
   return (
-    <div className='u-footerCv relative w-full h-[250px] md:h-[377px] bg-white z-10 px-5 md:pr-20 md:pl-[185px]'>
+    <div className='u-footerCv u-fade-in relative w-full h-[250px] md:h-[377px] bg-white z-10 px-5 md:pr-20 md:pl-[185px]'>
       <Link href="/" className='u-footerCv-link u-link-blank flex items-center h-[250px] md:h-[377px]'>
         <p className="shippori font-medium text-[22px] md:text-3xl w-full flex items-center justify-end gap-1">
           採用サイト
