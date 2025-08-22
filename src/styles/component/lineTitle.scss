@@ -1,0 +1,9 @@
+.u-lineTitle{
+  &::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    background-color: #1D1112;
+  }
+}

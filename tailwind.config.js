@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import aspectRatio from '@tailwindcss/aspect-ratio';
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -32,6 +34,7 @@ module.exports = {
     },
   },
   plugins: [
+    aspectRatio,
     function ({ addUtilities }) {
       addUtilities({
         '.writing-vertical': {

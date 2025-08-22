@@ -11,7 +11,7 @@ export default function News() {
         mainTitle="お知らせ"
         subTitle="news"
         color="white"
-        className="mr-6 md:mr-32"
+        className="u-fade-in mr-6 md:mr-32"
         subTitleTop="40px"
         subTitleTopSP="33px"
         subTitleRight="-7px"
@@ -22,7 +22,7 @@ export default function News() {
         <Button
           href="/news"
           text="お知らせ一覧へ"
-          className="u-button-white u-bottun-md text-white border-white mt-10 md:mt-16"
+          className="u-fade-in u-button-white u-bottun-md text-white border-white mt-10 md:mt-16"
         />
       </div>
     </section>

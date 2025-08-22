@@ -11,7 +11,7 @@ const newsList = [
 
 export default function NewsList() {
   return (
-    <ul className='u-newsList pt-4 max-w-[603px]'>
+    <ul className='u-newsList u-fade-in pt-4 max-w-[603px]'>
       {newsList.map((item) => (
         <li key={item.href} className='u-news-item py-2 md:py-3'>
           <Link href={item.href} className='u-news-link text-white block md:flex md:gap-6'>

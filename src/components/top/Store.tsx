@@ -14,14 +14,14 @@ export default function Store() {
             mainTitle="パナ・ンの店舗"
             subTitle="store line-up"
             color="white"
-            className='mx-auto'
+            className='u-fade-in mx-auto'
             subTitleTop="75px"
             subTitleRight="-37px"
             subTitleTopSP="57px"
             subTitleRightSP="-33px"
           />
         </div>
-        <div className="u-store-intro flex justify-center flex-row-reverse gap-3 md:gap-6 shippori text-base text-white md:text-lg font-medium tracking-[2px] mx-auto mb-5 md:mb-10 pt-24 md:pt-10">
+        <div className="u-store-intro u-fade-in flex justify-center flex-row-reverse gap-3 md:gap-6 shippori text-base text-white md:text-lg font-medium tracking-[2px] mx-auto mb-5 md:mb-10 pt-24 md:pt-10">
           <div className="u-store-textBlock writing-vertical">
             <p className='px-1'>パナ・ンの店舗は、</p>
             <p className='px-0'>
@@ -55,11 +55,11 @@ export default function Store() {
           </div>
         </div>
       </div>
-      <StoreSlider />
+      <StoreSlider isTopPage={true} />
       <Button
         href="/salon"
         text="店舗一覧へ"
-        className="u-button-white text-white border-white mx-auto mt-16 md:mt-20"
+        className="u-fade-in u-button-white text-white border-white mx-auto mt-16 md:mt-20"
       />
       <News/>
     </section>
