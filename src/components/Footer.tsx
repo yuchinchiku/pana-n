@@ -1,45 +1,57 @@
-
 'use client';
 import Link from 'next/link';
 import { Pana } from '@/assets/icons/Pana';
 import '@/styles/critical/footer.scss';
 
 const navItems = [
-  { href: '/story', ja: 'パナ・ンの物語',
+  {
+    href: '/story',
+    ja: 'パナ・ンの物語',
     subMenu: [
-      { href: '/story/beginning', ja: 'パナ・ンの始まり',},
-      { href: '/story/okinawa', ja: '沖縄、そして恩返し ',},
-      { href: '/story/therapist', ja: 'パナ・ンを作る人々',},
-      { href: '/story/future', ja: 'パナ・ンの夢',}
+      { href: '/story/beginning', ja: 'パナ・ンの始まり' },
+      { href: '/story/okinawa', ja: '沖縄、そして恩返し ' },
+      { href: '/story/therapist', ja: 'パナ・ンを作る人々' },
+      { href: '/story/future', ja: 'パナ・ンの夢' }
     ]
   },
-  { href: '/healing', ja: 'パナ・ンの癒し',
-    subMenu: [
-      { href: '/healing/signature', ja: 'パナ・ンシグネチャー',}
-    ]
+  {
+    href: '/healing',
+    ja: 'パナ・ンの癒し',
+    subMenu: [{ href: '/healing/signature', ja: 'パナ・ンシグネチャー' }]
   },
-  { href: '/salon', ja: 'パナ・ンの店舗',
+  {
+    href: '/salon',
+    ja: 'パナ・ンの店舗',
     subMenu: [
-      { href: '/salon/hogushigatten-nahakume', ja: 'ほぐしガッテン那覇久米店',},
-      { href: '/salon/hogushigatten-maezato', ja: 'ほぐしガッテン真栄里店 ',},
-      { href: '/salon/hogushigatten-omori', ja: 'ほぐしガッテン大森東口店',},
-      { href: '/salon/hoshino-okinawa', ja: '星のや沖縄スパ ',},
-      { href: '/salon/hoshino-taketomi', ja: '星のや竹富島スパ',},
-      { href: '/salon/hoshino-iriomote', ja: '西表スパ ',},
-      { href: '/salon/hoshino-kohama', ja: '小浜島琉球スパ',},
-      { href: '/salon/painushima', ja: 'パナ・ン南ぬ島 ',},
-      { href: '/salon/fusaki', ja: '琉球足つぼ',}
+      { href: '/salon/hogushigatten-nahakume', ja: 'ほぐしガッテン那覇久米店' },
+      { href: '/salon/hogushigatten-maezato', ja: 'ほぐしガッテン真栄里店 ' },
+      { href: '/salon/hogushigatten-omori', ja: 'ほぐしガッテン大森東口店' },
+      { href: '/salon/hoshino-okinawa', ja: '星のや沖縄スパ ' },
+      { href: '/salon/hoshino-taketomi', ja: '星のや竹富島スパ' },
+      { href: '/salon/hoshino-iriomote', ja: '西表スパ ' },
+      { href: '/salon/hoshino-kohama', ja: '小浜島琉球スパ' },
+      { href: '/salon/painushima', ja: 'パナ・ン南ぬ島 ' },
+      { href: '/salon/fusaki', ja: '琉球足つぼ' }
     ]
   },
   { href: '/company', ja: '会社概要' },
   { href: '/news', ja: 'お知らせ' },
   { href: '/faq', ja: 'よくあるご質問' },
-  { href: '/contact', ja: 'お問い合わせ' },
+  { href: '/contact', ja: 'お問い合わせ' }
 ];
 
-export default function Footer() {
+type FooterProps = {
+  variant?: 'pages' | 'default'; // どちらのデザインを使うか
+};
+
+export default function Footer({ variant = 'default' }: FooterProps) {
+  const wrapperClass =
+    variant === 'pages'
+      ? 'u-footer-pages sec-black z-10 mt-4 px-5 pt-10 pb-10 md:ml-[185px] md:pt-32 md:pr-[14.5%] md:pl-0'
+      : 'u-footer sec-black z-10 mt-[147px] px-5 pt-10 pb-10 md:mt-[250px] md:pt-[55vh] md:pr-[14.5%] md:pl-0';
+
   return (
-    <div className='u-footer sec-black z-10 mt-[147px] px-5 pt-10 pb-10 md:mt-[250px] md:pt-[55vh] md:pr-[14.5%] md:pl-0' data-header-color="#fff">
+    <div className={wrapperClass} data-header-color="#fff">
       <nav className='u-Fnav-wrapper'>
         <ul className='u-Fnav md:flex justify-start md:flex-row-reverse gap-8'>
           {navItems.map((item) => (
@@ -50,7 +62,6 @@ export default function Footer() {
                 </i>
                 <p className="shippori font-medium md:pt-4">{item.ja}</p>
               </Link>
-              {/* サブメニューの表示 */}
               {item.subMenu && item.subMenu.length > 0 && (
                 <ul className='u-submenu md:flex justify-start md:flex-row-reverse gap-4 pt-2 md:pt-6'>
                   {item.subMenu.map((subItem) => (

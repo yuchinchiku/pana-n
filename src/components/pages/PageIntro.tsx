@@ -6,14 +6,14 @@ type PageIntroProps = {
 
 export default function PageIntro({ lead, subLead, desc }: PageIntroProps) {
   return (
-    <div className="u-pageIntro md:w-[82.3%] md:ml-[8.6%] md:mr-[9%] md:pt-20 md:pb-32">
+    <div className="u-pageIntro max-w-[1160px] md:w-[82.3%] md:ml-[8.6%] md:mr-[9%] px-[10.6%] md:px-0 pt-14 md:pt-20 md:pb-32">
       <div className="u-pageIntro-lead">
-        <h2 className="shippori text-[28px] pb-4">{lead}</h2>
-        <p className="garamond text-xl">{subLead}</p>
+        <h2 className="shippori text-2xl md:text-[28px] leading-[180%] pb-2 md:pb-4">{lead}</h2>
+        <p className="garamond text-lg md:text-xl">{subLead}</p>
       </div>
       {desc && (
         <div
-          className="u-pageIntro-desc shippori text-lg leading-[180%] md:max-w-lg md:mt-14 md:ml-auto md:mr-0"
+          className="u-pageIntro-desc shippori md:text-lg leading-[180%] md:max-w-lg mt-6 md:mt-14 md:ml-auto md:mr-0"
           dangerouslySetInnerHTML={{ __html: desc }}
         />
       )}

@@ -27,19 +27,21 @@ export default function PageLearn({ lead, subLead, desc, items }: PageLearnProps
   if (filteredItems.length === 0) return null;
 
   return (
-    <div className="u-pageLearn mx-auto md:mb-40 md:mx-[21.8%]">
-      <div className="u-lineTitle w-full flex items-center gap-4 mb-10 ">
-        <div className="u-pageLearn-title flex items-center gap-2 flex-shrink-0">
-          <h3 className="shippori text-[28px]">{lead}</h3>
-          {subLead && <p className="garamond text-xl leading-tight">{subLead}</p>}
+    <div className="u-pageLearn mx-auto md:mx-[11%] mt-20 md:mb-40 px-5 md:px-0">
+      <div className="u-lineTitle flex items-center gap-2 md:gap-4 mb-10">
+        <div className="u-pageLearn-title md:flex items-center gap-2 flex-shrink-0">
+          <h3 className="shippori text-2xl md:text-[28px]">{lead}</h3>
+          {subLead && <p className="garamond text-lg md:text-xl leading-tight">{subLead}</p>}
         </div>
       </div>
       {desc && <div dangerouslySetInnerHTML={{ __html: desc }} />}
-      <ul className="flex gap-4">
-        {filteredItems.map((item) => (
+      <ul className="md:flex gap-4">
+        {filteredItems.map((item, index) => (
         <li
             key={item.href}
-            className="flex-shrink-0 w-[calc(50%-0.5rem)]" // 例：2列 or 3列にレスポンシブ
+            className={`flex-shrink-0 md:w-[calc(50%-0.5rem)]
+              ${index == 1 ? 'mt-10 md:mt-0' : ''}
+              `}
           >
             <Link href={`/story/${item.href}`} className='u-pageLearn-link block'>
               <div className="u-pageLearn-thumb relative w-full h-0 pb-[57%] overflow-hidden">
@@ -51,13 +53,13 @@ export default function PageLearn({ lead, subLead, desc, items }: PageLearnProps
                   className="u-pageLearn-img object-cover"
                 />
               </div>
-              <div className='flex items-center justify-end pt-4 pl-6'>
+              <div className='flex items-center justify-end pt-2 md:pt-4 px-2 md:pl-6'>
                 <div>
-                  <h4 className='shippori font-medium text-[22px] leading-tight'>{item.title}</h4>
+                  <h4 className='shippori font-medium text-lg md:text-[22px] leading-tight'>{item.title}</h4>
                   {item.titleEn && <p className='garamond'>{item.titleEn}</p>}
                 </div>
-                <div className='u-button u-button-small block w-[80px] md:w-[150px] h-[36px] border border-pana pt-[2px] pl-4 ml-auto'>
-                  <p className='u-button-text shippori font-medium text-lg'>もっと読む</p>
+                <div className='u-button u-button-small block w-[120px] md:w-[150px] h-[36px] border border-pana pt-[5px] md:pt-[2px] pl-2 md:pl-4 ml-auto'>
+                  <p className='u-button-text shippori font-medium text-sm md:text-lg'>もっと読む</p>
                 </div>
               </div>
             </Link>

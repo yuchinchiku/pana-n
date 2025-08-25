@@ -39,6 +39,7 @@ export default function HeaderColor() {
             width={120}
             height={40}
             priority
+            className="md:mx-auto w-[60px] h-[61px] md:w-[100px] md:h-[104px]"
           />
         </Link>
       </div>
@@ -48,9 +49,9 @@ export default function HeaderColor() {
         className={`u-navIcon fixed top-7 right-5 block z-20 md:hidden cursor-pointer transition-all duration-300 ${isOpen ? 'js-open' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="block w-[45px] h-[1px]"></span>
-        <span className="block w-[45px] h-[1px] mt-2"></span>
-        <span className="block w-[45px] h-[1px] mt-2"></span>
+        <span className="block w-[45px] h-[1px] bg-pana"></span>
+        <span className="block w-[45px] h-[1px] mt-2 bg-pana"></span>
+        <span className="block w-[45px] h-[1px] mt-2 bg-pana"></span>
       </div>
 
       {/* ナビゲーション */}
@@ -66,7 +67,7 @@ export default function HeaderColor() {
             <li key={item.href} className='u-nav-item pb-6'>
               <Link href={item.href}  className='u-nav-link block text-center'>
               <i className='inline-block mx-auto'>
-                <Pana color='#1D1112' />
+                <Pana color='#00B0C7' />
               </i>
                 <p className="shippori font-medium leading-none">{item.ja}</p>
                 <p className="garamond text-pana-gray01 text-sm leading-none pt-2">{item.en}</p>

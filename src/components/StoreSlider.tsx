@@ -33,7 +33,7 @@ const stores: Store[] = [
 
 export default function StoreSlider({ isTopPage = true }: StoreSliderProps) {
   return (
-    <div className={isTopPage ? 'md:ml-[185px] md:mr-24' : 'md:ml-[21.8%] md:mr-0'}>
+    <div className={isTopPage ? 'md:ml-[185px] md:mr-24' : 'md:ml-[11%] md:mr-0'}>
       <Swiper
         modules={[Autoplay]}
         loop

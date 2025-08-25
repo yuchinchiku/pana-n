@@ -1,7 +1,8 @@
 import HeaderSwitcher from '@/components/HeaderSwitcher';
 import CV from '@/components/CV';
-import Footer from '@/components/Footer';
+import FooterSwitcher from '@/components/FooterSwitcher';
 import FooterCV from '@/components/FooterCV';
+import Breadcrumb from '@/components/Breadcrumb';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import type { Metadata } from "next";
 import { EB_Garamond, Shippori_Mincho_B1 } from 'next/font/google';
@@ -29,7 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CV />
           <main className="overflow-hidden u-main">{children}</main>
           <FooterCV />
-          <Footer />
+          <Breadcrumb />
+          <FooterSwitcher />
         </div>
       </body>
     </html>
