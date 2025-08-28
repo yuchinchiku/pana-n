@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import aspectRatio from '@tailwindcss/aspect-ratio';
+import forms from '@tailwindcss/forms';
 
 module.exports = {
   content: [
@@ -28,13 +29,15 @@ module.exports = {
           gray01: '#8B8787',
           gray02: '#E9E9E9',
           gray03: '#F4F4F4',
-          gray04: '#E1DDD7'
+          gray04: '#E1DDD7',
+          red: '#EE4960'
         },
       },
     },
   },
   plugins: [
     aspectRatio,
+    forms,
     function ({ addUtilities }) {
       addUtilities({
         '.writing-vertical': {
