@@ -43,6 +43,24 @@
       }
     }
   }
+  &-submit{
+    .u-button-text{
+      transition: color 0.3s ease-in-out;
+    }
+    &:hover{
+      @media screen and (min-width: 640px) {
+        .u-button-text{
+          color: white;
+        }
+        &::before{
+          background-color: white;
+        }
+        &::after{
+          transform: scale(1,1);
+        }
+      }
+    }
+  }
   &-white{
     &::before{
       background-color: white;

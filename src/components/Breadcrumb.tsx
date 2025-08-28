@@ -32,7 +32,11 @@ const labelMap: Record<string, string | Record<string, string>> = {
   company: '会社概要',
   news: 'お知らせ',
   faq: 'よくあるご質問',
-  contact: 'お問い合わせ',
+  contact: {
+    '': 'お問い合わせ',
+    confirm: 'お問い合わせ確認',
+    thanks: 'お問い合わせ完了',
+  },
 };
 
 function getLabel(segments: string[], index: number) {
