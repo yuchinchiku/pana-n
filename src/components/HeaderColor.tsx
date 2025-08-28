@@ -62,15 +62,24 @@ export default function HeaderColor() {
             : 'fixed inset-0 bg-black bg-opacity-90 md:static md:bg-transparent opacity-0 invisible'
           }`}
       >
-        <ul className='u-nav'>
+        <ul className="u-nav flex md:block flex-col items-start md:items-center justify-center h-full pl-12 md:pl-0">
           {navItems.map((item) => (
-            <li key={item.href} className='u-nav-item pb-6'>
-              <Link href={item.href}  className='u-nav-link block text-center'>
+            <li key={item.href} className="u-nav-item pb-8 md:pb-6">
+              <Link
+                href={item.href}
+                className="u-nav-link flex gap-2 items-center md:block text-center"
+                onClick={() => {
+                  setIsOpen(false);
+                  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+                    document.documentElement.classList.remove('js-open');
+                  }
+                }}
+              >
               <i className='inline-block mx-auto'>
                 <Pana color='#00B0C7' />
               </i>
                 <p className="shippori font-medium leading-none">{item.ja}</p>
-                <p className="garamond text-pana-gray01 text-sm leading-none pt-2">{item.en}</p>
+                <p className="garamond text-pana-gray01 text-sm leading-none pl-2 md:pl-0 md:pt-2">{item.en}</p>
               </Link>
             </li>
           ))}

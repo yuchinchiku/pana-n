@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import { Pana } from '@/assets/icons/Pana';
 import '@/styles/critical/footer.scss';

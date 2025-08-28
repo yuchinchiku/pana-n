@@ -1,0 +1,10 @@
+.u-pageSecTitle-wrapper{
+  &::after{
+    content: "";
+    width: 200px;
+    height: 1px;
+    display: block;
+    background-color: #1D1112;
+    margin: 0 auto;
+  }
+}

@@ -97,7 +97,13 @@ export default function Header() {
                 href={item.href}
                 className="u-nav-link flex gap-2 items-center md:block text-center"
                 style={{ color: textColor }}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  // htmlタグの js-open クラスも消す
+                  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+                    document.documentElement.classList.remove('js-open');
+                  }
+                }}
               >
                 <i className="inline-block mx-auto">
                   <Pana color={color} />

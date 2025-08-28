@@ -14,7 +14,7 @@ export default function CV() {
       className={`
         u-cv fixed md:top-0 right-0 bottom-0 bg-white 
         w-[54px] h-[164px] md:w-[80px] md:h-fit md:min-h-screen z-20
-        ${!isHome ? 'border-l border-[#1d11124d]' : ''}
+        ${!isHome ? 'md:border-l border-[#1d11124d]' : ''}
       `}
     >
       <Link href="/" className='u-cv-link block h-fit min-h-screen pt-4 px-5 md:py-10 md:px-8'>

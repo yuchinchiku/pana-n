@@ -1,3 +1,4 @@
+'use client'
 import { Pana } from '@/assets/icons/Pana';
 import { useEffect, useState } from 'react';
 
