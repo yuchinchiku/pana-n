@@ -13,11 +13,11 @@ export default function ButtonBack({ href, text, className }: ButtonProps) {
   return (
     <Link href={href}
       className={clsx(
-        'u-button u-button-back block w-[244px] border border-pana py-1 pr-6',
+        'u-button u-button-back block w-[244px] h-12 border border-pana py-1 pr-5',
         className
       )}
     >
-      <p className='u-button-text shippori font-medium text-22px text-right'>{text}</p>
+      <p className='u-button-text shippori font-medium text-lg md:text-22px text-right pt-1'>{text}</p>
     </Link>
   );
 }

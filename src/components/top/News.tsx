@@ -1,6 +1,5 @@
-'use client';
 import SectionTitle from '@/components/SectionTitle';
-import NewsList from '@/components/NewsList';
+import NewsListTop from '@/components/NewsListTop';
 import Button from '@/components/Button';
 import '@/styles/pages/top/news.scss';
 
@@ -18,7 +17,7 @@ export default function News() {
         subTitleRightSP="-7px"
       />
       <div>
-        <NewsList />
+        <NewsListTop />
         <Button
           href="/news"
           text="お知らせ一覧へ"

@@ -11,3 +11,13 @@
     }
   }
 }
+
+.u-textLink{
+  transition: color 0.3s ease-in-out;
+  &:hover{
+    @media screen and (min-width: 640px) {
+      color: #00B0C7;
+    }
+  }
+
+}

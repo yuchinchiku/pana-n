@@ -60,7 +60,8 @@ function getLabel(segments: string[], index: number) {
 
 export default function Breadcrumb() {
   const pathname = usePathname();
-  const segments = pathname.split('/').filter(Boolean);
+  const segments = pathname.split('/').filter(Boolean)
+  .map((seg) => decodeURIComponent(seg));
 
   if (segments.length === 0) return null;
 

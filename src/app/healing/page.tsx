@@ -23,7 +23,7 @@ const pageItems = [
 ];
 
 
-export default function StoryPage() {
+export default function HealingPage() {
   return (
     <div className='u-pageHealing md:ml-[185px] md:mr-20'>
       <ScrollAnimation />

@@ -1,4 +1,3 @@
-'use client'
 import ScrollAnimation from '@/components/ScrollAnimation';
 import Hero from '@/components/top/Hero';
 import Intro from '@/components/top/Intro';
