@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import '@/styles/component/button.scss';
-import '@/styles/component/slider.scss';
 import '@/styles/pages/top/store.scss';
 
 type Store = {
@@ -38,7 +37,7 @@ export default function StoreSlider({ isTopPage = true }: StoreSliderProps) {
         modules={[Autoplay]}
         loop
         speed={1000}
-        spaceBetween={32}
+        spaceBetween={24}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
           0: { slidesPerView: 1.5 },

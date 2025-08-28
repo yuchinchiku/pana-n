@@ -1,6 +1,7 @@
-'use client';
+import type { Metadata } from "next";
 import Link from 'next/link';
 import Image from 'next/image';
+import ScrollAnimation from '@/components/ScrollAnimation';
 import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
 import PageLearn from '@/components/pages/PageLearn';
@@ -8,22 +9,28 @@ import PageStoreSlider from '@/components/pages/PageStoreSlider'
 import '@/styles/pages/story/story.scss';
 import '@/styles/component/button.scss';
 
+export const metadata: Metadata = {
+  title: "パナ・ンの物語 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  description: "琉球の伝統と癒しを融合させたパナ・ンの物語。歴史や想いに触れながら、心と身体を解きほぐす特別な時間をご提供します。",
+};
+
+
 const StoryList = [
-  { num: "1", href:"beginning", imageWidthPC: "498px", orientation : "horizontal",
+  { num: "1", href:"beginning", imageWidthPC: "498px", imageWidthSP: "335px", orientation : "horizontal",
     class: "u-yoko",
     title: "パナ・ンの始まり", titleEn: "pana-n’s beginning",
     desc: "<p>始まりの、その先へ。</p><p>パナ・ンが始まったその想い。</p>"
   },
-  { num: "2", href:"okinawa", imageWidthPC: "393px", orientation : "vertical",
+  { num: "2", href:"okinawa", imageWidthPC: "393px", imageWidthSP: "265px", orientation : "vertical",
     title: "沖縄、そして恩返し", titleEn: "okinawa and ongaeshi",
     desc: "<p>沖縄の大地に恵まれる。</p><p>全ての「命」への恩返し。</p>"
   },
-  { num: "3", href:"therapist",  imageWidthPC: "393px", orientation : "vertical",
+  { num: "3", href:"therapist",  imageWidthPC: "393px", imageWidthSP: "265px", orientation : "vertical",
     class: "u-tate",
     title: "パナ・ンを作る人々", titleEn: "pana-n’s therapist",
     desc: "<p>手のひらに宿るまごころ。</p><p>「心」に触れる癒しの本質。</p>"
   },
-  { num: "4", href:"future", imageWidthPC: "498px", orientation : "horizontal",
+  { num: "4", href:"future", imageWidthPC: "498px", imageWidthSP: "335px", orientation : "horizontal",
     class: "u-yoko",
     title: "パナ・ンの夢", titleEn: "pana-n’s dream",
     desc: "<p>想いは巡りて花ひらく。</p><p>未来へと続くパナ・ンの挑戦。</p>"
@@ -37,7 +44,8 @@ const pageItems = [
 
 export default function StoryPage() {
   return (
-    <div className='md:ml-[185px] md:mr-20'>
+    <div className='u-pageStory md:ml-[185px] md:mr-20'>
+      <ScrollAnimation />
       <PageHero title="パナ・ンの物語" subTitle="pana-n’s story" />
       <PageIntro
         lead="石垣島から世界へ、恩返しの思いを込めて"
@@ -69,6 +77,7 @@ export default function StoryPage() {
                   src={`/images/story/thumb_story-${item.num}.jpg`}
                   alt={item.title}
                   fill
+                  sizes={`(min-width: 768px) ${item.imageWidthPC}, ${item.imageWidthSP || '100vw'}`}
                   className="u-storyList-img object-cover"
                 />
               </div>

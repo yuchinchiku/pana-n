@@ -87,6 +87,12 @@
       width: 32px;
     }
   }
+  &-back{
+    &::before{
+      right: auto;
+      left: 0;
+    }
+  }
 }
 
 
@@ -104,6 +110,23 @@
           }
         }
       }
+    }
+  }
+}
+
+.u-pageLearn-link,
+.u-storyNext{
+  &:hover{
+    @media screen and (min-width: 640px) {
+        .u-button{
+          color: white;
+          &::before{
+            background-color: white;
+          }
+          &::after{
+            transform: scale(1,1);
+          }
+        }
     }
   }
 }

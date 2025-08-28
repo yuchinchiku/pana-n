@@ -3,7 +3,6 @@ import CV from '@/components/CV';
 import FooterSwitcher from '@/components/FooterSwitcher';
 import FooterCV from '@/components/FooterCV';
 import Breadcrumb from '@/components/Breadcrumb';
-import ScrollAnimation from '@/components/ScrollAnimation';
 import type { Metadata } from "next";
 import { EB_Garamond, Shippori_Mincho_B1 } from 'next/font/google';
 import '@/styles/globals.scss';
@@ -23,8 +22,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja" className="overflow-x-hidden">
-      <body className={`${garamond.variable} ${shippori.variable} overflow-x-hidden`}>
-        <ScrollAnimation />
+      <body
+        suppressHydrationWarning
+        className={`${garamond.variable} ${shippori.variable} overflow-x-hidden`}>
         <div className="layout relative text-pana">
           <HeaderSwitcher />
           <CV />

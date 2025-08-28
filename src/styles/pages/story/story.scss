@@ -1,88 +1,132 @@
-.u-page-subTitle{
-  top: 85px;
-  left: 25px;
-}
-
-.u-pageHero{
-  position: relative;
-  background: url('/images/story/hero_story_sp.jpg') no-repeat center;
-  background-size: cover;
-  &::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: rgba(29, 17, 18, 0.7);
+.u-pageStory{
+  .u-page-subTitle{
+    top: 90px;
+    left: 22px;
+    @media screen and (max-width: 640px){
+      top: 70px;
+    }
   }
-  @media screen and (min-width: 640px){
-    background: url('/images/story/hero_story_pc.jpg') no-repeat center;
+
+  .u-pageHero{
+    position: relative;
+    background: url('/images/story/hero_story_sp.jpg') no-repeat center;
     background-size: cover;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(29, 17, 18, 0.7);
+    }
+    @media screen and (min-width: 640px){
+      background: url('/images/story/hero_story_pc.jpg') no-repeat center;
+      background-size: cover;
+    }
   }
-}
 
-.u-pageLearn-img,
-.u-storyList-img{
-  transition: 0.8s ease-in-out;
-}
+  .u-pageLearn-img,
+  .u-storyList-img{
+    transition: 0.8s ease-in-out;
+  }
 
 
-.u-pageLearn-link,
-.u-storyList-link{
-  &:hover{
-    @media screen and (min-width: 640px) {
-      .u-pageLearn-img,
-      .u-storyList-img{
-        transform: scale(1.05);
-      }
-      .u-button{
-        color: white;
-        &::before{
-          background-color: white;
+  .u-pageLearn-link,
+  .u-storyList-link{
+    &:hover{
+      @media screen and (min-width: 640px) {
+        .u-pageLearn-img,
+        .u-storyList-img{
+          transform: scale(1.05);
         }
-        &::after{
-          transform: scale(1,1);
+        .u-button{
+          color: white;
+          &::before{
+            background-color: white;
+          }
+          &::after{
+            transform: scale(1,1);
+          }
         }
       }
     }
   }
-}
 
-.u-storyList-item,
-.u-storyList-thumb {
-  position: relative;
-  width: 100%;
+  .u-storyList-item,
+  .u-storyList-thumb {
+    position: relative;
+    width: 100%;
 
-  &.horizontal {
-    max-width: 498px;
-    aspect-ratio: 498 / 450;
+    &.horizontal {
+      max-width: 498px;
+      aspect-ratio: 498 / 450;
 
-    @media (max-width: 1230px) {
-      max-width: 350px;
-      aspect-ratio: 350 / 316;
+      @media (max-width: 1230px) {
+        max-width: 350px;
+        aspect-ratio: 350 / 316;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 335px;
+        aspect-ratio: 335px / 254;
+      }
     }
 
-    @media (max-width: 768px) {
-      max-width: 335px;
-      aspect-ratio: 335px / 254;
+    &.vertical {
+      max-width: 393px;
+      aspect-ratio: 393 / 560;
+
+      @media (max-width: 1230px) {
+        max-width: 293px;
+        aspect-ratio: 293 / 418;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 265px;
+        aspect-ratio: 265 / 377;
+      }
     }
   }
 
-  &.vertical {
-    max-width: 393px;
-    aspect-ratio: 393 / 560;
 
-    @media (max-width: 1230px) {
-      max-width: 293px;
-      aspect-ratio: 293 / 418;
+  .u-storyHead-num{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &::after{
+      content: "";
+      width: 1px;
+      height: 40px;
+      transform: rotate(30deg);
+      background-color: #1D1112;
     }
+  }
 
-    @media (max-width: 768px) {
-      max-width: 265px;
-      aspect-ratio: 265 / 377;
+  .u-storyTitle{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @media screen and (max-width: 640px) {
+      gap: 16px;
+    }
+    &::before{
+      content: "";
+      width: 64px;
+      height: 1px;
+      background-color: #1D1112;
+      flex-shrink: 0;
+      @media screen and (max-width: 640px) {
+        width: 32px;
+      }
+    }
+  }
+
+  .u-storyText{
+    p{
+      padding: 0 0 24px;
     }
   }
 }

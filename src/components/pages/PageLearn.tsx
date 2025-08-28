@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import '@/styles/component/lineTitle.scss';
 import '@/styles/component/button.scss';
+import '@/styles/component/pageLearn.scss';
 
 type PageLearnItem = {
   href: string;
@@ -44,12 +45,12 @@ export default function PageLearn({ lead, subLead, desc, items }: PageLearnProps
               `}
           >
             <Link href={`/story/${item.href}`} className='u-pageLearn-link block'>
-              <div className="u-pageLearn-thumb relative w-full h-0 pb-[57%] overflow-hidden">
+              <div className="u-pageLearn-thumb relative w-full h-[200px] md:h-[250px] pb-[57%] overflow-hidden">
                 <Image
                   src={`/images/story/thumb_${item.img}.jpg`}
                   alt={item.title}
-                  width={438}
-                  height={250}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="u-pageLearn-img object-cover"
                 />
               </div>
