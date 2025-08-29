@@ -112,12 +112,22 @@
     &::after{
       background-color: white;
     }
-    .u-storeSliderBlk & {
+    &-pages {
+      .u-button-text{
+        transition: color 0.3s ease-in-out;
+      }
       &::before{
         background-color: #1D1112;
       }
       &::after{
         background-color: #1D1112;
+      }
+      &:hover{
+        @media screen and (min-width: 640px) {
+          .u-button-text{
+            color: white;
+          }
+        }
       }
     }
   }
@@ -169,15 +179,16 @@
 .u-store-link{
   &:hover{
     @media screen and (min-width: 640px) {
-      .u-storeSliderBlk & {
-        .u-button{
+      .u-button-store-pages{
+        color: white;
+        .u-button-text{
           color: white;
-          &::before{
-            background-color: white;
-          }
-          &::after{
-            transform: scale(1,1);
-          }
+        }
+        &::before{
+          background-color: white !important;
+        }
+        &::after{
+          transform: scale(1,1);
         }
       }
     }

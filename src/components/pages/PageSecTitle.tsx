@@ -19,7 +19,11 @@ export default function PageSecTitle({ mainTitleSmall, mainTitle, subTitle, desc
           {mainTitleSmall && (
             <span className='text-lg md:text-2xl block'>{mainTitleSmall}</span>
           )}
-          <span className='text-[28px] md:text-[32px] block'>{mainTitle}</span>
+          <span
+            className='text-[28px] md:text-[32px] block'
+            dangerouslySetInnerHTML={{ __html: mainTitle }}
+          ></span>
+
         </h2>
         {subTitle && (
           <p className='garamond text-lg md:text-xl pb-6'>{subTitle}</p>

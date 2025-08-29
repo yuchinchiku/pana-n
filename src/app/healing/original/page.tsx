@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
-import Button from '@/components/Button';
 import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
 import TabArea from '@/app/healing/original/TabArea';
