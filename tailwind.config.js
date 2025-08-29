@@ -32,6 +32,13 @@ module.exports = {
           gray04: '#E1DDD7',
           red: '#EE4960'
         },
+        tag: {
+          DEFAULT: '#1D1112',
+          pink: '#D77EA6',
+          red: '#D4707B',
+          blue: '#7FC5DB',
+          green: '#008AA0',
+        },
       },
     },
   },

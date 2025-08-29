@@ -17,8 +17,8 @@ export default function FooterCV() {
       <Link href="/" className={`u-footerCv-link u-link-blank flex items-center h-[250px] md:h-[377px]
         ${isTop ? '' : 'md:w-[90%] mx-auto'}`}
       >
-        <p className="shippori font-medium text-[22px] md:text-3xl w-full flex items-center justify-end gap-1">
-          採用サイト
+        <p className="shippori font-medium text-[22px] md:text-3xl w-full flex items-center justify-end gap-1 flex-shrink-0 md:pl-5">
+          <span className='flex-shrink-0'>採用サイト</span>
           <Arrow />
           <span className='u-footerCv-line w-6/12 md:w-9/12 h-[1px] bg-pana md:ml-10'></span>
         </p>

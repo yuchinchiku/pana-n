@@ -29,7 +29,7 @@ export default function HeaderColor() {
   }, [isOpen]);
 
   return(
-    <header className="u-top u-header fixed top-0 left-0 md:h-fit md:min-h-screen md:w-[185px] md:border-r md:border-pana-gray01 z-20">
+    <header className="u-top u-header fixed top-0 left-0 md:h-fit md:min-h-screen md:w-[185px] md:border-r md:border-pana-gray01 md:bg-white z-20">
        {/* ロゴ */}
       <div className="u-header-logo fixed top-3 left-5 md:static md:pt-10 md:pb-16 z-20">
         <Link href="/" className='text-center'>

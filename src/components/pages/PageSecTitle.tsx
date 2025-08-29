@@ -2,9 +2,9 @@ import { Pana } from '@/assets/icons/Pana';
 import '@/styles/component/pageSecTitle.scss';
 
 interface PageSecTitleProps {
-  mainTitleSmall: string;
+  mainTitleSmall?: string;
   mainTitle: string;
-  subTitle: string;
+  subTitle?: string;
   desc?: string;
 }
 
@@ -16,10 +16,14 @@ export default function PageSecTitle({ mainTitleSmall, mainTitle, subTitle, desc
           <Pana color='#00B0C7' className="w-3 h-3 md:w-5 md:h-5" />
         </i>
         <h2 className='u-pageSecTitle shippori font-medium'>
-          <span className='text-lg md:text-2xl block'>{mainTitleSmall}</span>
+          {mainTitleSmall && (
+            <span className='text-lg md:text-2xl block'>{mainTitleSmall}</span>
+          )}
           <span className='text-[28px] md:text-[32px] block'>{mainTitle}</span>
         </h2>
-        <p className='garamond text-lg md:text-xl pb-6'>{subTitle}</p>
+        {subTitle && (
+          <p className='garamond text-lg md:text-xl pb-6'>{subTitle}</p>
+          )}
       </div>
       {desc && (
         <div

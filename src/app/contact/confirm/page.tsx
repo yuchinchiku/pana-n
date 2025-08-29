@@ -76,7 +76,7 @@ export default function ContactConfirmPage() {
           <button
             type="button"
             onClick={() => router.back()} // sessionStorage から復元されるので安全
-            className="u-button u-button-back block w-[244px] h-12 border border-pana py-1 pl-6 mx-auto"
+            className="u-button u-button-back block w-[244px] h-12 border border-pana py-1 pl-6 mx-auto md:mx-0"
           >
             <span className='u-button-text shippori font-medium text-lg text-left pt-1 md:pl-10'>戻る</span>
           </button>
@@ -84,7 +84,7 @@ export default function ContactConfirmPage() {
             type="button"
             onClick={handleSend}
             disabled={isSending}
-            className="u-button u-button-submit block w-[244px] h-12 border border-pana py-1 pl-6 mx-auto mt-6 md:mt-0"
+            className="u-button u-button-submit u-button-white text-white bg-pana block w-[244px] h-12 border border-pana py-1 pl-6 mx-auto md:mx-0 mt-6 md:mt-0"
           >
             <span className='u-button-text shippori font-medium text-lg text-left pt-1 md:pr-20'>
               {isSending ? '送信中…' : '送信する'}

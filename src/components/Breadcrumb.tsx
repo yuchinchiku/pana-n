@@ -15,7 +15,7 @@ const labelMap: Record<string, string | Record<string, string>> = {
   },
   healing: {
     '': 'パナ・ンの癒し',
-    signature: 'パナ・ンシグネチャー',
+    original: 'パナ・ン流 独自メニュー',
   },
   salon: {
     '': 'パナ・ンの店舗',

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const pageItems = [
   { href: 'healing', img: 'healing', title: 'パナ・ンの癒し', titleEn: 'pana-n’s healing' },
-  { href: 'signature', img: 'healing', title: 'パナ・ンシグネチャー', titleEn: 'pana-n’s signature menu' }
+  { href: 'healing/original', img: 'healing', title: 'パナ・ン流 独自メニュー', titleEn: 'pana-n’s original menu' }
 ];
 
 
@@ -65,7 +65,7 @@ export default function HealingPage() {
         />
         <OriginalMenu />
         <Button
-          href="/healing/signature"
+          href="/healing/original"
           text="詳しく見る"
           className="u-fade-in u-bottun-md mt-4 md:mt-16 mx-auto"
         />

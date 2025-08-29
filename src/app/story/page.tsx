@@ -39,7 +39,7 @@ const StoryList = [
 
 const pageItems = [
   { href: 'healing', img: 'healing', title: 'パナ・ンの癒し', titleEn: 'pana-n’s healing' },
-  { href: 'signature', img: 'healing', title: 'パナ・ンシグネチャー', titleEn: 'pana-n’s signature menu' }
+  { href: 'healing/original', img: 'healing', title: 'パナ・ン流 独自メニュー', titleEn: 'pana-n’s original menu' }
 ];
 
 export default function StoryPage() {

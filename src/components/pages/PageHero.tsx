@@ -2,10 +2,11 @@ import { Pana } from '@/assets/icons/Pana';
 
 type PageHeroProps = {
   title: string;
+  titleSmall?: string;
   subTitle?: string;
 };
 
-export default function PageHero({ title, subTitle }: PageHeroProps) {
+export default function PageHero({ title,titleSmall, subTitle }: PageHeroProps) {
   return (
     <div className="u-pageHero relative flex justify-center w-full h-[350px] md:h-[450px] pt-10">
       <h1 className="u-page-title relative text-white md:w-[76px] h-fit">
@@ -15,6 +16,11 @@ export default function PageHero({ title, subTitle }: PageHeroProps) {
         <span
           className='shippori text-[32px] md:text-[40px] font-medium leading-none writing-vertical pl-[18px]'
         >
+          {titleSmall && (
+            <span className="block text-[20px] md:text-[24px] ml-3">
+              {titleSmall}
+            </span>
+          )}
           {title}
         </span>
         <span
