@@ -10,8 +10,8 @@ export default function StoreInfo({ store }: Props) {
   return (
     <section className="max-w-[1020px] md:w-[82.3%] md:ml-[15%] md:mr-[9%]">
       <PageSecTitleHor mainTitle="店舗情報" subTitle="salon info" />
-      <div className="md:ml-[8%]">
-        <div className="w-full h-[350px] md:h-[450px]">
+      <div className="md:ml-[8%] px-5 md:px-0">
+        <div className="w-full h-[250px] md:h-[450px]">
           <iframe
             src={store.mapUrl}
             className="w-full h-full"
@@ -30,14 +30,14 @@ export default function StoreInfo({ store }: Props) {
               <div className="px-1 md:px-0 flex flex-col gap-2">
                 {row.items.map((item, i) => (
                   <div key={i}>
-                    <div className="flex items-center gap-10">
+                    <div className="md:flex items-center gap-10">
                       <p className="shippori text-base py-1" dangerouslySetInnerHTML={{ __html: item.value }} />
                       {row.label === "住所" && store.mapUrl && (
                         <a
                           href={store.mapUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="u-button u-button-map block w-[150px] h-[45px] border border-pana py-1 pl-2"
+                          className="u-button u-button-map block w-[150px] h-[45px] border border-pana py-1 pl-2 mt-2 md:mt-0"
                         >
                           <p className='u-button-text shippori'>Google Maps</p>
                         </a>

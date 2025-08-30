@@ -38,7 +38,6 @@ export default function HeaderColor() {
             alt="琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン"
             width={120}
             height={40}
-            priority
             className="md:mx-auto w-[60px] h-[61px] md:w-[100px] md:h-[104px]"
           />
         </Link>

@@ -14,15 +14,15 @@ export default function StoreMenu({ store }: Props) {
 
   return (
     <section className="max-w-[1020px] md:w-[82.3%] md:ml-[12%] md:mr-[9%] mt-8">
-      <PageSecTitleHor mainTitle="メニュー・料金" subTitle="menu / price" />
+      <PageSecTitleHor mainTitle="メニュー・料金" subTitle="menu / <br class='md:hidden'>price" />
 
-      <div className="u-menuWrapper">
+      <div className="u-menuWrapper px-5 md:px-0">
         {store.menu.map((item, idx) => (
-          <div key={idx} className="u-menuItem pt-8 px-8 pb-10 mb-10">
-            <div className="u-menuHead flex justify-between items-start">
+          <div key={idx} className="u-menuItem pt-8 px-5 md:px-8 pb-10 mb-10">
+            <div className="u-menuHead md:flex justify-between items-start">
               <div className="md:max-w-[471px]">
                 {/* メニュー名 */}
-                <h3 className="shippori text-lg md:text-xl font-medium mb-6">{item.name}</h3>
+                <h3 className="shippori text-xl font-medium mb-6">{item.name}</h3>
 
                 {/* 説明 */}
                 {item.description && (
@@ -37,13 +37,13 @@ export default function StoreMenu({ store }: Props) {
 
               {/* 画像 */}
               {item.image && (
-                <div className="w-full md:max-w-[250px] h-[150px] relative">
+                <div className="w-full md:max-w-[250px] h-[150px] relative mt-4 md:mt-0">
                   <Image
                     src={`/images/salon/menu/${item.image}.jpg`}
                     alt={item.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover rounded"
+                    className="object-cover"
                   />
                 </div>
               )}
@@ -53,7 +53,7 @@ export default function StoreMenu({ store }: Props) {
               <h4 className="shippori text-white text-lg w-[145px] h-[35px] bg-pana flex items-center justify-center px-6">
                 料金・時間
               </h4>
-              <div className="u-menuPriceItem flex flex-col md:flex-row items-start justify-center gap-8 border border-pana bg-white py-6 px-10">
+              <div className="u-menuPriceItem md:flex flex-col md:flex-row items-start justify-center gap-8 border border-pana bg-white py-6 px-10">
                 {item.options.map((opt, i) => (
                   <div key={i} className="u-priceList shippori">
                     {opt.label && (

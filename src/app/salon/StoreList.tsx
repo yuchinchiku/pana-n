@@ -25,19 +25,21 @@ export default function StoreList({ stores }: Props) {
             />
           </div>
           <div className="u-store-text relative shippori font-medium text-left mt-2 md:mt-4 text-black">
-            <div className="u-store-textHead md:flex justify-between pl-2 md:pl-4 relative">
-              <h3
-                className="text-base md:text-lg"
-                dangerouslySetInnerHTML={{ __html: store.cat }}
-              />
+            <div className="min-h-[70px]">
+              <div className="u-store-textHead md:flex justify-between pl-2 md:pl-4 relative">
+                <h3
+                  className="text-base md:text-lg"
+                  dangerouslySetInnerHTML={{ __html: store.cat }}
+                />
 
+              </div>
+              <p className="text-sm block mt-[6px] md:mt-2 pl-2 md:pl-4">
+                {store.name}
+              </p>
             </div>
-            <p className="text-sm block mt-[6px] md:mt-2 pl-2 md:pl-4">
-              {store.name}
-            </p>
 
               {store.hasButton && (
-                <div className="text-center">
+                <div className="u-button-wrapper text-center">
                   <button
                     onClick={(e) => {
                       e.preventDefault();

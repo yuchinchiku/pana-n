@@ -2,13 +2,14 @@
 import type { Metadata } from "next";
 import { storeDetails } from "@/data/storeDetails";
 import PageHeroHor from "@/components/pages/PageHeroHor";
+import PageSecTitleHor from "@/components/pages/PageSecTitleHor";
 import PageIntro from "@/components/pages/PageIntro";
 import Notify from "@/components/pages/Notify";
 import StoreInfo from "@/components/pages/StoreInfo";
 import StoreMenu from "@/components/pages/StoreMenu";
 import StoreGallery from "@/components/pages/StoreGallery";
 import StoreList from "@/app/salon/StoreList";
-import { Store } from "@/data/stores";
+import ButtonBack from '@/components/ButtonBack';
 import { stores } from "@/data/stores";
 
 
@@ -38,19 +39,27 @@ export default async function StoreDetailPage({ params }: Props) {
 
   return (
     <div className={`u-${id} u-pageSalonDetails md:ml-[185px] md:mr-20`}>
-      <PageHeroHor title={store.name} subTitle={store.subTitle} />
+      <PageHeroHor title={store.title} subTitle={store.subTitle} />
       <PageIntro lead={store.lead} subLead={store.subLead} desc={store.desc} />
       {store.notify && <Notify title={store.notify.title} desc={store.notify.desc} />}
       <StoreInfo store={store} />
-      <StoreMenu store={store} />
-      <StoreGallery store={store} />
+      {store.menu && store.menu.length > 0 && <StoreMenu store={store} />}
+      {store.gallery && store.gallery.length > 0 && <StoreGallery store={store} />}
+
 
       {otherStores.length > 0 && (
-        <section className="mt-16">
-          <h2 className="text-xl font-bold mb-6">その他の店舗</h2>
-          <StoreList stores={otherStores} />
+        <section className="u-pageSalonDetails-salonList max-w-[1020px] md:w-[82.3%] mt-20 md:mt-40 md:ml-[15%] md:mr-[9%] mb-20">
+          <PageSecTitleHor mainTitle="その他の店舗" subTitle="others salons" />
+          <div className="px-5 md:px-0">
+            <StoreList stores={otherStores} />
+          </div>
         </section>
       )}
+      <ButtonBack
+        href="/salon"
+        text="店舗一覧へ"
+        className="u-bottun-md mt-10 md:mt-16 mb-32 md:mb-60 mx-auto"
+      />
     </div>
   );
 }

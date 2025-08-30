@@ -15,10 +15,20 @@
   }
   &.u-hogushigatten-nahakume{
     .u-pageHero{
-      background: url('/images/salon/hogushigatten-nahakume/hero_salon_sp.jpg') no-repeat center;
+      background: url('/images/salon/hogushigatten-nahakume/hero_nahakume_sp.jpg') no-repeat center;
       background-size: cover;
       @media screen and (min-width: 640px){
         background: url('/images/salon/hogushigatten-nahakume/hero_nahakume_pc.jpg') no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+  &.u-hogushigatten-maezato{
+    .u-pageHero{
+      background: url('/images/salon/hogushigatten-maezato/hero_salon_sp.jpg') no-repeat center;
+      background-size: cover;
+      @media screen and (min-width: 640px){
+        background: url('/images/salon/hogushigatten-maezato/hero_maezato_pc.jpg') no-repeat center;
         background-size: cover;
       }
     }
@@ -28,6 +38,16 @@
     background: url('/images/common/bg-paper.png') repeat;
   }
   .u-priceList{
+    &:first-child{
+      @media screen and (max-width: 640px){
+        padding: 0 0 16px;
+      }
+    }
+    &:last-child{
+      @media screen and (max-width: 640px){
+        padding: 16px 0 0;
+      }
+    }
     &:nth-child(2){
       border-right: 1px dashed #8B8787;
       border-left: 1px dashed #8B8787;
@@ -35,11 +55,61 @@
       @media screen and (max-width: 1385px){
         padding: 0 16px;
       }
+      @media screen and (max-width: 640px){
+        border-right: none;
+        border-left: none;
+        border-top: 1px dashed #8B8787;
+        border-bottom: 1px dashed #8B8787;
+        padding: 16px 0
+      }
     }
   }
   .u-priceListText {
     @media screen and (max-width: 1350px){
       display: block;
+    }
+    @media screen and (max-width: 640px){
+      display: flex;
+    }
+  }
+  &-salonList{
+    .u-button-store{
+      position: absolute;
+      @media screen and (max-width: 1350px){
+        position: relative;
+        width: 80%;
+        margin: 16px auto 0;
+      }
+    }
+  }
+  .u-gallery-wrapper{
+    @media screen and (max-width: 1440px){
+      padding: 0 ;
+    }
+  }
+  .u-gallery-2{
+    @media screen and (max-width: 1350px){
+      margin: 40px 0 0 auto;
+    }
+  }
+  .u-gallery-3{
+    @media screen and (max-width: 1350px){
+      margin: 40px auto 0 0;
+    }
+  }
+  .u-gallery-4{
+    @media screen and (max-width: 1350px){
+      margin: 40px 0 0 auto;
+    }
+  }
+  .u-gallery-5{
+    @media screen and (max-width: 1350px){
+      margin: 40px auto 0 0;
+    }
+  }
+  .u-gallery-6{
+    @media screen and (max-width: 1350px){
+      margin: 40px 0 0 auto;
     }
   }
 }
