@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    domains: ['puputito.jp'], // ここに外部画像のドメインを追加
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
