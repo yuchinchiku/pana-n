@@ -1,0 +1,31 @@
+.u-pageFaq{
+  .u-page-subTitle{
+    top: 35px;
+    left: 65px;
+    @media screen and (max-width: 640px){
+      top: 25px;
+      left: 55px;
+    }
+  }
+
+  .u-pageHero{
+    position: relative;
+    background: url('/images/faq/hero_faq_sp.jpg') no-repeat center;
+    background-size: cover;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(29, 17, 18, 0.6);
+    }
+    @media screen and (min-width: 640px){
+      background: url('/images/faq/hero_faq_pc.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+}

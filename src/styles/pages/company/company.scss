@@ -1,0 +1,31 @@
+.u-pageCompany{
+  .u-page-subTitle{
+    top: 58px;
+    left: 45px;
+    @media screen and (max-width: 640px){
+      top: 44px;
+      left: 39px;
+    }
+  }
+
+  .u-pageHero{
+    position: relative;
+    background: url('/images/company/hero_company_sp.jpg') no-repeat center;
+    background-size: cover;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(29, 17, 18, 0.6);
+    }
+    @media screen and (min-width: 640px){
+      background: url('/images/company/hero_company_pc.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+}

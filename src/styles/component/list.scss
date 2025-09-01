@@ -1,0 +1,11 @@
+.u-list-circle{
+  li{
+    display: flex;
+    align-items: flex-start;
+    &::before{
+      content: "・";
+      display: inline-block;
+      padding-right: 4px;
+    }
+  }
+}

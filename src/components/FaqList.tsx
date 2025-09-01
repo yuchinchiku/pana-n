@@ -1,32 +1,37 @@
 import '@/styles/component/faq.scss';
+import '@/styles/component/list.scss';
+import { faqs } from '@/data/faqs';
 
-const faqlist = [
-  {
-    question: 'パナ・ンの施術は、どのような特徴がありますか？',
-    answer: 'パナ・ンでは、琉球の伝統的な癒しの技法と現代のスパテクニックを融合したオリジナルのマッサージ・エステ・もみほぐしを提供しております。<br>沖縄の自然由来の素材や伝統的な技法を取り入れ、唯一無二の癒しの体験をお届けしています。',
-  },
-  {
-    question: '他の質問の例',
-    answer: '他の回答の例です。',
-  },
-  {
-    question: 'さらに別の質問',
-    answer: 'さらに別の回答です。',
-  },
-];
+type Props = {
+  variant?: 'top' | 'sub'; // ページの種類でクラスを変える
+};
 
-export default function FaqList() {
+export default function FaqList({ variant = 'sub' }: Props) {
+  const wrapperClass =
+    variant === 'top'
+      ? 'u-faqList u-fade-in pt-4 max-w-[800px]' // トップページ用
+      : 'u-faqList u-fade-in  max-w-[800px]  px-10 md:px-0 mx-auto mt-10 md:mt-0 mb-20 md:mb-40'; // 下層ページ用
+
+  // トップページなら最初の3件だけ表示
+  const displayFaqs = variant === 'top' ? faqs.slice(0, 3) : faqs;
+
   return (
-    <ul className='u-faqList u-fade-in pt-4 max-w-[603px]'>
-      {faqlist.map((item) => (
-        <li key={item.question} className='u-faq-item shippori font-medium py-3 border-b border-pana-gray01'>
+    <ul className={wrapperClass}>
+      {displayFaqs.map((item) => (
+        <li
+          key={item.question}
+          className="u-faq-item shippori font-medium py-6 border-b border-pana-gray01"
+        >
           <div className="md:text-lg flex justify-start align-top gap-3 md:gap-4 pb-2 md:pb-6">
-            <p className="flex-shrink-0">Q</p>
-            <p>{item.question}</p>
+            <p className="text-2xl flex-shrink-0">Q</p>
+            <p className='pt-1'>{item.question}</p>
           </div>
-          <div className="md:text-lg flex justify-start align-top gap-3 md:gap-4">
-            <p className="flex-shrink-0">A</p>
-            <p className="shippori font-medium" dangerouslySetInnerHTML={{ __html: item.answer }}></p>
+          <div className="flex justify-start align-top gap-3 md:gap-4">
+            <p className="text-2xl flex-shrink-0">A</p>
+            <p
+              className="shippori font-medium pt-1"
+              dangerouslySetInnerHTML={{ __html: item.answer }}
+            />
           </div>
         </li>
       ))}

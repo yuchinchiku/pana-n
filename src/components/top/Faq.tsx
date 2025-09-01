@@ -18,7 +18,7 @@ export default function Faq() {
           subTitleRightSP="-1px"
         />
         <div>
-          <FaqList />
+          <FaqList variant="top" />
           <Button
             href="/faq"
             text="ご質問一覧へ"

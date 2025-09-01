@@ -17,11 +17,11 @@ export default function NewsPage() {
       <ScrollAnimation />
       <PageHero title="お知らせ" subTitle="news" />
       <NewsListPage />
-      <ButtonBack
+      {/* <ButtonBack
         href="/"
         text="トップページへ"
         className="u-bottun-md mt-10 md:mt-16 mb-40 md:mb-60 mx-auto"
-      />
+      /> */}
     </div>
   );
 }
