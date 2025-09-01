@@ -17,9 +17,13 @@ export default function LoadingOverlay() {
 
   useEffect(() => {
     setMounted(true);
-    const textTimer = setTimeout(() => setShowCircle(true), 1000); // 文字が先に出るように短め
-    const endTimer = setTimeout(() => setLoading(false), 4500);
+    const isSP = window.innerWidth <= 768;
 
+    const textTimer = setTimeout(() => setShowCircle(true), 1000); // 文字が先に出るように短め
+    const endTimer = setTimeout(
+      () => setLoading(false),
+      isSP ? 3000 : 4500 // SPは少し長めに
+    );
     return () => {
       clearTimeout(textTimer);
       clearTimeout(endTimer);

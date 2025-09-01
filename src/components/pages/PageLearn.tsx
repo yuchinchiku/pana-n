@@ -29,7 +29,7 @@ export default function PageLearn({ lead, subLead, desc, items }: PageLearnProps
 
   return (
     <div className="u-pageLearn mx-auto md:mx-[11%] mt-20 md:mb-40 px-5 md:px-0">
-      <div className="u-lineTitle flex items-center gap-2 md:gap-4 mb-10">
+      <div className="u-lineTitle u-fade-in flex items-center gap-2 md:gap-4 mb-10">
         <div className="u-pageLearn-title md:flex items-center gap-2 flex-shrink-0">
           <h3 className="shippori text-2xl md:text-[28px]">{lead}</h3>
           {subLead && <p className="garamond text-lg md:text-xl leading-tight">{subLead}</p>}
@@ -40,11 +40,11 @@ export default function PageLearn({ lead, subLead, desc, items }: PageLearnProps
         {filteredItems.map((item, index) => (
         <li
             key={item.href}
-            className={`flex-shrink-0 md:w-[calc(50%-0.5rem)]
+            className={`u-fade-in flex-shrink-0 md:w-[calc(50%-0.5rem)]
               ${index == 1 ? 'mt-10 md:mt-0' : ''}
               `}
           >
-            <Link href={`/story/${item.href}`} className='u-pageLearn-link block'>
+            <Link href={item.href} className='u-pageLearn-link block'>
               <div className="u-pageLearn-thumb relative w-full h-[200px] md:h-[250px] pb-[57%] overflow-hidden">
                 <Image
                   src={`/images/story/thumb_${item.img}.jpg`}

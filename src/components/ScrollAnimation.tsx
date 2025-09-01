@@ -19,10 +19,10 @@ export default function ScrollAnimation() {
           {
             opacity: 1,
             filter: 'blur(0)',
-            duration: 0.5,
+            duration: 0.3,
             scrollTrigger: {
               trigger: element,
-              start: 'top 90%', // 100%だと遅いので少し余裕をもたせる
+              start: 'top 95%', // 100%だと遅いので少し余裕をもたせる
               toggleActions: 'play none none none',
             },
           }

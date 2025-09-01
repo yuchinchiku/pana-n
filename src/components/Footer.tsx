@@ -16,7 +16,7 @@ const navItems = [
   {
     href: '/healing',
     ja: 'パナ・ンの癒し',
-    subMenu: [{ href: '/healing/original', ja: 'パナ・ン流 独自メニュー' }]
+    subMenu: [{ href: '/healing/original', ja: 'パナ・ンの独自メニュー' }]
   },
   {
     href: '/salon',

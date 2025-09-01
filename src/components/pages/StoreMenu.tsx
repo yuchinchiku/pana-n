@@ -18,7 +18,7 @@ export default function StoreMenu({ store }: Props) {
 
       <div className="u-menuWrapper px-5 md:px-0">
         {store.menu.map((item, idx) => (
-          <div key={idx} className="u-menuItem pt-8 px-5 md:px-8 pb-10 mb-10">
+          <div key={idx} className="u-menuItem u-fade-in pt-8 px-5 md:px-8 pb-10 mb-10">
             <div className="u-menuHead md:flex justify-between items-start">
               <div className="md:max-w-[471px]">
                 {/* メニュー名 */}

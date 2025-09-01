@@ -15,7 +15,7 @@ type PageIntroProps = {
 export default function StoryNext({ storyNextClass, num, title,subTitle,link }: PageIntroProps) {
   return (
     <>
-      <div className={`u-storyNext u-storyNext-${storyNextClass} relative w-[90%] h-[250px] md:h-[460px] mx-auto mt-20 md:mt-0`}>
+      <div className={`u-storyNext u-storyNext-${storyNextClass} u-fade-in relative w-[90%] h-[250px] md:h-[460px] mx-auto mt-20 md:mt-0`}>
         <Link href={link || '#'} className='u-storyNext-link block w-full h-[250px] md:h-[460px] pt-6 md:pt-[100px] pl-5 md:pl-[9%]'>
           <p className="u-storyNext-num garamond text-xl md:text-[32px]">{`#0${num}`}</p>
           <div className="my-1 md:my-4">
@@ -30,7 +30,7 @@ export default function StoryNext({ storyNextClass, num, title,subTitle,link }: 
       <ButtonBack
         href="/story"
         text="物語一覧へ"
-        className="u-bottun-md mt-10 md:mt-16 mb-40 md:mb-60 mx-auto"
+        className="u-bottun-md u-fade-in mt-10 md:mt-16 mb-40 md:mb-60 mx-auto"
       />
     </>
   );

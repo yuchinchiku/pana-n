@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 };
 
 const pageItems = [
-  { href: 'healing', img: 'healing', title: 'パナ・ンの癒し', titleEn: 'pana-n’s healing' },
-  { href: 'healing/original', img: 'healing', title: 'パナ・ン流 独自メニュー', titleEn: 'pana-n’s original menu' }
+  { href: '/story', img: 'story', title: 'パナ・ンの物語', titleEn: 'pana-n’s story' },
+  { href: '/healing/original', img: 'healing', title: 'パナ・ンの独自メニュー', titleEn: 'pana-n’s original menu' }
 ];
 
 

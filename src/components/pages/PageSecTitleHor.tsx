@@ -9,7 +9,7 @@ interface PageSecTitleHorProps {
 
 export default function PageSecTitleHor({ mainTitleSmall, mainTitle, subTitle }: PageSecTitleHorProps) {
   return (
-    <div className='u-PageSecTitleHor-section mb-10 px-5 md:px-0'>
+    <div className='u-PageSecTitleHor-section u-fade-in mb-10 px-5 md:px-0'>
       <div className='u-PageSecTitleHor-wrapper flex items-center gap-4 md:gap-6'>
         <div className='flex items-center gap-2 md:gap-4 flex-shrink-0'>
           <i className="block w-3 h-3 md:w-4 md:h-5">

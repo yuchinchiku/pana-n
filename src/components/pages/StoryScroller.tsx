@@ -160,11 +160,11 @@ export default function StoryScroller({ stories, intro }: Props) {
               )}
             </div>
             <div className="max-w-[651px] px-5 md:px-0">
-              <h2 className="u-storyTitle max-w-[561px] shippori text-2xl md:text-4xl leading-[160%] md:leading-[160%] mb-4 md:mb-14 mt-0">
+              <h2 className="u-storyTitle u-fade-in max-w-[561px] shippori text-2xl md:text-4xl leading-[160%] md:leading-[160%] mb-4 md:mb-14 mt-0">
                 {s.title}
               </h2>
               <div
-                className="u-storyText max-w-[461px] shippori md:text-lg font-medium leading-[180%] md:leading-[180%] md:pl-24"
+                className="u-storyText u-fade-in max-w-[461px] shippori md:text-lg font-medium leading-[180%] md:leading-[180%] md:pl-24"
                 dangerouslySetInnerHTML={{ __html: s.desc }}
               />
             </div>
