@@ -38,8 +38,8 @@ const StoryList = [
 ]
 
 const pageItems = [
-  { href: 'healing', img: 'healing', title: 'パナ・ンの癒し', titleEn: 'pana-n’s healing' },
-  { href: 'healing/original', img: 'healing', title: 'パナ・ン流 独自メニュー', titleEn: 'pana-n’s original menu' }
+  { href: '/healing', img: 'healing', title: 'パナ・ンの癒し', titleEn: 'pana-n’s healing' },
+  { href: '/healing/original', img: 'healing', title: 'パナ・ンの独自メニュー', titleEn: 'pana-n’s original menu' }
 ];
 
 export default function StoryPage() {
@@ -62,7 +62,7 @@ export default function StoryPage() {
           <li
             key={item.href}
             className={`
-              u-storyList-item mt-14 ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
+              u-storyList-item u-fade-in mt-14 ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
               ${index == 0 ? 'md:mt-0' : ''}
               ${index % 2 === 0 ? 'md:ml-0 md:mr-auto' : 'ml-auto mr-0'}
               ${index !== 0 && index!==2 ? 'md:-mt-[320px]' : ''}

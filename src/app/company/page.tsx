@@ -31,7 +31,7 @@ export default function CompanyPage() {
       <div className="u-companyWrapper max-w-[1020px] md:w-[82.3%] px-5 md:px-0 mx-auto mb-20 md:mb-40">
         <ol className="w-full mt-10">
           {company.table.map((row: Company["table"][number], idx: number) => (
-            <li key={idx} className="md:flex gap-4 md:gap-6 border-b border-pana-gray02 py-4">
+            <li key={idx} className="u-fade-in md:flex gap-4 md:gap-6 border-b border-pana-gray02 py-4">
               <p className="shippori text-white text-center font-medium w-[140px] h-8 md:h-10 flex-shrink-0 bg-pana pt-[1px] md:py-1 mb-2 md:mb-0">
                 {row.label}
               </p>

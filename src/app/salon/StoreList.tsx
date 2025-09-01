@@ -14,7 +14,7 @@ export default function StoreList({ stores }: Props) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 md:gap-x-6 gap-y-6 md:gap-y-10 items-start justify-center">
       {stores.map((store, idx) => (
-        <Link href={`/salon/${store.href}`} key={idx} className="u-store-link">
+        <Link href={`/salon/${store.href}`} key={idx} className="u-store-link u-fade-in">
           <div className="u-store-thumb relative w-full aspect-[16/10] overflow-hidden">
             <Image
               src={`/images/salon/thumb_${store.image}.jpg`}

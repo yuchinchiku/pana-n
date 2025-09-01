@@ -26,7 +26,7 @@ export default function SalonPage() {
       <PageHero title="パナ・ンの店舗" subTitle="salon line-up" />
       <PageIntro
         lead="琉球の息吹が満ちる、癒しの場所"
-        subLead="pana-n’s original treatments at each location"
+        subLead="Ryukyu’s Spirit, a Place of Healing."
         desc={
           `<p>パナ・ンの店舗は、ただ癒しを提供する場所ではありません。</p>
           <p>島々の豊かな自然と、琉球に息づく先人たちの知恵と祈りに包まれた、静かであたたかな空間です。</p>

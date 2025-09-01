@@ -11,7 +11,7 @@ export default function FooterCV() {
 
   return (
     <div
-      className={`u-footerCv u-fade-in relative h-[250px] md:h-[377px] bg-white z-10 px-5 md:pr-20 md:pl-[185px] 
+      className={`u-footerCv relative h-[250px] md:h-[377px] bg-white z-10 px-5 md:pr-20 md:pl-[185px] 
         ${isTop ? 'w-full' : 'mx-auto'}`}
     >
       <Link href="/" className={`u-footerCv-link u-link-blank flex items-center h-[250px] md:h-[377px]

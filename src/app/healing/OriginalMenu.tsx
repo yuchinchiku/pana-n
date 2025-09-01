@@ -40,7 +40,7 @@ export default function OriginalMenu() {
       {sectionsData.map((section) => (
         <li
           key={section.id}
-          className="md:w-[33%] pb-10 md:pb-0"
+          className="u-fade-in md:w-[33%] pb-10 md:pb-0"
         >
           <div className="w-full h-[250px] md:h-[450px] relative">
             <Image

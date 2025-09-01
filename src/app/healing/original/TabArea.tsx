@@ -35,7 +35,7 @@ export default function TabArea() {
   return (
     <div className="space-y-16">
       {/* アンカーボタン */}
-      <div className="flex justify-center flex-wrap md:flex-nowrap gap-3 md:gap-6 mt-10 md:mt-0 px-5 md:px-0">
+      <div className="u-fade-in flex justify-center flex-wrap md:flex-nowrap gap-3 md:gap-6 mt-10 md:mt-0 px-5 md:px-0">
         {tabsAreas.map((area, i) => (
           <button
             key={i}
@@ -56,7 +56,7 @@ export default function TabArea() {
           <div
             key={areaIndex}
             ref={(el) => { areaRefs.current[areaIndex] = el; }}
-            className="px-5 md:px-6"
+            className="u-fade-in px-5 md:px-6"
           >
             <PageSecTitle mainTitle={area.areaTitle} subTitle={area.areaTitleEn} />
 

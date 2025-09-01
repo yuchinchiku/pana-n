@@ -11,7 +11,7 @@ export default function StoreInfo({ store }: Props) {
     <section className="max-w-[1020px] md:w-[82.3%] md:ml-[15%] md:mr-[9%]">
       <PageSecTitleHor mainTitle="店舗情報" subTitle="salon info" />
       <div className="md:ml-[8%] px-5 md:px-0">
-        <div className="w-full h-[250px] md:h-[450px]">
+        <div className="u-fade-in w-full h-[250px] md:h-[450px]">
           <iframe
             src={store.mapUrl}
             className="w-full h-full"
@@ -23,7 +23,7 @@ export default function StoreInfo({ store }: Props) {
 
         <ol className="w-full mt-10">
           {store.table.map((row, idx) => (
-            <li key={idx} className="md:flex gap-4 md:gap-6 border-b border-pana-gray02 py-4">
+            <li key={idx} className="u-fade-in md:flex gap-4 md:gap-6 border-b border-pana-gray02 py-4">
               <p className="shippori text-white text-center font-medium w-[140px] h-8 md:h-10 flex-shrink-0 bg-pana pt-[1px] md:py-1 mb-2 md:mb-0">
                 {row.label}
               </p>

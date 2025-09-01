@@ -68,7 +68,7 @@ const nuchi: Nuchi[] = [
 export default function Nuchigusui() {
 
   return (
-    <div className='u-SliderNuchigusui relative pl-5 md:pl-6 overflow-visible'>
+    <div className='u-SliderNuchigusui u-fade-in relative pl-5 md:pl-6 overflow-visible'>
       <Swiper
         modules={[Autoplay, Pagination]}
         loop

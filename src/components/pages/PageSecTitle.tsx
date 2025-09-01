@@ -10,7 +10,7 @@ interface PageSecTitleProps {
 
 export default function PageSecTitle({ mainTitleSmall, mainTitle, subTitle, desc }: PageSecTitleProps) {
   return (
-    <div className='u-pageSecTitle-section mb-10 md:mb-20'>
+    <div className='u-pageSecTitle-section u-fade-in mb-10 md:mb-20'>
       <div className='u-pageSecTitle-wrapper text-center'>
         <i className="block mx-auto mb-2 w-3 h-3 md:w-4 md:h-5">
           <Pana color='#00B0C7' className="w-3 h-3 md:w-5 md:h-5" />

@@ -118,12 +118,12 @@ export default function Story() {
             />
           </div>
           <div className="u-kodawari-textArea w-full bg-white px-10 py-10 md:flex-shrink-0 md:w-[55.5%] md:pt-20 md:py-0">
-            <div className="u-kodawariHead">
+            <div className="u-kodawariHead u-fade-in">
               <p className="shippori font-medium md:text-lg">#{section.number}のこだわり</p>
               <h3 className="shippori font-medium text-xl md:text-2xl py-2">{section.title}</h3>
               <p className="garamond md:text-lg">{section.subtitle}</p>
             </div>
-            <div className="shippori font-medium text-base leading-[180%] pt-2 md:pt-8 md:pr-[20%]">
+            <div className="u-fade-in shippori font-medium text-base leading-[180%] pt-2 md:pt-8 md:pr-[20%]">
               {section.texts.map((text, idx) => (
                 <p key={idx} className='pb-4'>{text}</p>
               ))}

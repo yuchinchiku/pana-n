@@ -17,7 +17,7 @@ export default function StoreGallery({ store }: Props) {
           const heightClass = img.type === "portrait" ? "h-[291px] md:h-[587px]" : "h-[190px] md:h-[418px]";
 
           return (
-            <div key={idx} className={`relative ${widthClass} ${heightClass} ${img.className}`}>
+            <div key={idx} className={`relative u-fade-in ${widthClass} ${heightClass} ${img.className}`}>
               <Image
                 src={`/images/salon/${store.id}/${img.src}`}
                 alt={`gallery-${idx}`}

@@ -11,6 +11,7 @@ import StoreGallery from "@/components/pages/StoreGallery";
 import StoreList from "@/app/salon/StoreList";
 import ButtonBack from '@/components/ButtonBack';
 import { stores } from "@/data/stores";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 
 import '@/styles/pages/salon/salonDetails.scss';
@@ -39,6 +40,7 @@ export default async function StoreDetailPage({ params }: Props) {
 
   return (
     <div className={`u-${id} u-pageSalonDetails md:ml-[185px] md:mr-20`}>
+      <ScrollAnimation />
       <PageHeroHor title={store.title} subTitle={store.subTitle} />
       <PageIntro lead={store.lead} subLead={store.subLead} desc={store.desc} />
       {store.notify && <Notify title={store.notify.title} desc={store.notify.desc} />}
@@ -58,7 +60,7 @@ export default async function StoreDetailPage({ params }: Props) {
       <ButtonBack
         href="/salon"
         text="店舗一覧へ"
-        className="u-bottun-md mt-10 md:mt-16 mb-32 md:mb-60 mx-auto"
+        className="u-bottun-md u-fade-in mt-10 md:mt-16 mb-32 md:mb-60 mx-auto"
       />
     </div>
   );
