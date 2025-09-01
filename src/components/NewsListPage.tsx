@@ -42,7 +42,7 @@ export default function NewsListClient({ perPage = 10 }: { perPage?: number }) {
 
       try {
         const res = await fetch(
-          `https://puputito.jp/pana-n/wp-json/wp/v2/news?_embed&per_page=${perPage}&page=${page}&orderby=date&order=desc`,
+          `https://pn.konety.jp/wp-json/wp/v2/news?_embed&per_page=${perPage}&page=${page}&orderby=date&order=desc`,
           { cache: 'no-store' }
         );
 

@@ -10,7 +10,7 @@ type WPNews = {
 
 async function fetchLatestNews(limit: number = 5): Promise<WPNews[]> {
   const res = await fetch(
-    `https://puputito.jp/pana-n/wp-json/wp/v2/news?_embed&per_page=${limit}&orderby=date&order=desc`,
+    `https://pn.konety.jp/wp-json/wp/v2/news?_embed&per_page=${limit}&orderby=date&order=desc`,
     { cache: 'no-store' }
   );
   if (!res.ok) return [];

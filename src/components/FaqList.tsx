@@ -28,7 +28,7 @@ export default function FaqList({ variant = 'sub' }: Props) {
           </div>
           <div className="flex justify-start align-top gap-3 md:gap-4">
             <p className="text-2xl flex-shrink-0">A</p>
-            <p
+            <div
               className="shippori font-medium pt-1"
               dangerouslySetInnerHTML={{ __html: item.answer }}
             />

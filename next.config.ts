@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['puputito.jp'], // ここに外部画像のドメインを追加
+    domains: ['pn.konety.jp'], // ここに外部画像のドメインを追加
   },
 };
 
