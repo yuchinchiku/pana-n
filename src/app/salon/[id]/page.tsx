@@ -1,7 +1,6 @@
 // src/app/salon/[id]/page.tsx
 import type { Metadata } from "next";
 import { storeDetails } from "@/data/storeDetails";
-import PageHeroHor from "@/components/pages/PageHeroHor";
 import PageSecTitleHor from "@/components/pages/PageSecTitleHor";
 import PageIntro from "@/components/pages/PageIntro";
 import Notify from "@/components/pages/Notify";
@@ -12,7 +11,7 @@ import StoreList from "@/app/salon/StoreList";
 import ButtonBack from '@/components/ButtonBack';
 import { stores } from "@/data/stores";
 import ScrollAnimation from "@/components/ScrollAnimation";
-import PageTransitionFog from '@/components/PageTransitionFog';
+import HeroSection from './HeroSection';
 
 
 import '@/styles/pages/salon/salonDetails.scss';
@@ -41,9 +40,8 @@ export default async function StoreDetailPage({ params }: Props) {
 
   return (
     <div className={`u-${id} u-pageSalonDetails md:ml-[185px] md:mr-20`}>
-      <PageTransitionFog />
       <ScrollAnimation />
-      <PageHeroHor title={store.title} subTitle={store.subTitle} />
+      <HeroSection title={store.title} subTitle={store.subTitle} />
       <PageIntro lead={store.lead} subLead={store.subLead} desc={store.desc} />
       {store.notify && <Notify title={store.notify.title} desc={store.notify.desc} />}
       <StoreInfo store={store} />

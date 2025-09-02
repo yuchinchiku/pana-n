@@ -2,10 +2,9 @@
 // src/app/salon/page.tsx (Server Component)
 import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
-import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
 import FaqList from '@/components/FaqList';
-import PageTransitionFog from '@/components/PageTransitionFog';
+import HeroSection from './HeroSection';
 import '@/styles/pages/faq/faq.scss';
 import '@/styles/component/button.scss';
 
@@ -18,9 +17,8 @@ export default function FaqPage() {
 
   return (
     <div className='u-pageFaq md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
-      <PageHero title="よくある質問" subTitle="faq" />
+      <HeroSection />
       <PageIntro
         lead="石垣島から始まり、琉球の癒しの知恵を日常へ。<br>よくあるご質問にお答えします。"
         subLead="From Ishigaki Island, bringing Ryukyu’s wisdom of healing to your everyday life."

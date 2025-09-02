@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
 import Button from '@/components/Button';
-import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
 import PageSecTitle from '@/components/pages/PageSecTitle';
 import KodawariScroller from '@/app/healing/KodawariScroller';
@@ -9,7 +8,7 @@ import OriginalMenu from '@/app/healing/OriginalMenu';
 import Nuchigusui from '@/app/healing/Nuchigusui';
 import PageLearn from '@/components/pages/PageLearn';
 import PageStoreSlider from '@/components/pages/PageStoreSlider'
-import PageTransitionFog from '@/components/PageTransitionFog';
+import HeroSection from './HeroSection';
 import '@/styles/pages/healing/healing.scss';
 import '@/styles/component/button.scss';
 
@@ -27,9 +26,8 @@ const pageItems = [
 export default function HealingPage() {
   return (
     <div className='u-pageHealing md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
-      <PageHero title="パナ・ンの癒し" subTitle="pana-n’s healing" />
+      <HeroSection />
       <PageIntro
         lead="本当の意味での「癒し」とは？"
         subLead="What is a “true healing”?"

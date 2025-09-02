@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
 import ButtonBack from '@/components/ButtonBack';
-import PageHero from '@/components/pages/PageHero';
 import NewsListPage from '@/components/NewsListPage';
-import PageTransitionFog from '@/components/PageTransitionFog';
+import HeroSection from './HeroSection';
 import '@/styles/pages/news/news.scss';
 import '@/styles/component/button.scss';
 
@@ -15,9 +14,8 @@ export const metadata: Metadata = {
 export default function NewsPage() {
   return (
     <div className='u-pageNews md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
-      <PageHero title="お知らせ" subTitle="news" />
+      <HeroSection />
       <NewsListPage />
       {/* <ButtonBack
         href="/"
