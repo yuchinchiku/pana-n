@@ -10,7 +10,7 @@ import News from "@/components/top/News";
 export default function Home() {
   return (
     <>
-      <LoadingOverlay /> {/* ← クライアントコンポーネントとして呼び出し */}
+      <LoadingOverlay />
       <ScrollAnimation />
       <Hero />
       <Intro />

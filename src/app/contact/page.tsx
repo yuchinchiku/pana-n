@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import PageHero from '@/components/pages/PageHero';
+import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/contact/contact.scss';
 import '@/styles/component/button.scss';
 
@@ -140,6 +141,7 @@ export default function ContactPage() {
 
   return (
     <div className="u-pageContact md:ml-[185px] md:mr-20">
+      <PageTransitionFog />
       <PageHero title="お問い合わせ" subTitle="contact" />
 
       <div className="u-pageContact-Desc md:text-center max-w-4xl md:w-[82.3%] mx-auto mt-10 md:mt-20 px-10">

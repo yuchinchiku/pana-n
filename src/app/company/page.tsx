@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
 import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
+import PageTransitionFog from '@/components/PageTransitionFog';
 import { company } from "@/data/company";
 import type { Company } from "@/data/company";
 import '@/styles/pages/company/company.scss';
@@ -17,6 +18,7 @@ export default function CompanyPage() {
 
   return (
     <div className='u-pageCompany md:ml-[185px] md:mr-20'>
+      <PageTransitionFog />
       <ScrollAnimation />
       <PageHero title="会社概要" subTitle="company" />
       <PageIntro

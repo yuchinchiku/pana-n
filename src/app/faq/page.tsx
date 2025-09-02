@@ -5,6 +5,7 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
 import FaqList from '@/components/FaqList';
+import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/faq/faq.scss';
 import '@/styles/component/button.scss';
 
@@ -17,6 +18,7 @@ export default function FaqPage() {
 
   return (
     <div className='u-pageFaq md:ml-[185px] md:mr-20'>
+      <PageTransitionFog />
       <ScrollAnimation />
       <PageHero title="よくある質問" subTitle="faq" />
       <PageIntro

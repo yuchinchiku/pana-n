@@ -1,5 +1,6 @@
 // app/news/[slug]/page.tsx
 import { notFound } from 'next/navigation';
+import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/news/news.scss';
 
 type WPNews = {
@@ -34,6 +35,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
   return (
     <div className="u-news-detail md:ml-[185px] md:mr-10">
+      <PageTransitionFog />
       <div className="max-w-2xl mx-auto mt-24 md:mt-20 mb-20 px-5 md:px-0">
         <p className="garamond text-lg mb-1 md:mb-2">
           {new Date(news.date).toLocaleDateString('ja-JP')}

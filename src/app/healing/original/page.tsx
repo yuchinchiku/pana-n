@@ -4,6 +4,7 @@ import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
 import TabArea from '@/app/healing/original/TabArea';
 import PageLearn from '@/components/pages/PageLearn';
+import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/originalMenu/originalMenu.scss';
 import '@/styles/component/button.scss';
 
@@ -20,6 +21,7 @@ const pageItems = [
 export default function OriginalMenuPage() {
   return (
     <div className='u-pageOriginal md:ml-[185px] md:mr-20'>
+      <PageTransitionFog />
       <ScrollAnimation />
       <PageHero titleSmall="パナ・ンの" title="独自メニュー" subTitle="pana-n’s  original menu" />
       <PageIntro

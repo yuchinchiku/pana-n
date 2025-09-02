@@ -9,6 +9,7 @@ import OriginalMenu from '@/app/healing/OriginalMenu';
 import Nuchigusui from '@/app/healing/Nuchigusui';
 import PageLearn from '@/components/pages/PageLearn';
 import PageStoreSlider from '@/components/pages/PageStoreSlider'
+import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/healing/healing.scss';
 import '@/styles/component/button.scss';
 
@@ -26,6 +27,7 @@ const pageItems = [
 export default function HealingPage() {
   return (
     <div className='u-pageHealing md:ml-[185px] md:mr-20'>
+      <PageTransitionFog />
       <ScrollAnimation />
       <PageHero title="パナ・ンの癒し" subTitle="pana-n’s healing" />
       <PageIntro

@@ -3,6 +3,7 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import StoryScroller from '@/components/pages/StoryScroller';
 import PageIntro from '@/components/pages/PageIntro';
 import StoryNext from '@/components/pages/StoryNext';
+import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/story/story.scss';
 
 export const metadata: Metadata = {
@@ -65,6 +66,7 @@ const StoryList: Story[] = [
 export default function StoryLayout() {
   return (
     <div className='md:ml-[185px] md:mr-20'>
+      <PageTransitionFog />
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <PageIntro

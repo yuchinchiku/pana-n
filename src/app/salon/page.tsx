@@ -6,6 +6,7 @@ import PageIntro from '@/components/pages/PageIntro';
 import PageSecTitle from '@/components/pages/PageSecTitle';
 import StoreList from "@/app/salon/StoreList";
 import { stores } from "@/data/stores";
+import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/salon/salon.scss';
 import '@/styles/component/button.scss';
 
@@ -22,6 +23,7 @@ export default function SalonPage() {
 
   return (
     <div className='u-pageSalon md:ml-[185px] md:mr-20'>
+      <PageTransitionFog />
       <ScrollAnimation />
       <PageHero title="パナ・ンの店舗" subTitle="salon line-up" />
       <PageIntro

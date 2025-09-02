@@ -12,6 +12,7 @@ import StoreList from "@/app/salon/StoreList";
 import ButtonBack from '@/components/ButtonBack';
 import { stores } from "@/data/stores";
 import ScrollAnimation from "@/components/ScrollAnimation";
+import PageTransitionFog from '@/components/PageTransitionFog';
 
 
 import '@/styles/pages/salon/salonDetails.scss';
@@ -40,6 +41,7 @@ export default async function StoreDetailPage({ params }: Props) {
 
   return (
     <div className={`u-${id} u-pageSalonDetails md:ml-[185px] md:mr-20`}>
+      <PageTransitionFog />
       <ScrollAnimation />
       <PageHeroHor title={store.title} subTitle={store.subTitle} />
       <PageIntro lead={store.lead} subLead={store.subLead} desc={store.desc} />
