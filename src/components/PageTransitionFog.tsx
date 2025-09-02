@@ -3,6 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+type PageTransitionFogProps = {
+  setShowHeroText?: (v: boolean) => void;
+};
+
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -16,18 +20,23 @@ function useIsMobile() {
   return isMobile;
 }
 
-export default function PageTransitionFog() {
+export default function PageTransitionFog({ setShowHeroText }: PageTransitionFogProps) {
   const pathname = usePathname();
   const [isAnimating, setIsAnimating] = useState(true);
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsAnimating(false), 2000); // ページ遷移後もゆったり表示
+    const timer = setTimeout(() => {
+      setIsAnimating(false);    // 霧を消す
+      setShowHeroText?.(true);    // 文字アニメ開始
+    }, 2000);
+
     return () => {
       setIsAnimating(true);
       clearTimeout(timer);
+      setShowHeroText?.(false);    // ページ切り替え時に文字もリセット
     };
-  }, [pathname]);
+  }, [pathname, setShowHeroText]);
 
   const baseStyle = {
     backgroundImage: 'url(/images/common/bg-fog-l.png)',
@@ -44,16 +53,13 @@ export default function PageTransitionFog() {
           initial={{ opacity: 0.6 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }} // exitゆったり
+          transition={{ duration: 1.5, ease: 'easeOut' }}
           className="fixed inset-0 z-50 pointer-events-none"
         >
           {/* レイヤー1 */}
           <motion.div
             className="absolute inset-0 scale-[2] md:scale-[1.3]"
-            style={{
-              ...baseStyle,
-              backgroundColor: 'rgba(255, 255, 255, 0.08)',
-            }}
+            style={{ ...baseStyle, backgroundColor: 'rgba(255,255,255,0.08)' }}
             initial={{ opacity: 1, x: isMobile ? '-2%' : '-0.5%' }}
             animate={{ opacity: 0.5, x: isMobile ? '2%' : '0.5%' }}
             exit={{ opacity: 0 }}
@@ -63,11 +69,7 @@ export default function PageTransitionFog() {
           {/* レイヤー2 */}
           <motion.div
             className="absolute inset-0 scale-[2] md:scale-[1.3]"
-            style={{
-              ...baseStyle,
-              filter: 'blur(8px)',
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-            }}
+            style={{ ...baseStyle, filter: 'blur(8px)', backgroundColor: 'rgba(255,255,255,0.05)' }}
             initial={{ opacity: 1, x: isMobile ? '-2%' : '-0.5%' }}
             animate={{ opacity: 0.3, x: isMobile ? '2%' : '0.5%' }}
             exit={{ opacity: 0 }}
@@ -77,24 +79,11 @@ export default function PageTransitionFog() {
           {/* レイヤー3（揺らめき） */}
           <motion.div
             className="absolute inset-0 scale-[2] md:scale-[1.3]"
-            style={{
-              ...baseStyle,
-              filter: 'blur(14px)',
-              backgroundColor: 'rgba(255, 255, 255, 0.03)',
-            }}
+            style={{ ...baseStyle, filter: 'blur(14px)', backgroundColor: 'rgba(255,255,255,0.03)' }}
             initial={{ opacity: 0.2, x: '-1%', y: '-0.5%' }}
-            animate={{
-              opacity: [0.2, 0.5, 0.3],
-              x: ['-1%', '1%', '-1%'],
-              y: ['-0.5%', '0.5%', '-0.5%'],
-            }}
+            animate={{ opacity: [0.2, 0.5, 0.3], x: ['-1%', '1%', '-1%'], y: ['-0.5%', '0.5%', '-0.5%'] }}
             exit={{ opacity: 0 }}
-            transition={{
-              duration: 12,
-              ease: 'easeInOut',
-              repeat: Infinity,
-              repeatType: 'mirror',
-            }}
+            transition={{ duration: 12, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
           />
 
           {/* SVG粒子ノイズレイヤー */}
@@ -108,12 +97,7 @@ export default function PageTransitionFog() {
             <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <filter id="fogParticles" x="0" y="0" width="100%" height="100%">
                 <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise">
-                  <animate
-                    attributeName="baseFrequency"
-                    dur="25s"
-                    values="0.05;0.06;0.05"
-                    repeatCount="indefinite"
-                  />
+                  <animate attributeName="baseFrequency" dur="25s" values="0.05;0.06;0.05" repeatCount="indefinite" />
                 </feTurbulence>
                 <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" xChannelSelector="R" yChannelSelector="G"/>
               </filter>

@@ -1,9 +1,8 @@
 // src/app/salon/page.tsx (Server Component)
 import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
-import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
-import PageTransitionFog from '@/components/PageTransitionFog';
+import HeroSection from './HeroSection';
 import { company } from "@/data/company";
 import type { Company } from "@/data/company";
 import '@/styles/pages/company/company.scss';
@@ -18,9 +17,8 @@ export default function CompanyPage() {
 
   return (
     <div className='u-pageCompany md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
-      <PageHero title="会社概要" subTitle="company" />
+      <HeroSection />
       <PageIntro
         lead="石垣島から始まり、琉球の心と技を世界へ。<br>癒しの文化を紡ぎ続ける私たちの物語。"
         subLead="From Ishigaki Island, sharing Ryukyu’s spirit and healing art with the world."

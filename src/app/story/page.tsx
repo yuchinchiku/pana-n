@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollAnimation from '@/components/ScrollAnimation';
-import PageTransitionFog from '@/components/PageTransitionFog';
-import PageHero from '@/components/pages/PageHero';
 import PageIntro from '@/components/pages/PageIntro';
 import PageLearn from '@/components/pages/PageLearn';
 import PageStoreSlider from '@/components/pages/PageStoreSlider'
+import StoryHeroSection from './HeroSection';
 import '@/styles/pages/story/story.scss';
 import '@/styles/component/button.scss';
 
@@ -14,7 +13,6 @@ export const metadata: Metadata = {
   title: "パナ・ンの物語 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
   description: "琉球の伝統と癒しを融合させたパナ・ンの物語。歴史や想いに触れながら、心と身体を解きほぐす特別な時間をご提供します。",
 };
-
 
 const StoryList = [
   { num: "1", href:"beginning", imageWidthPC: "498px", imageWidthSP: "335px", orientation : "horizontal",
@@ -46,9 +44,8 @@ const pageItems = [
 export default function StoryPage() {
   return (
     <div className='u-pageStory md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
-      <PageHero title="パナ・ンの物語" subTitle="pana-n’s story" />
+      <StoryHeroSection />
       <PageIntro
         lead="石垣島から世界へ、恩返しの思いを込めて"
         subLead="Started from Ishigaki Island to the world— with a spirit of “ongaeshi”."
