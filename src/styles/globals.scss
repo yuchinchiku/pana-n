@@ -24,6 +24,8 @@
 }
 
 html{
+  scrollbar-gutter: stable;
+
   &.js-open{
     overflow: hidden;
     touch-action: none;
