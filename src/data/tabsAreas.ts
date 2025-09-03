@@ -132,14 +132,16 @@ export const tabsAreas: TabAreaType[] = [
     ],
   },
   {
-    areaTitle: '街灯エリア',
-    areaTitleEn: '',
+    areaTitle: '美ら島コース',
+    areaTitleEn: 'chura-shima course',
     tabs: [
       {
-        title: 'タブ1-1',
-        titleEn: 'Tab 1-1',
-        lead: 'リード文1-1',
-        desc: '...', // 簡略化
+        title: '美ら島ボディパック',
+        titleEn: 'Blessed by Okinawa’s sun and sea — a treatment with island botanicals for radiant, nourished skin.',
+        lead: '沖縄の大自然が育んだ素材で、お肌に潤いと透明感を。',
+        desc: `<p class='pb-4'>太陽の恵みをたくさん含んだ植物と美しい珊瑚礁が広がる沖縄の海。</p>
+        <p class='pb-4'>それら大自然からの贈り物がパナ・ンこだわりの化粧材。</p>
+        <p>紫外線を浴びたお肌や日頃手の届きにくい箇所など、お身体全身に潤いを与え、健やかなお肌へと導きます。</p>`,
         descriptionImages: undefined,
         table: [
           {
@@ -149,12 +151,166 @@ export const tabsAreas: TabAreaType[] = [
             ],
           },
         ],
-        rightImages: ['r1-1.jpg', 'r1-2.jpg', 'r1-3.jpg'],
+        rightImages: ['chura-1_1', 'chura-1_2', 'chura-1_3'],
         tags: [
-          { text: 'タグA', color: 'bg-red-400' },
-          { text: 'タグB', color: 'bg-green-400' },
-          { text: 'タグC', color: 'bg-blue-400' },
-          { text: 'タグD', color: 'bg-yellow-400' },
+          { text: 'くすみ', color: 'bg-tag-pink' },
+          { text: 'シミ', color: 'bg-tag-pink' },
+          { text: '保湿', color: 'bg-tag-pink' },
+          { text: '美白', color: 'bg-tag-pink' },
+          { text: '毛穴の汚れ', color: 'bg-tag-pink' },
+        ],
+      },
+      {
+        title: '美ら島ボディスクラブ',
+        titleEn: 'Polished with Okinawan sea salt and coral calcium, revealing smooth, radiant skin.',
+        lead: '沖縄の海塩と珊瑚カルシウムで叶える、透明感あふれるなめらかな素肌へ。',
+        desc: `<p class='pb-4'>古い角質を取り除き、透明感のあるふわふわなお肌に導きます。</p>
+        <p>スクラブの程よいマッサージは血行を促進し、内側からのくすみ対策にもなります。</p>`,
+        descriptionImages: undefined,
+        table: [
+          {
+            label: '施術時間',
+            items: [
+              { value: '30分' },
+            ],
+          },
+        ],
+        rightImages: ['chura-2_1', 'chura-2_2', 'chura-2_3'],
+        tags: [
+          { text: 'くすみ', color: 'bg-tag-pink' },
+          { text: '角質肥厚', color: 'bg-tag-pink' },
+          { text: '老廃物', color: 'bg-tag-red' },
+          { text: '引き締め', color: 'bg-tag-red' },
+        ],
+      },
+      {
+        title: '美ら島フェイシャル（デコルテ付）',
+        titleEn: 'Okinawan botanicals and coral care for radiant, hydrated skin.',
+        lead: '琉球の自然素材でお顔とデコルテをケア。透明感と潤いに満ちた、美しく健やかな素肌へ。',
+        desc: `<p class='pb-4'>クレンジングからお顔＋デコルテのアロマオイルマッサージを行ったあと、珊瑚、ゴーヤー、黒糖、モズク、クチャ（琉球粘土）など、こだわりの琉球粧材にてパックいたします。</p>
+        <p>透明感のあるお肌、潤いのあるみずみずしいお肌、ハリのあるお肌、美白など様々な効果を与えてくれます。</p>`,
+        descriptionImages: undefined,
+        table: [
+          {
+            label: '施術時間',
+            items: [
+              { value: '45分' },
+            ],
+          },
+        ],
+        rightImages: ['chura-3_1', 'chura-3_2', 'chura-3_3'],
+        tags: [
+          { text: 'くすみ', color: 'bg-tag-pink' },
+          { text: 'シミ', color: 'bg-tag-pink' },
+          { text: '保湿', color: 'bg-tag-pink' },
+          { text: '美白', color: 'bg-tag-pink' },
+          { text: '毛穴の汚れ', color: 'bg-tag-pink' },
+        ],
+      },
+    ],
+  },
+  {
+    areaTitle: 'フットマッサージ',
+    areaTitleEn: 'foot massage',
+    tabs: [
+      {
+        title: '月桃リフレクソロジー',
+        titleEn: 'Step into lightness with shell ginger — Okinawa’s healing touch for your feet.',
+        lead: '沖縄の月桃アロマで、旅の疲れを癒し足元から軽やかに。',
+        desc: `<p class='pb-4'>沖縄に咲く月桃。</p>
+        <p>保湿と抗菌効果がある爽やかな香りのアロマオイルで膝下から足裏まで心地よくほぐします。</p>`,
+        descriptionImages: undefined,
+        table: [
+          {
+            label: '施術時間',
+            items: [
+              { value: '30分' },
+            ],
+          },
+        ],
+        rightImages: ['foot-1_1', 'foot-1_2', 'foot-1_3'],
+        tags: [
+          { text: 'むくみ', color: 'bg-tag-red' },
+          { text: '保湿', color: 'bg-tag-pink' },
+          { text: '代謝', color: 'bg-tag-green' },
+          { text: 'リラックス', color: 'bg-tag-blue' },
+        ],
+      },
+      {
+        title: '足浴',
+        titleEn: 'A soothing foot bath with Okinawa’s herbs, awamori, and coral salt.',
+        lead: '沖縄の薬草と泡盛、珊瑚の恵みで足元から整える癒しのひととき。',
+        desc: `<p>古来より長寿の薬草と言われる「長命草」や「月桃」、ぬちぐすい（命の薬）とも言われる「泡盛」を入れ足元を温めたあと、珊瑚カルシウムをブレンドした沖縄の塩でやさしく塩もみし、すべすべの素足へと導きます。</p>`,
+        descriptionImages: undefined,
+        table: [
+          {
+            label: '施術時間',
+            items: [
+              { value: '30分' },
+            ],
+          },
+        ],
+        rightImages: ['foot-2_1', 'foot-2_2', 'foot-2_3'],
+        tags: [
+          { text: 'むくみ', color: 'bg-tag-red' },
+          { text: '冷え性', color: 'bg-tag-red' },
+          { text: 'リラックス', color: 'bg-tag-blue' },
+        ],
+      },
+    ],
+  },
+  {
+    areaTitle: 'アロマ・タイ式',
+    areaTitleEn: 'aromatherapy / thai massage',
+    tabs: [
+      {
+        title: 'アロマオイルマッサージ',
+        titleEn: 'Relax and unwind — a gentle full-body massage with your choice of soothing oils.',
+        lead: '好みの香りに包まれ、全身を優しくほぐすスタンダードメニュー',
+        desc: `<p class='pb-4'>アロマオイルによる全身のマッサージで筋肉をやさしくほぐします。</p>
+        <p class='pb-4'>心身共にアロマの香りに包まれて夢心地に誘います。</p>
+        <p class='pb-4'>沖縄の人に昔から親しまれている月桃のアロマオイルやバリニーズオイルなど、多数のオイルからお好きな香りをお選びいただけます。</p>
+        <p>のんびりリラックスしたいという方のスタンダードメニューです。</p>`,
+        descriptionImages: undefined,
+        table: [
+          {
+            label: '施術時間',
+            items: [
+              { value: '30分' },
+              { value: '60分' },
+            ],
+          },
+        ],
+        rightImages: ['massage-1_1', 'massage-1_2', 'massage-1_3'],
+        tags: [
+          { text: '肩こり', color: 'bg-tag-green' },
+          { text: '全身の疲れ', color: 'bg-tag-green' },
+          { text: '保湿', color: 'bg-tag-pink' },
+          { text: 'リラックス', color: 'bg-tag-blue' },
+        ],
+      },
+      {
+        title: 'タイ式リラクゼーションマッサージ',
+        titleEn: 'Experience 2,500 years of wisdom — a dynamic blend of acupressure and stretching.',
+        lead: 'エネルギーラインを整え、ストレッチで全身を解きほぐす伝統の技。',
+        desc: `<p class='pb-4'>約2500年の歴史を持つタイ伝統のマッサージ。</p>
+        <p>体のエネルギーライン（セン）をマッサージで刺激し、程よいストレッチにより全身の筋肉をほぐし、血液とリンパの流れをスムーズにします。</p>`,
+        descriptionImages: undefined,
+        table: [
+          {
+            label: '施術時間',
+            items: [
+              { value: '30分' },
+              { value: '60分' },
+            ],
+          },
+        ],
+        rightImages: ['massage-2_1', 'massage-2_2', 'massage-2_3'],
+        tags: [
+          { text: '肩こり', color: 'bg-tag-green' },
+          { text: '全身の疲れ', color: 'bg-tag-green' },
+          { text: '代謝', color: 'bg-tag-green' },
+          { text: 'リラックス', color: 'bg-tag-blue' },
         ],
       },
     ],

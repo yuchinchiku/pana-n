@@ -23,7 +23,7 @@ export default function OriginalMenuPage() {
       <ScrollAnimation />
       <HeroSection />
       <PageIntro
-        lead="パナ・ンだけの特別な「パナ・ンのオリジナルメニュー」"
+        lead="パナ・ンだけの特別な<br />「パナ・ンの<br class='hidden md:block' />オリジナルメニュー」"
         subLead="pana-n’s original treatments at each location."
         desc={
           `<p>パナ・ンでは各店舗が持つ土地の個性を大切にし、<br class='hidden md:block' />その場所でしか味わえない特別な独自メニューをご用意しています。</p>
