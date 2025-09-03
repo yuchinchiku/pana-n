@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Pana } from '@/assets/icons/Pana';
 
 type PageHeroProps = {
-  title: string;          // <br> を含む文字列もOK
+  title: string;          // <br>, <span class="..."> を含む文字列OK
   titleSmall?: string;
   subTitle?: string;
   animate?: boolean;
@@ -22,19 +22,39 @@ const letterVariants = {
 };
 
 export default function PageHeroHor({ title, titleSmall, subTitle, animate = false }: PageHeroProps) {
-  // <br> タグ（属性付きも含む）を認識して JSX 配列に変換
+  // <br> と <span> を解析して JSX に変換
   const titleLetters = title
-    .split(/(<br\s*[^>]*>)/gi)
-    .flatMap((chunk) => {
+    .split(/(<br\s*[^>]*>|<span[^>]*>.*?<\/span>)/gi)
+    .flatMap((chunk, chunkIndex) => {
       if (/^<br/i.test(chunk)) {
-        // class 属性を抽出
+        // <br>
         const classMatch = chunk.match(/class=['"]([^'"]+)['"]/i);
-        return [<br key={Math.random()} className={classMatch ? classMatch[1] : undefined} />];
+        return [<br key={`br-${chunkIndex}`} className={classMatch ? classMatch[1] : undefined} />];
+      } else if (/^<span/i.test(chunk)) {
+        // <span> ... </span>
+        const classMatch = chunk.match(/class=['"]([^'"]+)['"]/i);
+        const innerText = chunk.replace(/<span[^>]*>|<\/span>/gi, '');
+        return [
+          <span key={`span-${chunkIndex}`} className={classMatch ? classMatch[1] : undefined}>
+            {innerText.split('').map((char, i) => (
+              <motion.span
+                key={`${chunkIndex}-${i}`}
+                custom={i + 1}
+                variants={letterVariants}
+                initial="hidden"
+                animate={animate ? 'visible' : 'hidden'}
+                className="inline-block"
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span>,
+        ];
       }
-      // 文字はアニメーション付き span に
+      // 通常文字
       return chunk.split('').map((char, i) => (
         <motion.span
-          key={i + chunk}
+          key={`${chunkIndex}-${i}`}
           custom={i + 1}
           variants={letterVariants}
           initial="hidden"
@@ -48,13 +68,13 @@ export default function PageHeroHor({ title, titleSmall, subTitle, animate = fal
 
   return (
     <div className="u-pageHero relative flex justify-start items-center w-full h-[350px] md:h-[450px] pt-10">
-      <div className='relative md:ml-[12%] md:mr-[9%] px-5 md:px-0'>
+      <div className="relative md:ml-[12%] md:mr-[9%] px-5 md:px-0">
         <h1 className="u-page-title u-page-title-hor text-white flex items-start md:items-center gap-4">
           <i className="block w-3 h-3 md:w-5 md:h-5 mt-7 md:mt-2">
             <Pana color="white" className="w-3 h-3 md:w-5 md:h-5" />
           </i>
 
-          <span className='shippori text-[32px] md:text-[40px] font-medium leading-[160%] md:leading-[180%]'>
+          <span className="shippori text-[32px] md:text-[40px] font-medium leading-[160%] md:leading-[180%]">
             {titleLetters}
           </span>
 
@@ -75,7 +95,7 @@ export default function PageHeroHor({ title, titleSmall, subTitle, animate = fal
             initial={{ opacity: 0, y: 10 }}
             animate={animate ? { opacity: 1, y: 0 } : { opacity: 0 }}
             transition={{ duration: 1 }}
-            className='u-page-subTitle garamond text-base md:text-xl text-white tracking-wider pl-8 md:pl-10'
+            className="u-page-subTitle garamond text-base md:text-xl text-white tracking-wider pl-8 md:pl-10"
           >
             {subTitle}
           </motion.p>

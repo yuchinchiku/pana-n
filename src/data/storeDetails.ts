@@ -123,6 +123,11 @@ export const storeDetails: StoreDetail[] = [
         ],
       },
     ],
+    gallery: [
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
+    ],
 
   },
 
@@ -192,6 +197,14 @@ export const storeDetails: StoreDetail[] = [
       title: "【改定のお知らせ】",
       desc: "2025年7月1日よりメニュー及び価格の見直しをさせていただきます。",
     },
+    gallery: [
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
+      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 md:-mt-40 md:mr-20 md:ml-10" },
+      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 md:mt-20 md:mr-0 md:ml-auto" },
+    ],
   },
 
   //=====ほぐしガッテン大森東口店（東京品川）===============================
@@ -221,7 +234,7 @@ export const storeDetails: StoreDetail[] = [
   //=====星のや沖縄スパ（星野リゾート星のや沖縄）===============================
   {
     id: "hoshino-okinawa",
-    title: "星のや沖縄スパ<span class='text-base'>（星野リゾート星のや沖縄）</span>",
+    title: "星のや沖縄スパ<span class='text-base md:text-xl block md:inline'>（星野リゾート星のや沖縄）</span>",
     name: "星のや沖縄スパ（星野リゾート星のや沖縄）",
     subTitle: "hoshino-okinawa",
     lead: "沖縄の自然に包まれ、心と体を整える特別なスパ体験。",
@@ -246,7 +259,7 @@ export const storeDetails: StoreDetail[] = [
   //=====星のや竹富島スパ（星野リゾート星のや竹富島）===============================
   {
     id: "hoshino-taketomi",
-    title: "星のや竹富島スパ<span class='text-base'>（星野リゾート星のや竹富島）</span>",
+    title: "星のや竹富島スパ<span class='text-base md:text-xl block md:inline'>（星野リゾート星のや竹富島）</span>",
     name: "星のや竹富島スパ（星野リゾート星のや竹富島）",
     subTitle: "hoshino-taketomi",
     lead: "竹富島の自然に包まれ、心と体を深くほぐす特別なスパ体験。",
@@ -264,12 +277,18 @@ export const storeDetails: StoreDetail[] = [
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
       { label: "ご予約詳細", items: [{ value: "<a href='https://hoshinoresorts.com/ja/hotels/hoshinoyataketomijima/activities/13939/' target='_blank' class='u-link-blank underline'>星のや竹富島スパ</a>" }] },
     ],
+    gallery: [
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
+    ],
   },
 
   //=====西表スパ（星野リゾート西表島ホテル）===============================
   {
     id: "hoshino-iriomote",
-    title: "西表スパ<span class='text-base'>（星野リゾート西表島ホテル）</span>",
+    title: "西表スパ<span class='text-base md:text-xl block md:inline'>（星野リゾート西表島ホテル）</span>",
     name: "西表スパ（星野リゾート西表島ホテル）",
     subTitle: "hoshino-iriomote",
     lead: "西表島の自然に包まれ、心と体を潤す極上のスパ体験。",
@@ -287,12 +306,18 @@ export const storeDetails: StoreDetail[] = [
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
       { label: "ご予約詳細", items: [{ value: "<a href='https://hoshinoresorts.com/ja/hotels/iriomote/sp/iriomotespa_/' target='_blank' class='u-link-blank underline'>西表スパ</a>" }] },
     ],
+    gallery: [
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
+    ],
   },
 
   //=====小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ===============================
   {
     id: "hoshino-kohama",
-    title: "小浜島琉球スパ<span class='text-base'>（星野リゾートリゾナーレ小浜島）</span>",
+    title: "小浜島琉球スパ<span class='text-base md:text-xl block md:inline'>（星野リゾートリゾナーレ小浜島）</span>",
     name: "小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ",
     subTitle: "hoshino-kohama",
     lead: "海に抱かれた小浜島で癒されて、安らぎに満ちたひととき。",
@@ -310,12 +335,20 @@ export const storeDetails: StoreDetail[] = [
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
       { label: "ご予約詳細", items: [{ value: "<a href='https://hoshinoresorts.com/ja/hotels/risonarekohamajima/sp/newspa/' target='_blank' class='u-link-blank underline'>リゾナーレ小浜島スパ</a>" }] },
     ],
+    gallery: [
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
+      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 md:-mt-40 md:mr-20 md:ml-10" },
+      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 md:mt-20 md:mr-0 md:ml-auto" },
+    ],
   },
 
   //=====琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）  ===============================
   {
     id: "fusaki",
-    title: "琉球足つぼ<span class='text-base'>（フサキビーチリゾートホテル＆ヴィラズ）</span>",
+    title: "琉球足つぼ<span class='text-base md:text-xl block md:inline'>（フサキビーチリゾートホテル＆ヴィラズ）</span>",
     name: "琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）",
     subTitle: "fusaki",
     lead: "オーガニック植物の香りに包まれ、心と体を整える贅沢なスパ体験。",

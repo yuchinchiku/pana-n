@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
 import StoryScroller from '@/components/pages/StoryScroller';
 import ButtonBack from '@/components/ButtonBack';
-import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/story/story.scss';
 import '@/styles/component/link.scss';
 
@@ -77,7 +76,6 @@ const StoryList: Story[] = [
 export default function StoryLayout() {
   return (
     <div className='md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <ButtonBack

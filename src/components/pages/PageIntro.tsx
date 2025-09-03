@@ -13,10 +13,10 @@ export default function PageIntro({
     <div className="u-pageIntro max-w-[1020px] md:w-[82.3%] md:ml-[12%] md:mr-[9%] px-[10.6%] md:px-0 pt-14 md:pt-20 md:pb-32">
       <div className="u-pageIntro-lead u-fade-in">
         <h2
-          className="shippori text-2xl md:text-[28px] leading-[180%] pb-2 md:pb-4"
+          className="shippori text-2xl md:text-[28px] leading-[180%] md:w-[40%] pb-2 md:pb-4"
           dangerouslySetInnerHTML={{ __html: lead }}
         ></h2>
-        {subLead && <p className="garamond text-lg md:text-xl">{subLead}</p>}
+        {subLead && <p className="garamond text-lg md:text-xl md:w-[40%]" dangerouslySetInnerHTML={{ __html: subLead }}></p>}
       </div>
 
       {desc && (

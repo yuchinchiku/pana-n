@@ -25,7 +25,7 @@ export default function SalonPage() {
       <ScrollAnimation />
       <StoryHeroSection />
       <PageIntro
-        lead="琉球の息吹が満ちる、癒しの場所"
+        lead="琉球の息吹が満ちる、<br class='hidden md:block'>癒しの場所"
         subLead="Ryukyu’s Spirit, a Place of Healing."
         desc={
           `<p>パナ・ンの店舗は、ただ癒しを提供する場所ではありません。</p>

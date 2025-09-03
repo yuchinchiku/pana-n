@@ -3,7 +3,6 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import StoryScroller from '@/components/pages/StoryScroller';
 import PageIntro from '@/components/pages/PageIntro';
 import StoryNext from '@/components/pages/StoryNext';
-import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/story/story.scss';
 
 export const metadata: Metadata = {
@@ -66,12 +65,11 @@ const StoryList: Story[] = [
 export default function StoryLayout() {
   return (
     <div className='md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <PageIntro
-        lead="パナ・ンで働く人々への恩返し　ゆいまーる"
-        subLead="Giving Back to the People Who Work at Pana-n – Yui Maaru."
+        lead="パナ・ンで働く人々への恩返し　 <br class='hidden md:block' />ゆいまーる"
+        subLead="Giving Back to the People Who Work at Pana-n <br class='hidden md:block' /> – Yui Maaru."
         desc={
           `<p>『みんなが喜ぶ笑顔のために』</p>
           <p>ーこの言葉は、パナ・ンを訪れるお客様だけでなく、ここで働く仲間たちへの思いも込められています。</p>

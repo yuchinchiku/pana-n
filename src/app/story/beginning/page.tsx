@@ -3,7 +3,6 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import StoryScroller from '@/components/pages/StoryScroller';
 import PageIntro from '@/components/pages/PageIntro';
 import StoryNext from '@/components/pages/StoryNext';
-import PageTransitionFog from '@/components/PageTransitionFog';
 import '@/styles/pages/story/story.scss';
 
 export const metadata: Metadata = {
@@ -63,12 +62,11 @@ const StoryList: Story[] = [
 export default function StoryLayout() {
   return (
     <div className='md:ml-[185px] md:mr-20'>
-      <PageTransitionFog />
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <PageIntro
-        lead="石垣から始まったパナ・ンの想い"
-        subLead="Born in Ishigaki Island, Pana-n’s journey of heartfelt intentions."
+        lead="石垣から始まった<br class='hidden md:block' />パナ・ンの想い"
+        subLead="Born in Ishigaki Island, <br class='hidden md:block' />Pana-n’s journey of heartfelt intentions."
         desc={
           `<p>2006年3月に石垣島で設立されたパナ・ン。</p>
           <p>尚巴志の時代から受け継がれた琉球王国の叡智と、<br class='hidden md:block' />

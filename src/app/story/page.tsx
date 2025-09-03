@@ -47,8 +47,8 @@ export default function StoryPage() {
       <ScrollAnimation />
       <StoryHeroSection />
       <PageIntro
-        lead="石垣島から世界へ、恩返しの思いを込めて"
-        subLead="Started from Ishigaki Island to the world— with a spirit of “ongaeshi”."
+        lead="石垣島から世界へ、<br class='hidden md:block' />恩返しの思いを込めて"
+        subLead="Started from Ishigaki Island to the world<br class='hidden md:block' />— with a spirit of “ongaeshi”."
         desc={
           `<p>沖縄を拠点に事業を展開する「パナ・ン」。</p>
           <p>2006年3月に設立された当社は、<br class='hidden md:block' />
