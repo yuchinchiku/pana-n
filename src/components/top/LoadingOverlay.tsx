@@ -17,7 +17,7 @@ export default function LoadingOverlay() {
 
   useEffect(() => {
     setMounted(true);
-    const isSP = window.innerWidth <= 768;
+    const isSP = window.innerWidth <= 1024;
 
     const textTimer = setTimeout(() => setShowCircle(true), 1000); // 文字が先に出るように短め
     const endTimer = setTimeout(
@@ -41,12 +41,12 @@ export default function LoadingOverlay() {
           transition={{ duration: 2 }}
         >
           {/* 文字は常に表示 */}
-          <div className="absolute z-20 u-hero-lead shippori text-xl text-white md:text-4xl">
+          <div className="absolute z-20 u-hero-lead shippori text-xl text-white lg:text-4xl">
             {loadingText.map((line, i) => (
               <motion.div
                 key={i}
                 className={`block mb-2 ${
-                  i === 1 ? "pl-6 md:pl-16" : i === 2 ? "pl-12 md:pl-32" : ""
+                  i === 1 ? "pl-6 lg:pl-16" : i === 2 ? "pl-12 lg:pl-32" : ""
                 }`}
                 initial="hidden"
                 animate="visible"

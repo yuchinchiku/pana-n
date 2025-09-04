@@ -67,14 +67,14 @@ export default function PageHeroHor({ title, titleSmall, subTitle, animate = fal
     });
 
   return (
-    <div className="u-pageHero relative flex justify-start items-center w-full h-[350px] md:h-[450px] pt-10">
-      <div className="relative md:ml-[12%] md:mr-[9%] px-5 md:px-0">
-        <h1 className="u-page-title u-page-title-hor text-white flex items-start md:items-center gap-4">
-          <i className="block w-3 h-3 md:w-5 md:h-5 mt-7 md:mt-2">
-            <Pana color="white" className="w-3 h-3 md:w-5 md:h-5" />
+    <div className="u-pageHero relative flex justify-start items-center w-full h-[350px] lg:h-[450px] pt-10">
+      <div className="relative lg:ml-[12%] lg:mr-[9%] px-5 lg:px-0">
+        <h1 className="u-page-title u-page-title-hor text-white flex items-start lg:items-center gap-4">
+          <i className="block w-3 h-3 lg:w-5 lg:h-5 mt-7 lg:mt-2">
+            <Pana color="white" className="w-3 h-3 lg:w-5 lg:h-5" />
           </i>
 
-          <span className="shippori text-[32px] md:text-[40px] font-medium leading-[160%] md:leading-[180%]">
+          <span className="shippori text-[32px] lg:text-[40px] font-medium leading-[160%] lg:leading-[180%]">
             {titleLetters}
           </span>
 
@@ -83,7 +83,7 @@ export default function PageHeroHor({ title, titleSmall, subTitle, animate = fal
               initial={{ opacity: 0, y: -10 }}
               animate={animate ? { opacity: 1, y: 0 } : { opacity: 0 }}
               transition={{ duration: 0.8 }}
-              className="block text-[20px] md:text-[24px] ml-3"
+              className="block text-[20px] lg:text-[24px] ml-3"
             >
               {titleSmall}
             </motion.span>
@@ -95,7 +95,7 @@ export default function PageHeroHor({ title, titleSmall, subTitle, animate = fal
             initial={{ opacity: 0, y: 10 }}
             animate={animate ? { opacity: 1, y: 0 } : { opacity: 0 }}
             transition={{ duration: 1 }}
-            className="u-page-subTitle garamond text-base md:text-xl text-white tracking-wider pl-8 md:pl-10"
+            className="u-page-subTitle garamond text-base lg:text-xl text-white tracking-wider pl-8 lg:pl-10"
           >
             {subTitle}
           </motion.p>

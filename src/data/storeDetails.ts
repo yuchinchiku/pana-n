@@ -124,8 +124,8 @@ export const storeDetails: StoreDetail[] = [
       },
     ],
     gallery: [
-      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
-      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
       { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
     ],
 
@@ -134,13 +134,13 @@ export const storeDetails: StoreDetail[] = [
   //=====ほぐしガッテン那覇久米店===============================
   {
     id: "hogushigatten-nahakume",
-    title: "ほぐしガッテン<br class='md:hidden'>那覇久米店",
+    title: "ほぐしガッテン<br class='lg:hidden'>那覇久米店",
     name: "ほぐしガッテン那覇久米店",
     subTitle: "hogushigatten-nahakume",
     lead: "歴史が息づく那覇久米で、訪れる人の内なる輝きを呼び覚ます",
     subLead: "Rediscover your inner light in historic Naha Kume.",
     desc: `
-      <p>1985年に石垣島で鍼灸マッサージ治療院を開院の後、<br class='hidden md:block'>以上地元企業として県内多数リゾートホテルや空港内のリラクゼーション業に携わる中、地域の皆様に感謝の気持ちで恩返しをしたいという想いで直営店の「ほぐしガッテン」が誕生しました。</p>
+      <p>1985年に石垣島で鍼灸マッサージ治療院を開院の後、<br class='hidden lg:block'>以上地元企業として県内多数リゾートホテルや空港内のリラクゼーション業に携わる中、地域の皆様に感謝の気持ちで恩返しをしたいという想いで直営店の「ほぐしガッテン」が誕生しました。</p>
       <p>本島第1号店となる「ほぐしガッテン那覇久米店」で出逢う皆様に「確かな高い技術力と最高品質の癒し」をご提供し、明日への活力へのお手伝いをして参ります。</p>
       <p>是非、至福のひとときをご堪能ください。</p>
     `,
@@ -159,12 +159,12 @@ export const storeDetails: StoreDetail[] = [
       desc: "2025年7月1日よりメニュー及び価格の見直しをさせていただきます。",
     },
     gallery: [
-      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
-      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
       { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
-      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
-      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 md:-mt-40 md:mr-20 md:ml-10" },
-      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 md:mt-20 md:mr-0 md:ml-auto" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 lg:mt-52 lg:mr-10 lg:ml-auto" },
+      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 lg:-mt-40 lg:mr-20 lg:ml-10" },
+      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 lg:mt-20 lg:mr-0 lg:ml-auto" },
     ],
 
   },
@@ -173,7 +173,7 @@ export const storeDetails: StoreDetail[] = [
   //=====ほぐしガッテン真栄里店 & パナ・ン琉球スパ===============================
   {
     id: "hogushigatten-maezato",
-    title: "ほぐしガッテン<br class='md:hidden'>真栄里店 & パナ・ン琉球スパ",
+    title: "ほぐしガッテン<br class='lg:hidden'>真栄里店 & パナ・ン琉球スパ",
     name: "ほぐしガッテン真栄里店 & パナ・ン琉球スパ",
     subTitle: "hogushigatten-maezato",
     lead: "石垣島真栄里で、訪れる人の心と体に深い安らぎを届ける",
@@ -268,19 +268,19 @@ export const storeDetails: StoreDetail[] = [
       },
     ],
     gallery: [
-      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
-      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
       { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
-      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
-      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 md:-mt-40 md:mr-20 md:ml-10" },
-      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 md:mt-20 md:mr-0 md:ml-auto" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 lg:mt-52 lg:mr-10 lg:ml-auto" },
+      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 lg:-mt-40 lg:mr-20 lg:ml-10" },
+      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 lg:mt-20 lg:mr-0 lg:ml-auto" },
     ],
   },
 
   //=====ほぐしガッテン大森東口店（東京品川）===============================
   {
     id: "hogushigatten-omori",
-    title: "ほぐしガッテン<br class='md:hidden'>大森東口店（東京品川）",
+    title: "ほぐしガッテン<br class='lg:hidden'>大森東口店（東京品川）",
     name: "ほぐしガッテン大森東口店（東京品川）",
     subTitle: "hogushigatten-omori",
     lead: "東京・大森で、唯一無二の癒し体験を。",
@@ -358,7 +358,7 @@ export const storeDetails: StoreDetail[] = [
   //=====星のや沖縄スパ（星野リゾート星のや沖縄）===============================
   {
     id: "hoshino-okinawa",
-    title: "星のや沖縄スパ<span class='text-base md:text-xl block md:inline'>（星野リゾート星のや沖縄）</span>",
+    title: "星のや沖縄スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾート星のや沖縄）</span>",
     name: "星のや沖縄スパ（星野リゾート星のや沖縄）",
     subTitle: "hoshino-okinawa",
     lead: "沖縄の自然に包まれ、心と体を整える特別なスパ体験。",
@@ -540,7 +540,7 @@ export const storeDetails: StoreDetail[] = [
   //=====星のや竹富島スパ（星野リゾート星のや竹富島）===============================
   {
     id: "hoshino-taketomi",
-    title: "星のや竹富島スパ<span class='text-base md:text-xl block md:inline'>（星野リゾート星のや竹富島）</span>",
+    title: "星のや竹富島スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾート星のや竹富島）</span>",
     name: "星のや竹富島スパ（星野リゾート星のや竹富島）",
     subTitle: "hoshino-taketomi",
     lead: "竹富島の自然に包まれ、心と体を深くほぐす特別なスパ体験。",
@@ -660,17 +660,17 @@ export const storeDetails: StoreDetail[] = [
       },
     ],
     gallery: [
-      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
-      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
       { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
-      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 lg:mt-52 lg:mr-10 lg:ml-auto" },
     ],
   },
 
   //=====西表スパ（星野リゾート西表島ホテル）===============================
   {
     id: "hoshino-iriomote",
-    title: "西表スパ<span class='text-base md:text-xl block md:inline'>（星野リゾート西表島ホテル）</span>",
+    title: "西表スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾート西表島ホテル）</span>",
     name: "西表スパ（星野リゾート西表島ホテル）",
     subTitle: "hoshino-iriomote",
     lead: "西表島の自然に包まれ、心と体を潤す極上のスパ体験。",
@@ -754,17 +754,17 @@ export const storeDetails: StoreDetail[] = [
       },
     ],
     gallery: [
-      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
-      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
       { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
-      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 lg:mt-52 lg:mr-10 lg:ml-auto" },
     ],
   },
 
   //=====小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ===============================
   {
     id: "hoshino-kohama",
-    title: "小浜島琉球スパ<span class='text-base md:text-xl block md:inline'>（星野リゾートリゾナーレ小浜島）</span>",
+    title: "小浜島琉球スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾートリゾナーレ小浜島）</span>",
     name: "小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ",
     subTitle: "hoshino-kohama",
     lead: "海に抱かれた小浜島で癒されて、安らぎに満ちたひととき。",
@@ -832,19 +832,19 @@ export const storeDetails: StoreDetail[] = [
       },
     ],
     gallery: [
-      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 md:mr-20 md:ml-10" },
-      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 md:mt-60 md:mr-0 md:ml-auto" },
+      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
       { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
-      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 md:mt-52 md:mr-10 md:ml-auto" },
-      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 md:-mt-40 md:mr-20 md:ml-10" },
-      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 md:mt-20 md:mr-0 md:ml-auto" },
+      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 lg:mt-52 lg:mr-10 lg:ml-auto" },
+      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 lg:-mt-40 lg:mr-20 lg:ml-10" },
+      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 lg:mt-20 lg:mr-0 lg:ml-auto" },
     ],
   },
 
   //=====琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）  ===============================
   {
     id: "fusaki",
-    title: "琉球足つぼ<span class='text-base md:text-xl block md:inline'>（フサキビーチリゾートホテル＆ヴィラズ）</span>",
+    title: "琉球足つぼ<span class='text-base lg:text-xl block lg:inline'>（フサキビーチリゾートホテル＆ヴィラズ）</span>",
     name: "琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）",
     subTitle: "fusaki",
     lead: "オーガニック植物の香りに包まれ、心と体を整える贅沢なスパ体験。",

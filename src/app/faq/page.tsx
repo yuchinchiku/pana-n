@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
 
   return (
-    <div className='u-pageFaq md:ml-[185px] md:mr-20'>
+    <div className='u-pageFaq lg:ml-[185px] lg:mr-20'>
       <ScrollAnimation />
       <HeroSection />
       <PageIntro

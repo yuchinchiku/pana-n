@@ -48,23 +48,23 @@ export default function PageHero({ title, titleSmall, subTitle, animate = false 
   };
 
   return (
-    <div className="u-pageHero relative flex justify-center w-full h-[350px] md:h-[450px] pt-10">
-      <h1 className="u-page-title relative text-white md:w-[76px] h-fit">
+    <div className="u-pageHero relative flex justify-center w-full h-[350px] lg:h-[450px] pt-10">
+      <h1 className="u-page-title relative text-white lg:w-[76px] h-fit">
         {/* Panaアイコンもタイトルと同じアニメーション */}
         <motion.i
-          className="block mx-auto mb-2 w-3 h-3 md:w-5 md:h-5 pl-2 md:pl-0"
+          className="block mx-auto mb-2 w-3 h-3 lg:w-5 lg:h-5 pl-2 lg:pl-0"
           variants={letterVariants}
           custom={0}                // 最初の要素として index=0
           initial="hidden"
           animate={animate ? "visible" : "hidden"}
         >
-          <Pana color="white" className="w-3 h-3 md:w-5 md:h-5" />
+          <Pana color="white" className="w-3 h-3 lg:w-5 lg:h-5" />
         </motion.i>
 
-        <span className="shippori text-[32px] md:text-[40px] font-medium leading-none writing-vertical pl-[18px] block">
+        <span className="shippori text-[32px] lg:text-[40px] font-medium leading-none writing-vertical pl-[18px] block">
           {titleSmall && (
             <motion.span
-              className="block text-[20px] md:text-[24px] ml-3"
+              className="block text-[20px] lg:text-[24px] ml-3"
               variants={letterVariants}
               custom={0}
               initial="hidden"
@@ -93,7 +93,7 @@ export default function PageHero({ title, titleSmall, subTitle, animate = false 
             variants={subTitleVariants}
             initial="hidden"
             animate={animate ? "visible" : "hidden"}
-            className="u-page-subTitle garamond text-base md:text-xl tracking-widest rotate-90 whitespace-nowrap absolute"
+            className="u-page-subTitle garamond text-base lg:text-xl tracking-widest rotate-90 whitespace-nowrap absolute"
           >
             {subTitle}
           </motion.span>

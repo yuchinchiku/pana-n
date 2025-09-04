@@ -37,13 +37,13 @@ export const tabsAreas: TabAreaType[] = [
     tabs: [
       //元祖琉球マッサージ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
       {
-        titleSmall: '元祖琉球<br class="md:hidden">マッサージ',
+        titleSmall: '元祖琉球<br class="lg:hidden">マッサージ',
         title: '「琉球ほぐし手（てぃ）」',
         titleEn: 'Experience the only one of its kind — the original Ryukyuan Massage, only at pana-n.',
         lead: '琉球の技と想いが融合したパナ・ンの独自技法',
         desc: `
-          <p class='pb-4'>琉球空手の「正拳」や「平拳」の「技」と、<br class="hidden md:block">
-          琉球・八重山舞踊に伝わるしなやかな「こねり手」の“手の舞”を融合させた、<br class="hidden md:block">
+          <p class='pb-4'>琉球空手の「正拳」や「平拳」の「技」と、<br class="hidden lg:block">
+          琉球・八重山舞踊に伝わるしなやかな「こねり手」の“手の舞”を融合させた、<br class="hidden lg:block">
           パナ・ン独自の技法「琉球ほぐし手（てぃ）」です。</p>
           <p class='pb-4'>イチャリバチョーデー（行き逢えば皆兄弟）の精神や、出会いを大切にする「ちむぐくる」の心、そして琉球文化と伝統を守り抜いてきた先人たちの想いが込められています。</p>
           <p class='pb-4'>凝り固まった肩・首・腰の筋肉にしっかりとアプローチしながらも、おもてなしの心を大切に、優しく深くほぐしていく特別な技術を世界で雄一できるのがパナ・ンが展開するほぐし店舗です。</p>
@@ -92,7 +92,7 @@ export const tabsAreas: TabAreaType[] = [
       {
         titleSmall: '（デコルテ付）',
         titleSub: '（デコルテ付）',
-        title: '琉球ヘッド<br class="md:hidden">マッサージ',
+        title: '琉球ヘッド<br class="lg:hidden">マッサージ',
         titleEn: 'Experience the Bliss of Ryukyuan Head & Décolleté Massage',
         lead: '琉球の癒しの知恵を生かし、頭から胸元までを優しくほぐす特別な手法。深いリラクゼーションと心地よい解放感をお届けします。',
         desc: `
@@ -112,7 +112,7 @@ export const tabsAreas: TabAreaType[] = [
 
       //ハイビスカスジャグジー＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
       {
-        title: 'ハイビスカス<br class="md:hidden">ジャグジー',
+        title: 'ハイビスカス<br class="lg:hidden">ジャグジー',
         titleEn: 'Immerse Yourself in the Luxury of a Hibiscus Jacuzzi Experience',
         lead: '沖縄の太陽を浴びて育ったハイビスカスの香りと効能が、心と体を優しく包み込みます。南国の自然に抱かれながら、至福のスパタイムをお楽しみください。',
         desc: `

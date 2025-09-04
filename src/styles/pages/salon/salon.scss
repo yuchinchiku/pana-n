@@ -2,7 +2,7 @@
   .u-page-subTitle{
     top: 90px;
     left: 22px;
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 1024px){
       top: 70px;
     }
   }
@@ -22,14 +22,14 @@
       display: block;
       background-color: rgba(29, 17, 18, 0.7);
     }
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: 1024px){
       background: url('/images/salon/hero_salon_pc.jpg') no-repeat center;
       background-size: cover;
     }
   }
   .u-button-store-pages{
     position: absolute;
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 1024px){
       position: relative;
       &::before{
         width: 32px;
@@ -43,7 +43,7 @@
     }
   }
   &:hover{
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 1024px) {
       .u-store-thumb{
         img{
           transform: scale(1.05);

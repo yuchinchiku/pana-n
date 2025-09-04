@@ -67,7 +67,7 @@ const StoryList: Story[] = [
 
 export default function StoryLayout() {
   return (
-    <div className='md:ml-[185px] md:mr-20'>
+    <div className='lg:ml-[185px] lg:mr-20'>
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <PageIntro

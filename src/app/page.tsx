@@ -16,7 +16,7 @@ export default function Home() {
       <Intro />
       <Story />
       <section
-        className="u-store-wrapper sec-black relative z-10 md:pb-24"
+        className="u-store-wrapper sec-black relative z-10 lg:pb-24"
         data-header-color="#fff"
       >
         <Store />

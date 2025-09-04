@@ -7,7 +7,7 @@ import '@/styles/pages/top/store.scss';
 export default function Store() {
   return (
       <div>
-        <div className='u-store-head flex flex-row-reverse md:block px-5 md:px-0'>
+        <div className='u-store-head flex flex-row-reverse lg:block px-5 lg:px-0'>
           <div className='u-store-titleArea pl-[80px]'>
             <SectionTitle
               mainTitle="パナ・ンの店舗"
@@ -20,22 +20,22 @@ export default function Store() {
               subTitleRightSP="-33px"
             />
           </div>
-          <div className="u-store-intro u-fade-in flex justify-center flex-row-reverse gap-3 md:gap-6 shippori text-base text-white md:text-lg font-medium tracking-[2px] mx-auto mb-5 md:mb-10 pt-24 md:pt-10">
+          <div className="u-store-intro u-fade-in flex justify-center flex-row-reverse gap-3 lg:gap-6 shippori text-base text-white lg:text-lg font-medium tracking-[2px] mx-auto mb-5 lg:mb-10 pt-24 lg:pt-10">
             <div className="u-store-textBlock writing-vertical">
               <p className='px-1'>パナ・ンの店舗は、</p>
               <p className='px-0'>
-                <span className='px-1 md:block'>ただ癒しを提供する</span>
-                <span className='px-1 md:block'>場所ではありません。</span>
+                <span className='px-1 lg:block'>ただ癒しを提供する</span>
+                <span className='px-1 lg:block'>場所ではありません。</span>
               </p>
             </div>
             <div className="u-store-textBlock writing-vertical">
               <p className='px-0'>
-                <span className='px-1 md:block'>島々の豊かな自然と、</span>
-                <span className='px-1 md:block'>琉球に息づく先人たちの</span>
+                <span className='px-1 lg:block'>島々の豊かな自然と、</span>
+                <span className='px-1 lg:block'>琉球に息づく先人たちの</span>
               </p>
               <p className='px-0'>
-                <span className='px-1 md:block'>知恵と祈りに包まれた、</span>
-                <span className='px-1 md:block'>静かであたたかな空間です。</span>
+                <span className='px-1 lg:block'>知恵と祈りに包まれた、</span>
+                <span className='px-1 lg:block'>静かであたたかな空間です。</span>
               </p>
             </div>
             <div className="u-store-textBlock writing-vertical">
@@ -44,12 +44,12 @@ export default function Store() {
             </div>
             <div className="u-store-textBlock writing-vertical">
               <p className='px-0'>
-                <span className='px-1 md:block'>この土地ならではの</span>
-                <span className='px-1 md:block'>エネルギーとともに、</span>
+                <span className='px-1 lg:block'>この土地ならではの</span>
+                <span className='px-1 lg:block'>エネルギーとともに、</span>
               </p>
               <p className='px-0'>
-                <span className='px-1 md:block'>あなたの内なる輝きを</span>
-                <span className='px-1 md:block'>そっと呼び覚まします。</span>
+                <span className='px-1 lg:block'>あなたの内なる輝きを</span>
+                <span className='px-1 lg:block'>そっと呼び覚まします。</span>
               </p>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Store() {
         <Button
           href="/salon"
           text="店舗一覧へ"
-          className="u-fade-in u-button-white text-white border-white mx-auto mt-16 md:mt-20"
+          className="u-fade-in u-button-white text-white border-white mx-auto mt-16 lg:mt-20"
         />
       </div>
   );

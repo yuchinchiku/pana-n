@@ -47,9 +47,9 @@ export default function NewsListClient({ perPage = 10 }: { perPage?: number }) {
   }, [page, perPage]);
 
   return (
-    <div className="news-list-page mx-auto mt-10 md:mt-20 mb-20 px-5 md:px-20">
+    <div className="news-list-page mx-auto mt-10 lg:mt-20 mb-20 px-5 lg:px-20">
       <ul
-        className={`u-newsList md:flex items-start justify-center flex-wrap gap-5 transition-opacity duration-500 ${
+        className={`u-newsList lg:flex items-start justify-center flex-wrap gap-5 transition-opacity duration-500 ${
           fade ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -59,17 +59,17 @@ export default function NewsListClient({ perPage = 10 }: { perPage?: number }) {
           newsList.map((news) => (
             <li
               key={news.id}
-              className="u-news-item py-3 w-full md:w-[45%] border-t border-pana-gray01"
+              className="u-news-item py-3 w-full lg:w-[45%] border-t border-pana-gray01"
             >
               <Link
                 href={`/news/${news.slug}`}
-                className="u-news-link u-textLink relative text-text-pana flex gap-2 md:gap-4 py-2"
+                className="u-news-link u-textLink relative text-text-pana flex gap-2 lg:gap-4 py-2"
               >
-                <p className="u-news-date h-[76px] md:h-[114px] shippori text-sm md:text-xl font-medium leading-relaxed md:leading-none py-1 md:py-4">
+                <p className="u-news-date h-[76px] lg:h-[114px] shippori text-sm lg:text-xl font-medium leading-relaxed lg:leading-none py-1 lg:py-4">
                   {news.date ? new Date(news.date).toLocaleDateString('ja-JP') : ''}
                 </p>
 
-                <div className="u-news-thumb relative w-[124px] h-[76px] md:w-[185px] md:h-[114px] overflow-hidden flex-shrink-0">
+                <div className="u-news-thumb relative w-[124px] h-[76px] lg:w-[185px] lg:h-[114px] overflow-hidden flex-shrink-0">
                   <Image
                     src={news.thumbnailUrl || DEFAULT_THUMBNAIL}
                     alt={news.title.rendered}
@@ -80,7 +80,7 @@ export default function NewsListClient({ perPage = 10 }: { perPage?: number }) {
                 </div>
 
                 <div>
-                  <p className="shippori md:text-lg font-medium leading-relaxed pr-2 md:pr-0 md:pt-4">
+                  <p className="shippori lg:text-lg font-medium leading-relaxed pr-2 lg:pr-0 lg:pt-4">
                     {news.title?.rendered || ''}
                   </p>
                 </div>

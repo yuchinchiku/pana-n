@@ -75,13 +75,13 @@ const StoryList: Story[] = [
 
 export default function StoryLayout() {
   return (
-    <div className='md:ml-[185px] md:mr-20'>
+    <div className='lg:ml-[185px] lg:mr-20'>
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <ButtonBack
         href="/story"
         text="物語一覧へ"
-        className="u-bottun-md mt-10 md:mt-16 mb-40 md:mb-60 mx-auto"
+        className="u-bottun-md mt-10 lg:mt-16 mb-40 lg:mb-60 mx-auto"
       />
       </div>
   );

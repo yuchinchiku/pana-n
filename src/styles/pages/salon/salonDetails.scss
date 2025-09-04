@@ -17,7 +17,7 @@
     .u-pageHero{
       background: url('/images/salon/hogushigatten-nahakume/hero_nahakume_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/hogushigatten-nahakume/hero_nahakume_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -27,7 +27,7 @@
     .u-pageHero{
       background: url('/images/salon/hogushigatten-maezato/hero_maezato_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/hogushigatten-maezato/hero_maezato_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -37,7 +37,7 @@
     .u-pageHero{
       background: url('/images/salon/hogushigatten-omori/hero_omori_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/hogushigatten-omori/hero_omori_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -47,7 +47,7 @@
     .u-pageHero{
       background: url('/images/salon/hoshino-taketomi/hero_taketomi_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/hoshino-taketomi/hero_taketomi_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -57,7 +57,7 @@
     .u-pageHero{
       background: url('/images/salon/hoshino-iriomote/hero_iriomote_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/hoshino-iriomote/hero_iriomote_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -67,7 +67,7 @@
     .u-pageHero{
       background: url('/images/salon/hoshino-kohama/hero_kohama_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/hoshino-kohama/hero_kohama_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -77,7 +77,7 @@
     .u-pageHero{
       background: url('/images/salon/fusaki/hero_fusaki_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/fusaki/hero_fusaki_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -87,7 +87,7 @@
     .u-pageHero{
       background: url('/images/salon/painushima/hero_painushima_sp.jpg') no-repeat center;
       background-size: cover;
-      @media screen and (min-width: 640px){
+      @media screen and (min-width: 1024px){
         background: url('/images/salon/painushima/hero_painushima_pc.jpg') no-repeat center;
         background-size: cover;
       }
@@ -99,12 +99,12 @@
   }
   .u-priceList{
     &:first-child{
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 1024px){
         padding: 0 0 16px;
       }
     }
     &:last-child{
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 1024px){
         padding: 16px 0 0;
       }
     }
@@ -115,7 +115,7 @@
       @media screen and (max-width: 1385px){
         padding: 0 16px;
       }
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 1024px){
         border-right: none;
         border-left: none;
         border-top: 1px dashed #8B8787;
@@ -128,7 +128,7 @@
     @media screen and (max-width: 1350px){
       display: block;
     }
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 1024px){
       display: flex;
     }
   }

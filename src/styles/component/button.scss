@@ -33,7 +33,7 @@
     z-index: 2;
   }
   &:hover{
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 1024px) {
       color: white;
       &::before{
         background-color: white;
@@ -48,7 +48,7 @@
       transition: color 0.6s ease-in-out;
     }
     &:hover{
-      @media screen and (min-width: 640px) {
+      @media screen and (min-width: 1024px) {
         .u-button-text{
           color: white;
         }
@@ -68,7 +68,7 @@
         background-color: white;
       }
       &:hover{
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 1024px) {
           .u-button-text{
             color: #1D1112;
           }
@@ -90,7 +90,7 @@
       background-color: white;
     }
     &:hover{
-      @media screen and (min-width: 640px) {
+      @media screen and (min-width: 1024px) {
         color: #1D1112;
         &::before{
           background-color: #1D1112;
@@ -105,7 +105,7 @@
     &::before{
       width: 32px;
       background-color: white;
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 1024px) {
         width: 12px;
       }
     }
@@ -123,7 +123,7 @@
         background-color: #1D1112;
       }
       &:hover{
-        @media screen and (min-width: 640px) {
+        @media screen and (min-width: 1024px) {
           .u-button-text{
             color: white;
           }
@@ -160,7 +160,7 @@
       transition: color 0.6s ease-in-out;
     }
     &:hover {
-      @media screen and (min-width: 640px) {
+      @media screen and (min-width: 1024px) {
         .u-button-text{
           color: white;
         }
@@ -183,7 +183,7 @@
 
 .u-store-link{
   &:hover{
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 1024px) {
       .u-button-store-pages{
         color: white;
         .u-button-text{
@@ -203,7 +203,7 @@
 .u-pageLearn-link,
 .u-storyNext{
   &:hover{
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 1024px) {
         .u-button{
           color: white;
           &::before{

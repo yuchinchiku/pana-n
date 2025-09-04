@@ -19,14 +19,14 @@ const pageItems = [
 
 export default function OriginalMenuPage() {
   return (
-    <div className='u-pageOriginal md:ml-[185px] md:mr-20'>
+    <div className='u-pageOriginal lg:ml-[185px] lg:mr-20'>
       <ScrollAnimation />
       <HeroSection />
       <PageIntro
-        lead="パナ・ンだけの特別な<br />「パナ・ンの<br class='hidden md:block' />オリジナルメニュー」"
+        lead="パナ・ンだけの特別な<br />「パナ・ンの<br class='hidden lg:block' />オリジナルメニュー」"
         subLead="pana-n’s original treatments at each location."
         desc={
-          `<p>パナ・ンでは各店舗が持つ土地の個性を大切にし、<br class='hidden md:block' />その場所でしか味わえない特別な独自メニューをご用意しています。</p>
+          `<p>パナ・ンでは各店舗が持つ土地の個性を大切にし、<br class='hidden lg:block' />その場所でしか味わえない特別な独自メニューをご用意しています。</p>
           <p>恩返しの想いで丁寧に磨き上げられた上質で贅沢なひととき。</p>
           <p>新しい癒しの体験をお楽しみください。</p>`}
       />

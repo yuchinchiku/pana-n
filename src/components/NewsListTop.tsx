@@ -30,12 +30,12 @@ export default async function NewsListTop() {
   return (
     <ul className="u-newsList u-fade-in pt-4 max-w-[603px]">
       {newsList.map(news => (
-        <li key={news.id} className="u-news-item py-2 md:py-3">
-          <Link href={`/news/${news.slug}`} className="u-news-link text-white block md:flex md:gap-6">
-            <p className="shippori text-sm font-medium leading-relaxed md:leading-none md:flex-shrink-0 md:min-w-[70px]">
+        <li key={news.id} className="u-news-item py-2 lg:py-3">
+          <Link href={`/news/${news.slug}`} className="u-news-link text-white block lg:flex lg:gap-6">
+            <p className="shippori text-sm font-medium leading-relaxed lg:leading-none lg:flex-shrink-0 lg:min-w-[70px]">
               {news.date ? new Date(news.date).toLocaleDateString('ja-JP') : ''}
             </p>
-            <p className="shippori font-medium leading-relaxed md:leading-none">
+            <p className="shippori font-medium leading-relaxed lg:leading-none">
               {news.title?.rendered || ''}
             </p>
           </Link>

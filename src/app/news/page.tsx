@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 
 export default function NewsPage() {
   return (
-    <div className='u-pageNews md:ml-[185px] md:mr-20'>
+    <div className='u-pageNews lg:ml-[185px] lg:mr-20'>
       <ScrollAnimation />
       <HeroSection />
       <NewsListPage />
       {/* <ButtonBack
         href="/"
         text="トップページへ"
-        className="u-bottun-md mt-10 md:mt-16 mb-40 md:mb-60 mx-auto"
+        className="u-bottun-md mt-10 lg:mt-16 mb-40 lg:mb-60 mx-auto"
       /> */}
     </div>
   );

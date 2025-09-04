@@ -1,6 +1,6 @@
 .u-header-logo svg path{
   transition: 4s ease-in-out;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1024px) {
     transition: 0.4s ease-in-out;
   }
 }
@@ -65,14 +65,14 @@
 
 .u-top{
   .u-nav-link{
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       color: white !important;
     }
   }
   .u-navIcon{
     &.js-open{
       span{
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 1024px) {
           background-color: white !important;
         }
       }
@@ -80,7 +80,7 @@
   }
   .js-open &{
     .u-header-logo svg path{
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 1024px) {
         fill: white !important;
       }
     }

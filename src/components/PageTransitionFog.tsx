@@ -10,7 +10,7 @@ type PageTransitionFogProps = {
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -96,7 +96,7 @@ export default function PageTransitionFog({ setShowHeroText }: PageTransitionFog
         >
           {/* レイヤー1 */}
           <motion.div
-            className="absolute inset-0 scale-[2] md:scale-[1.3]"
+            className="absolute inset-0 scale-[2] lg:scale-[1.3]"
             style={{ ...baseStyle, backgroundColor: 'rgba(255,255,255,0.08)' }}
             initial={{ opacity: 1, x: isMobile ? '-5%' : '-1%' }}
             animate={{ opacity: 0.5, x: isMobile ? '5%' : '1%' }}
@@ -105,7 +105,7 @@ export default function PageTransitionFog({ setShowHeroText }: PageTransitionFog
           />
           {/* レイヤー2 */}
           <motion.div
-            className="absolute inset-0 scale-[2] md:scale-[1.3]"
+            className="absolute inset-0 scale-[2] lg:scale-[1.3]"
             style={{ ...baseStyle, filter: 'blur(8px)', backgroundColor: 'rgba(255,255,255,0.05)' }}
             initial={{ opacity: 1, x: isMobile ? '-5%' : '-1%' }}
             animate={{ opacity: 0.3, x: isMobile ? '5%' : '1%' }}
@@ -114,7 +114,7 @@ export default function PageTransitionFog({ setShowHeroText }: PageTransitionFog
           />
           {/* レイヤー3（揺らめき） */}
           <motion.div
-            className="absolute inset-0 scale-[2] md:scale-[1.3]"
+            className="absolute inset-0 scale-[2] lg:scale-[1.3]"
             style={{ ...baseStyle, filter: 'blur(14px)', backgroundColor: 'rgba(255,255,255,0.03)' }}
             initial={{ opacity: 0.2, x: '-2%', y: '-1%' }}
             animate={{

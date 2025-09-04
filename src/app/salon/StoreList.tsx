@@ -12,7 +12,7 @@ export default function StoreList({ stores }: Props) {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 md:gap-x-6 gap-y-6 md:gap-y-10 items-start justify-center">
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-6 gap-y-6 lg:gap-y-10 items-start justify-center">
       {stores.map((store, idx) => (
         <Link href={`/salon/${store.href}`} key={idx} className="u-store-link u-fade-in">
           <div className="u-store-thumb relative w-full aspect-[16/10] overflow-hidden">
@@ -24,16 +24,16 @@ export default function StoreList({ stores }: Props) {
               sizes="(max-width: 768px) 280px, 384px"
             />
           </div>
-          <div className="u-store-text relative shippori font-medium text-left mt-2 md:mt-4 text-black">
+          <div className="u-store-text relative shippori font-medium text-left mt-2 lg:mt-4 text-black">
             <div className="min-h-[70px]">
-              <div className="u-store-textHead md:flex justify-between pl-2 md:pl-4 relative">
+              <div className="u-store-textHead lg:flex justify-between pl-2 lg:pl-4 relative">
                 <h3
-                  className="text-base md:text-lg"
+                  className="text-base lg:text-lg"
                   dangerouslySetInnerHTML={{ __html: store.cat }}
                 />
 
               </div>
-              <p className="text-sm block mt-[6px] md:mt-2 pl-2 md:pl-4">
+              <p className="text-sm block mt-[6px] lg:mt-2 pl-2 lg:pl-4">
                 {store.name}
               </p>
             </div>
@@ -45,7 +45,7 @@ export default function StoreList({ stores }: Props) {
                       e.preventDefault();
                       router.push(`/salon/${store.href}`);
                     }}
-                    className="u-button u-button-store u-button-store-pages text-left md:absolute md:top-0 md:right-4 w-[calc(100%-0.5rem)] max-w-[104px] h-[29px] border border-pana pt-[2px] pl-[4px] mt-4 md:mt-0 mx-auto md:mx-0"
+                    className="u-button u-button-store u-button-store-pages text-left lg:absolute lg:top-0 lg:right-4 w-[calc(100%-0.5rem)] max-w-[104px] h-[29px] border border-pana pt-[2px] pl-[4px] mt-4 lg:mt-0 mx-auto lg:mx-0"
                   >
                     <p className="u-button-text shippori font-medium text-sm">
                       店舗詳細

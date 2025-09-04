@@ -111,14 +111,14 @@ export default async function NewsDetailPage(props: Props) {
   const { prev, next } = findPrevNext(news.slug, allNews);
 
   return (
-    <div className="u-news-detail px-5 md:pr-20 md:pl-[185px]">
-      <div className="md:w-[90%] mx-auto mt-24 md:mt-20 mb-10 md:mb-20 px-5 md:px-20 py-8 md:py-20 u-bgPaper">
+    <div className="u-news-detail px-5 lg:pr-20 lg:pl-[185px]">
+      <div className="lg:w-[90%] mx-auto mt-24 lg:mt-20 mb-10 lg:mb-20 px-5 lg:px-20 py-8 lg:py-20 u-bgPaper">
         {/* ニュース本文 */}
         <div className='u-news-detail-head border-b border-pana-gray01 mb-10'>
-          <p className="garamond text-lg mb-1 md:mb-2 ml-2">
+          <p className="garamond text-lg mb-1 lg:mb-2 ml-2">
             {new Date(news.date).toLocaleDateString('ja-JP')}
           </p>
-          <h1 className="shippori font-medium text-2xl md:text-4xl mb-8 md:mb-10">{news.title.rendered}</h1>
+          <h1 className="shippori font-medium text-2xl lg:text-4xl mb-8 lg:mb-10">{news.title.rendered}</h1>
         </div>
 
         <div
@@ -127,11 +127,11 @@ export default async function NewsDetailPage(props: Props) {
         />
 
         {/* 前後記事ナビ（サムネなし） */}
-        <div className="md:flex justify-between mt-12 gap-10">
+        <div className="lg:flex justify-between mt-12 gap-10">
           {prev ? (
             <Link
               href={`/news/${encodeURIComponent(prev.slug)}`}
-              className="u-button u-button-back block md:w-[40%] shippori px-4 py-2 md:pr-10 bg-white border border-pana flex-1 text-right mb-5 md:mb-0"
+              className="u-button u-button-back block lg:w-[40%] shippori px-4 py-2 lg:pr-10 bg-white border border-pana flex-1 text-right mb-5 lg:mb-0"
             >
               <p className="u-button-text garamond text-sm mt-1 mr-0 ml-auto">{prev.date ? new Date(prev.date).toLocaleDateString('ja-JP') : ''}</p>
               <p className="u-button-text mr-0 ml-auto">{prev.title?.rendered || '前の記事'}</p>
@@ -141,7 +141,7 @@ export default async function NewsDetailPage(props: Props) {
           {next ? (
             <Link
               href={`/news/${encodeURIComponent(next.slug)}`}
-              className="u-button block md:w-[40%] shippori px-4 py-2 md:pl-10 bg-white border border-pana flex-1 text-left"
+              className="u-button block lg:w-[40%] shippori px-4 py-2 lg:pl-10 bg-white border border-pana flex-1 text-left"
             >
               <p className="u-button-text garamond text-sm mt-1">{next.date ? new Date(next.date).toLocaleDateString('ja-JP') : ''}</p>
               <p className="u-button-text">{next.title?.rendered || '次の記事'}</p>
@@ -152,7 +152,7 @@ export default async function NewsDetailPage(props: Props) {
       <ButtonBack
         href="/news"
         text="お知らせ一覧へ"
-        className="u-bottun-newslist w-[250px] u-fade-in mt-10 md:mt-16 mb-40 md:mb-60 mx-auto"
+        className="u-bottun-newslist w-[250px] u-fade-in mt-10 lg:mt-16 mb-40 lg:mb-60 mx-auto"
       />
     </div>
   );

@@ -54,19 +54,19 @@ export default function Header() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const htmlEl = document.documentElement;
-    const isSP = window.innerWidth < 768;
+    const isSP = window.innerWidth < 1024;
     if (isSP) {
       htmlEl.classList.toggle('js-open', isOpen);
     }
   }, [isOpen]);
 
   return (
-    <header className="u-top u-header fixed top-0 left-0 md:h-fit md:min-h-screen md:w-[185px] md:border-r md:border-pana-gray01 z-20">
+    <header className="u-top u-header fixed top-0 left-0 lg:h-fit lg:min-h-screen lg:w-[185px] lg:border-r lg:border-pana-gray01 z-20">
       {/* ロゴ */}
-      <div className="u-header-logo fixed top-3 left-5 md:static md:pt-10 md:pb-16 z-20">
+      <div className="u-header-logo fixed top-3 left-5 lg:static lg:pt-10 lg:pb-16 z-20">
         <Link href="/" className="text-center">
           <LogoIcon
-            className="md:mx-auto w-[60px] h-[61px] md:w-[100px] md:h-[104px]"
+            className="lg:mx-auto w-[60px] h-[61px] lg:w-[100px] lg:h-[104px]"
             pathColor={color}
           />
         </Link>
@@ -74,7 +74,7 @@ export default function Header() {
 
       {/* ハンバーガーアイコン（SP） */}
       <div
-        className={`u-navIcon fixed top-7 right-5 block z-20 md:hidden cursor-pointer transition-all duration-300 ${isOpen ? 'js-open' : ''}`}
+        className={`u-navIcon fixed top-7 right-5 block z-20 lg:hidden cursor-pointer transition-all duration-300 ${isOpen ? 'js-open' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="block w-[45px] h-[1px]" style={{ backgroundColor: color }}></span>
@@ -84,23 +84,23 @@ export default function Header() {
 
       {/* ナビゲーション */}
       <nav
-        className={`md:opacity-100 md:visible transition-opacity duration-500 ease-in-out
+        className={`lg:opacity-100 lg:visible transition-opacity duration-500 ease-in-out
           ${isOpen
-            ? 'fixed inset-0 bg-black bg-opacity-90 md:static md:bg-transparent opacity-100 visible'
-            : 'fixed inset-0 bg-black bg-opacity-90 md:static md:bg-transparent opacity-0 invisible'
+            ? 'fixed inset-0 bg-black bg-opacity-90 lg:static lg:bg-transparent opacity-100 visible'
+            : 'fixed inset-0 bg-black bg-opacity-90 lg:static lg:bg-transparent opacity-0 invisible'
           }`}
       >
-        <ul className="u-nav flex md:block flex-col items-start md:items-center justify-center h-full pl-12 md:pl-0">
+        <ul className="u-nav flex lg:block flex-col items-start lg:items-center justify-center h-full pl-12 lg:pl-0">
           {navItems.map((item) => (
-            <li key={item.href} className="u-nav-item pb-8 md:pb-6">
+            <li key={item.href} className="u-nav-item pb-8 lg:pb-6">
               <Link
                 href={item.href}
-                className="u-nav-link flex gap-2 items-center md:block text-center"
+                className="u-nav-link flex gap-2 items-center lg:block text-center"
                 style={{ color: textColor }}
                 onClick={() => {
                   setIsOpen(false);
                   // htmlタグの js-open クラスも消す
-                  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+                  if (typeof window !== 'undefined' && window.innerWidth < 1024) {
                     document.documentElement.classList.remove('js-open');
                   }
                 }}
@@ -109,7 +109,7 @@ export default function Header() {
                   <Pana color={color} />
                 </i>
                 <p className="shippori font-medium leading-none">{item.ja}</p>
-                <p className="garamond text-pana-gray01 text-sm leading-none pl-2 md:pl-0 md:pt-2">{item.en}</p>
+                <p className="garamond text-pana-gray01 text-sm leading-none pl-2 lg:pl-0 lg:pt-2">{item.en}</p>
               </Link>
             </li>
           ))}

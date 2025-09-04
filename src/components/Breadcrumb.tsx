@@ -77,8 +77,8 @@ export default function Breadcrumb() {
   });
 
   return (
-    <nav className="shippori font-medium text-sm mt-10 md:mt-20 md:mr-20 px-5 md:px-0" aria-label="Breadcrumb">
-      <ol className="flex items-center justify-end flex-wrap space-x-2 md:pr-6">
+    <nav className="shippori font-medium text-sm mt-10 lg:mt-20 lg:mr-20 px-5 lg:px-0" aria-label="Breadcrumb">
+      <ol className="flex items-center justify-end flex-wrap space-x-2 lg:pr-6">
         <li>
           <Link href="/" className="underline">
             トップページ
