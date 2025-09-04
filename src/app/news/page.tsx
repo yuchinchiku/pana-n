@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ScrollAnimation from '@/components/ScrollAnimation';
-import ButtonBack from '@/components/ButtonBack';
 import NewsListPage from '@/components/NewsListPage';
 import HeroSection from './HeroSection';
 import '@/styles/pages/news/news.scss';

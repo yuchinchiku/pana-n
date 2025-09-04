@@ -1,23 +1,25 @@
+// src/app/contact/confirm/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Pana } from '@/assets/icons/Pana';
+import { ContactFormData } from '../types';
 import '@/styles/pages/contact/contact.scss';
 import '@/styles/component/button.scss';
+import { Pana } from '@/assets/icons/Pana';
 
 export default function ContactConfirmPage() {
   const router = useRouter();
-  const [formData, setFormData] = useState<any>(null);
+  const [formData, setFormData] = useState<ContactFormData | null>(null);
   const [isSending, setIsSending] = useState(false);
 
   useEffect(() => {
     const data = sessionStorage.getItem('contactData');
     if (!data) {
-      router.push('/contact'); // データがなければ入力画面に戻す
+      router.push('/contact');
       return;
     }
-    setFormData(JSON.parse(data));
+    setFormData(JSON.parse(data) as ContactFormData);
   }, [router]);
 
   const handleSend = async () => {

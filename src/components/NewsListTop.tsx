@@ -8,7 +8,7 @@ type WPNews = {
   thumbnailUrl?: string | null;
 };
 
-const DEFAULT_THUMBNAIL = '/images/news/default-news.jpg';
+
 
 async function fetchLatestNews(limit: number = 5): Promise<WPNews[]> {
   try {

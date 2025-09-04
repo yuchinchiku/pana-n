@@ -2,7 +2,7 @@
 "use client";
 import Image from "next/image";
 import PageSecTitleHor from "@/components/pages/PageSecTitleHor";
-import { StoreDetail, MenuItem } from "@/data/storeDetails";
+import { StoreDetail } from "@/data/storeDetails";
 import '@/styles/pages/salon/salonDetails.scss';
 
 type Props = {

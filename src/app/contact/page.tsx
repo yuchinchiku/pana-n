@@ -1,15 +1,17 @@
+// src/app/contact/page.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import HeroSection from './HeroSection';
+import { ContactFormData, ContactFormErrors, ContactFormTouched } from './types';
 import '@/styles/pages/contact/contact.scss';
 import '@/styles/component/button.scss';
 
 export default function ContactPage() {
   const router = useRouter();
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     subject: 'ご予約について',
     company: '',
     name: '',
@@ -19,109 +21,74 @@ export default function ContactPage() {
     message: ''
   });
 
-  const [errors, setErrors] = useState<any>({});
-  const [touched, setTouched] = useState<any>({});
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [touched, setTouched] = useState<ContactFormTouched>({});
 
   // sessionStorage から復元
   useEffect(() => {
     const saved = sessionStorage.getItem('contactData');
-    if (saved) setFormData(JSON.parse(saved));
+    if (saved) setFormData(JSON.parse(saved) as ContactFormData);
   }, []);
 
-  // メールアドレス確認 一致チェック（自動入力でも対応）
+  // メール確認 一致チェック
   useEffect(() => {
-    if (!formData.emailConfirm) {
-      setErrors(prev => {
-        const { emailConfirm, ...rest } = prev;
-        return rest;
-      });
-      return;
-    }
-    if (formData.email !== formData.emailConfirm) {
-      setErrors(prev => ({ ...prev, emailConfirm: 'メールアドレスが一致しません' }));
-    } else {
-      setErrors(prev => {
-        const { emailConfirm, ...rest } = prev;
-        return rest;
-      });
-    }
+    setErrors(prev => {
+      if (formData.emailConfirm && formData.email !== formData.emailConfirm) {
+        return { ...prev, emailConfirm: 'メールアドレスが一致しません' };
+      } else {
+        const newErrors = { ...prev };
+        delete newErrors.emailConfirm;
+        return newErrors;
+      }
+    });
   }, [formData.email, formData.emailConfirm]);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-
-    // メール確認は入力中にリアルタイムチェック
-    if (name === 'email' || name === 'emailConfirm') {
-      if (!formData.email || !formData.emailConfirm) {
-        setErrors((prev: any) => {
-          const { emailConfirm, ...rest } = prev;
-          return rest;
-        });
-        return;
-      }
-      if (name === 'emailConfirm' || name === 'email') {
-        if (formData.emailConfirm !== formData.email) {
-          setErrors((prev: any) => ({ ...prev, emailConfirm: 'メールアドレスが一致しません' }));
-        } else {
-          setErrors((prev: any) => {
-            const { emailConfirm, ...rest } = prev;
-            return rest;
-          });
-        }
-      }
-    }
   };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name } = e.target;
     setTouched({ ...touched, [name]: true });
-
-    // 必須・形式チェックはフォーカスアウト時に実行
-    validateField(name as keyof typeof formData);
+    validateField(name as keyof ContactFormData);
   };
 
-  const validateField = (key: keyof typeof formData) => {
+  const validateField = (key: keyof ContactFormData) => {
     let message = '';
     const value = formData[key];
 
-    // 必須チェック
     if (['subject','name','email','emailConfirm','phone','message'].includes(key) && !value) {
       message = '必須項目です';
     }
 
-    // メール形式
     if (key === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
       message = '正しいメールアドレスを入力してください';
     }
 
-    // 電話番号形式
     if (key === 'phone' && value && !/^[0-9\-+() ]+$/.test(value)) {
       message = '正しい電話番号を入力してください';
     }
 
-    setErrors((prev: any) => ({ ...prev, [key]: message }));
+    setErrors(prev => ({ ...prev, [key]: message }));
   };
 
   const validateAll = () => {
-    const newErrors: any = {};
+    const newErrors: ContactFormErrors = {};
 
-    ['subject','name','email','emailConfirm','phone','message'].forEach((key) => {
-      const value = formData[key as keyof typeof formData];
-      // 必須
+    (['subject','name','email','emailConfirm','phone','message'] as (keyof ContactFormData)[]).forEach((key) => {
+      const value = formData[key];
       if (!value) newErrors[key] = '必須項目です';
 
-      // メール形式
       if (key === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
         newErrors.email = '正しいメールアドレスを入力してください';
       }
 
-      // メール確認一致
       if (key === 'emailConfirm' && value && value !== formData.email) {
         newErrors.emailConfirm = 'メールアドレスが一致しません';
       }
 
-      // 電話番号
       if (key === 'phone' && value && !/^[0-9\-+() ]+$/.test(value)) {
         newErrors.phone = '正しい電話番号を入力してください';
       }
@@ -134,10 +101,12 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateAll()) return;
+
     sessionStorage.setItem('contactData', JSON.stringify(formData));
     router.push('/contact/confirm');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
 
   return (
     <div className="u-pageContact lg:ml-[185px] lg:mr-20">
