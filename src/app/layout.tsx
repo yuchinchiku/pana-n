@@ -15,6 +15,40 @@ const shippori = Shippori_Mincho_B1({ subsets: ['latin'], weight: ['400','700'],
 export const metadata: Metadata = {
   title: "琉球の想いと癒しをあなたへ。",
   description: "琉球の想いと癒しをあなたへ。",
+  icons: {
+    icon: [
+      { url: '/images/meta/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/images/meta/favicon/favicon.svg', type: 'image/svg+xml' },
+      { url: '/images/meta/favicon/favicon.ico', type: 'image/x-icon' },
+    ],
+    apple: '/images/meta/favicon/apple-touch-icon.png',
+  },
+  manifest: '/images/meta/favicon/site.webmanifest',
+  appleWebApp: {
+    title: '琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン',
+  },
+  openGraph: {
+    title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+    description: "琉球の想いと癒しをあなたへ。",
+    url: "https://pana-n.jp", // 本番サイトのURL
+    siteName: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・元祖琉球マッサージの店舗です。",
+    images: [
+      {
+        url: "https://pana-n.jp/images/meta/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+      }
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+    description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・元祖琉球マッサージの店舗です。",
+    images: ["https://pana-n.jp/images/meta/ogp.png"],
+  },
 };
 
 gsap.registerPlugin(ScrollTrigger);

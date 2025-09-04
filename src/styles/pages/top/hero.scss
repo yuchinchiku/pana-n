@@ -2,15 +2,22 @@
   background: linear-gradient(90deg, rgba(37, 36, 36, 0.6), rgba(139, 135, 135, 0));
 }
 
+
 .u-hero-lead{
   line-height: 1.8;
   top: 42%;
   left: 33%;
-  z-index: 0;
+  z-index: 10;
   @media screen and (max-width: 1024px) {
     top: 42%;
     left: 20px;
   }
+  &-loading{
+    @media screen and (max-width: 1024px) {
+      top: 39%;
+    }
+  }
+
 }
 
 .u-scroll-text{

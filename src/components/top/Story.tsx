@@ -104,7 +104,7 @@ export default function Story() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="u-fade-in w-full py-10 px-5 lg:flex-shrink-0 lg:w-[55.5%] lg:pt-20 lg:px-0">
+        <div className="u-fade-in w-full py-10 px-5 min-h-full lg:flex-shrink-0 lg:w-[55.5%] lg:pt-20 lg:px-0">
           <div className="relative flex flex-row-reverse gap-6 lg:gap-10">
             <SectionTitle
               mainTitle="パナ・ンの物語"

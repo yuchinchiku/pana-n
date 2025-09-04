@@ -61,7 +61,7 @@ export default function PageHero({ title, titleSmall, subTitle, animate = false 
           <Pana color="white" className="w-3 h-3 lg:w-5 lg:h-5" />
         </motion.i>
 
-        <span className="shippori text-[32px] lg:text-[40px] font-medium leading-none writing-vertical pl-[18px] block">
+        <span className="shippori text-[32px] lg:text-[40px] font-medium leading-none writing-vertical lg:pl-[18px] block">
           {titleSmall && (
             <motion.span
               className="block text-[20px] lg:text-[24px] ml-3"
