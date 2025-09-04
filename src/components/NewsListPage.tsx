@@ -63,13 +63,13 @@ export default function NewsListClient({ perPage = 10 }: { perPage?: number }) {
             >
               <Link
                 href={`/news/${news.slug}`}
-                className="u-news-link u-textLink relative text-text-pana flex gap-2 md:gap-4 py-2 md:pt-5"
+                className="u-news-link u-textLink relative text-text-pana flex gap-2 md:gap-4 py-2"
               >
-                <p className="u-news-date shippori text-base md:text-xl font-medium leading-relaxed md:leading-none py-1 md:py-4">
+                <p className="u-news-date h-[76px] md:h-[114px] shippori text-sm md:text-xl font-medium leading-relaxed md:leading-none py-1 md:py-4">
                   {news.date ? new Date(news.date).toLocaleDateString('ja-JP') : ''}
                 </p>
 
-                <div className="relative w-[124px] h-[76px] md:w-[185px] md:h-[114px] overflow-hidden flex-shrink-0">
+                <div className="u-news-thumb relative w-[124px] h-[76px] md:w-[185px] md:h-[114px] overflow-hidden flex-shrink-0">
                   <Image
                     src={news.thumbnailUrl || DEFAULT_THUMBNAIL}
                     alt={news.title.rendered}
