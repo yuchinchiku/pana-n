@@ -136,6 +136,7 @@ export default function ContactPage() {
     if (!validateAll()) return;
     sessionStorage.setItem('contactData', JSON.stringify(formData));
     router.push('/contact/confirm');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

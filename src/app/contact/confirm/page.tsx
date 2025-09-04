@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import PageHero from '@/components/pages/PageHero';
+import { Pana } from '@/assets/icons/Pana';
 import '@/styles/pages/contact/contact.scss';
 import '@/styles/component/button.scss';
 
@@ -33,6 +33,7 @@ export default function ContactConfirmPage() {
       if (result.success) {
         sessionStorage.removeItem('contactData');
         router.push('/contact/thanks');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         alert('送信に失敗しました。');
       }
@@ -48,7 +49,18 @@ export default function ContactConfirmPage() {
 
   return (
     <div className="u-pageContact lg:ml-[185px] lg:mr-20">
-      <PageHero title="お問い合わせ確認" subTitle="contact" />
+      <div className="u-pageHero relative flex justify-center w-full h-[350px] lg:h-[450px] pt-10">
+        <h1 className="u-page-title relative text-white lg:w-[76px] h-fit">
+          <i className="block mx-auto mb-2 w-3 h-3 lg:w-5 lg:h-5 pl-2 lg:pl-0">
+            <Pana color="white" className="w-3 h-3 lg:w-5 lg:h-5" />
+          </i>
+          <span className="shippori text-[32px] lg:text-[40px] font-medium leading-none writing-vertical pl-[18px] block">
+            お問い合わせ確認
+          </span>
+          <span className="u-page-subTitle garamond text-base lg:text-xl tracking-widest rotate-90 whitespace-nowrap absolute">
+            contact</span>
+          </h1>
+        </div>
       <div className="u-pageContact-Desc lg:text-center max-w-4xl lg:w-[82.3%] mx-auto mt-10 lg:mt-20 px-10">
         <div className="u-pageContact-desc shippori lg:text-lg leading-[180%]">
           <p>下記内容でお間違えなければ「送信」ボタンを押してください。</p>
@@ -75,7 +87,10 @@ export default function ContactConfirmPage() {
         <div className="lg:flex gap-10 justify-center pt-10">
           <button
             type="button"
-            onClick={() => router.back()} // sessionStorage から復元されるので安全
+            onClick={() => {
+              router.back();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="u-button u-button-back block w-[244px] h-12 border border-pana py-1 pl-6 mx-auto lg:mx-0"
           >
             <span className='u-button-text shippori font-medium text-lg text-left pt-1 lg:pl-10'>戻る</span>
