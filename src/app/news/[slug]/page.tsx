@@ -1,11 +1,13 @@
-// app/news/[slug]/page.tsx
+// src/app/news/[slug]/page.tsx
+
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import ButtonBack from '@/components/ButtonBack';
 import '@/styles/pages/news/news.scss';
 import '@/styles/component/button.scss';
-import { Metadata } from 'next';
-import ButtonBack from '@/components/ButtonBack';
 
+// -------------------- 型定義 --------------------
 type WPNews = {
   id: number;
   date: string;
@@ -22,11 +24,7 @@ type WPNewsListItem = {
   date: string;
 };
 
-interface Props {
-  params: { slug: string };
-}
-
-// API からニュース詳細を取得
+// -------------------- ユーティリティ --------------------
 async function fetchNewsDetail(slug: string): Promise<WPNews | null> {
   try {
     const res = await fetch(`http://localhost:3000/api/news/${slug}`, { cache: 'no-store' });
@@ -38,15 +36,11 @@ async function fetchNewsDetail(slug: string): Promise<WPNews | null> {
   }
 }
 
-// API から全ニュース一覧を取得
 async function fetchAllNews(): Promise<WPNewsListItem[]> {
   try {
     const res = await fetch(`http://localhost:3000/api/news`, { cache: 'no-store' });
     if (!res.ok) return [];
     const json = await res.json();
-    console.log('Server allNews raw:', json);
-
-    // json が { data: [...] } の場合は json.data を返す
     return Array.isArray(json) ? json : json.data || [];
   } catch (err) {
     console.error(err);
@@ -54,15 +48,12 @@ async function fetchAllNews(): Promise<WPNewsListItem[]> {
   }
 }
 
-
-// HTMLからテキスト抽出
 function extractText(html: string): string {
   if (!html) return '';
   const tmp = html.replace(/<[^>]+>/g, ' ');
   return tmp.replace(/\s+/g, ' ').trim();
 }
 
-// 前後記事を取得
 function findPrevNext(slug: string, list: WPNewsListItem[]) {
   if (!Array.isArray(list)) return { prev: null, next: null };
   const index = list.findIndex(item => item.slug === slug);
@@ -72,9 +63,11 @@ function findPrevNext(slug: string, list: WPNewsListItem[]) {
   };
 }
 
-// メタ情報生成
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const news = await fetchNewsDetail(params.slug);
+// -------------------- メタ情報 --------------------
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata(props: any): Promise<Metadata> {
+  const slug = props.params.slug;
+  const news = await fetchNewsDetail(slug);
   if (!news) return { title: 'ニュースが見つかりません | 琉球パナ・ン' };
 
   const fixedSuffix = 'お知らせ | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン';
@@ -100,11 +93,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// ⚠ params は await 不要
-export default async function NewsDetailPage(props: Props) {
+// -------------------- Page --------------------
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function NewsDetailPage(props: any) {
   const slug = props.params.slug;
   const news = await fetchNewsDetail(slug);
-
   if (!news) notFound();
 
   const allNews = await fetchAllNews();
@@ -126,7 +119,7 @@ export default async function NewsDetailPage(props: Props) {
           dangerouslySetInnerHTML={{ __html: news.content.rendered }}
         />
 
-        {/* 前後記事ナビ（サムネなし） */}
+        {/* 前後記事ナビ */}
         <div className="lg:flex justify-between mt-12 gap-10">
           {prev ? (
             <Link

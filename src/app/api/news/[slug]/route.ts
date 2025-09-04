@@ -1,36 +1,59 @@
 import type { NextRequest } from 'next/server';
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { slug: string } } // ← destructuring で直接取得
-) {
-  const slug = params.slug; // そのまま取得
-  const res = await fetch(
-    `https://pn.konety.jp/wp-json/wp/v2/news?slug=${encodeURIComponent(slug)}&_embed`,
-    { headers: { Authorization: 'Basic ' + Buffer.from(`${process.env.WP_USER}:${process.env.WP_PASS}`).toString('base64') }, cache: 'no-store' }
-  );
+type WPNews = {
+  id: number;
+  date: string;
+  title: { rendered: string };
+  content: { rendered: string };
+  slug: string;
+  featured_media_url?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+_embedded?: any;
+
+};
+
+export async function GET(req: NextRequest) {
+  // URL から slug を取得
+  const url = new URL(req.url);
+  const slug = url.pathname.split('/').pop(); // 最後の部分が slug
+  if (!slug) {
+    return new Response(JSON.stringify({ data: null, error: 'slug not found' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  const WP_USER = process.env.WP_USER;
+  const WP_PASS = process.env.WP_PASS;
+
+  if (!WP_USER || !WP_PASS) {
+    return new Response(JSON.stringify({ data: null, error: 'WP credentials not set' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
 
   try {
     const res = await fetch(
       `https://pn.konety.jp/wp-json/wp/v2/news?slug=${encodeURIComponent(slug)}&_embed`,
       {
         headers: {
-          Authorization:
-            'Basic ' +
-            Buffer.from(`${process.env.WP_USER}:${process.env.WP_PASS}`).toString('base64'),
+          Authorization: 'Basic ' + Buffer.from(`${WP_USER}:${WP_PASS}`).toString('base64'),
         },
         cache: 'no-store',
       }
     );
 
     if (!res.ok) {
-      return new Response(JSON.stringify(null), {
+      const text = await res.text();
+      console.error('WP API Error:', res.status, text);
+      return new Response(JSON.stringify({ data: null, error: 'WP fetch failed' }), {
         status: res.status,
         headers: { 'Content-Type': 'application/json' },
       });
     }
 
-    const data = await res.json();
+    const data: WPNews[] = await res.json();
     const news = data.length > 0 ? data[0] : null;
 
     return new Response(JSON.stringify(news), {
@@ -39,7 +62,7 @@ export async function GET(
     });
   } catch (err) {
     console.error('ニュース詳細取得失敗:', err);
-    return new Response(JSON.stringify(null), {
+    return new Response(JSON.stringify({ data: null, error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });

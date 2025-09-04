@@ -46,11 +46,9 @@ export default function StoryScroller({ stories, intro }: Props) {
   };
 
   useLayoutEffect(() => {
-    // すべてのPC画像がロードされてから ScrollTrigger を作る
     if (window.innerWidth >= 1024 && containerRef.current && imagesLoaded === stories.length) {
       const lastIndex = stories.length - 1;
 
-      // 固定画像ピン留め
       ScrollTrigger.create({
         trigger: containerRef.current,
         start: 'top top',
@@ -59,8 +57,8 @@ export default function StoryScroller({ stories, intro }: Props) {
         pinSpacing: false,
       });
 
-      // セクションごとの画像切替
       sectionRefs.current.forEach((section, i) => {
+        if (!section) return;
         ScrollTrigger.create({
           trigger: section,
           start: 'top 50%',
@@ -72,10 +70,7 @@ export default function StoryScroller({ stories, intro }: Props) {
         });
       });
 
-      // 初期表示
       fadeInImage(0);
-
-      // 遷移直後のクライアント遷移対策
       requestAnimationFrame(() => ScrollTrigger.refresh());
     }
   }, [imagesLoaded, stories]);
@@ -88,7 +83,7 @@ export default function StoryScroller({ stories, intro }: Props) {
           <div
             key={i}
             ref={(el) => {
-              if (el) imageRefs.current[i] = el;
+              if (el) imageRefs.current[i] = el as HTMLDivElement;
             }}
             className="absolute inset-0 opacity-0"
           >
@@ -114,7 +109,7 @@ export default function StoryScroller({ stories, intro }: Props) {
               <div className="story-image w-full mb-6">
                 <Image
                   src={`/images/story/${intro.pageName}/img_${intro.pageName}-01_sp.jpg`}
-                  alt=''
+                  alt=""
                   width={800}
                   height={600}
                   className="object-cover w-full h-auto"
@@ -141,7 +136,7 @@ export default function StoryScroller({ stories, intro }: Props) {
           <section
             key={i}
             ref={(el) => {
-              if (el) sectionRefs.current[i] = el;
+              if (el) sectionRefs.current[i] = el as HTMLDivElement;
             }}
             className="u-section lg:min-h-screen flex flex-col justify-start p-5 lg:p-16"
           >

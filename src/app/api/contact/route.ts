@@ -2,11 +2,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import sanitizeHtml from 'sanitize-html';
-import { FormData } from '@/app/types';
+import { ContactFormData } from '@/app/contact/types';
 
 export async function POST(req: NextRequest) {
   try {
-    const data: FormData & { recaptchaToken?: string } = await req.json();
+    const data: ContactFormData & { recaptchaToken?: string } = await req.json();
     const { recaptchaToken, ...rest } = data;
 
     if (!recaptchaToken) {
