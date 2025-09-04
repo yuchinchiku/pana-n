@@ -1,4 +1,3 @@
-// components/NewsListTop.tsx
 import Link from 'next/link';
 
 type WPNews = {
@@ -6,15 +5,21 @@ type WPNews = {
   date: string;
   title: { rendered: string };
   slug: string;
+  thumbnailUrl?: string | null;
 };
 
+const DEFAULT_THUMBNAIL = '/images/news/default-news.jpg';
+
 async function fetchLatestNews(limit: number = 5): Promise<WPNews[]> {
-  const res = await fetch(
-    `https://pn.konety.jp/wp-json/wp/v2/news?_embed&per_page=${limit}&orderby=date&order=desc`,
-    { cache: 'no-store' }
-  );
-  if (!res.ok) return [];
-  return res.json();
+  try {
+    const res = await fetch(`http://localhost:3000/api/news?page=1&perPage=${limit}`, { cache: 'no-store' });
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.data;
+  } catch (err) {
+    console.error('ニュース取得失敗:', err);
+    return [];
+  }
 }
 
 export default async function NewsListTop() {
@@ -27,7 +32,7 @@ export default async function NewsListTop() {
       {newsList.map(news => (
         <li key={news.id} className="u-news-item py-2 md:py-3">
           <Link href={`/news/${news.slug}`} className="u-news-link text-white block md:flex md:gap-6">
-            <p className="shippori text-sm font-medium leading-relaxed md:leading-none md:flex-shrink-0">
+            <p className="shippori text-sm font-medium leading-relaxed md:leading-none md:flex-shrink-0 md:min-w-[70px]">
               {news.date ? new Date(news.date).toLocaleDateString('ja-JP') : ''}
             </p>
             <p className="shippori font-medium leading-relaxed md:leading-none">
