@@ -17,7 +17,7 @@ export default function ButtonBack({ href, text, className }: ButtonProps) {
         className
       )}
     >
-      <p className='u-button-text shippori font-medium text-lg md:text-22px text-right pt-1'>{text}</p>
+      <p className='u-button-text shippori font-medium text-lg md:text-22px text-right pt-1 mt-1 mr-0 ml-auto'>{text}</p>
     </Link>
   );
 }

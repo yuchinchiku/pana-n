@@ -1,11 +1,10 @@
-import type { NextConfig } from "next";
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-    domains: ['pn.konety.jp'],
+    domains: ['pn.konety.jp', 'pana-n.jp'], // WordPress と自サイトのドメイン
   },
+  turbopack: {}, // Turbopack 有効化
 };
 
-module.exports = nextConfig;
+export default nextConfig;
