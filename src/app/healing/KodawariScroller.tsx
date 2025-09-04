@@ -108,7 +108,7 @@ export default function Story() {
               priority
             />
           </div>
-          <div className="block lg:hidden w-full h-[250px] relative">
+          <div className="block lg:hidden w-full h-[450px] relative">
             <Image
               src={section.sp}
               alt=""

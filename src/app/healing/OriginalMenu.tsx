@@ -42,7 +42,7 @@ export default function OriginalMenu() {
           key={section.id}
           className="u-fade-in lg:w-[33%] pb-10 lg:pb-0"
         >
-          <div className="w-full h-[250px] lg:h-[450px] relative">
+          <div className="w-full h-[410px] lg:h-[450px] relative">
             <Image
               src={`/images/healing/img_menu-${section.id}.jpg`}
               alt=""
