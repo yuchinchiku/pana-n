@@ -9,7 +9,7 @@ export default function Hero() {
         loop
         muted
       >
-        <source src="/video/panan-01.mp4" type="video/mp4" />
+        <source src="https://pana-n.jp/video/panan-01.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="u-overlay fixed inset-0 pointer-events-none"></div>
