@@ -68,7 +68,7 @@ const nuchi: Nuchi[] = [
 export default function Nuchigusui() {
 
   return (
-    <div className='u-SliderNuchigusui relative pl-5 md:pl-6 overflow-visible'>
+    <div className='u-SliderNuchigusui u-fade-in relative pl-5 lg:pl-6 overflow-visible'>
       <Swiper
         modules={[Autoplay, Pagination]}
         loop
@@ -85,7 +85,7 @@ export default function Nuchigusui() {
       >
         {nuchi.map((nuchi, index) => (
           <SwiperSlide key={index} className='flex-shrink-0 border border-pana'>
-            <div className='u-store-thumb relative w-full h-[250px] md:h-[450px] overflow-hidden'>
+            <div className='u-store-thumb relative w-full h-[250px] lg:h-[450px] overflow-hidden'>
               <Image
                 src={`/images/healing/img_nuchigusui-${index+1}.jpg`}
                 alt=''
@@ -94,9 +94,9 @@ export default function Nuchigusui() {
                 sizes="(max-width: 768px) 280px, 359px"
               />
             </div>
-            <div className='shippori font-medium h-[295px] md:h-[246px] px-4'>
-              <h4 className='text-lg md:text-[22px] pt-4 pb-2'>{nuchi.title}</h4>
-              <div className="shippori font-medium text-sm md:text-base leading-[180%] pb-4 md:pb-0">
+            <div className='shippori font-medium h-[295px] lg:h-[246px] px-4'>
+              <h4 className='text-lg lg:text-[22px] pt-4 pb-2'>{nuchi.title}</h4>
+              <div className="shippori font-medium text-sm lg:text-base leading-[180%] pb-4 lg:pb-0">
               {nuchi.texts?.map((text, idx) => (
                 <p key={idx}>{text}</p>
               ))}

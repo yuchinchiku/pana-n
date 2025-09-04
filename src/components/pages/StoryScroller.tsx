@@ -46,11 +46,9 @@ export default function StoryScroller({ stories, intro }: Props) {
   };
 
   useLayoutEffect(() => {
-    // すべてのPC画像がロードされてから ScrollTrigger を作る
-    if (window.innerWidth >= 768 && containerRef.current && imagesLoaded === stories.length) {
+    if (window.innerWidth >= 1024 && containerRef.current && imagesLoaded === stories.length) {
       const lastIndex = stories.length - 1;
 
-      // 固定画像ピン留め
       ScrollTrigger.create({
         trigger: containerRef.current,
         start: 'top top',
@@ -59,8 +57,8 @@ export default function StoryScroller({ stories, intro }: Props) {
         pinSpacing: false,
       });
 
-      // セクションごとの画像切替
       sectionRefs.current.forEach((section, i) => {
+        if (!section) return;
         ScrollTrigger.create({
           trigger: section,
           start: 'top 50%',
@@ -72,23 +70,20 @@ export default function StoryScroller({ stories, intro }: Props) {
         });
       });
 
-      // 初期表示
       fadeInImage(0);
-
-      // 遷移直後のクライアント遷移対策
       requestAnimationFrame(() => ScrollTrigger.refresh());
     }
   }, [imagesLoaded, stories]);
 
   return (
-    <div ref={containerRef} className="relative md:flex md:mb-40">
+    <div ref={containerRef} className="relative lg:flex lg:mb-40">
       {/* 固定画像 PC */}
-      <div className="u-fixed-image-container hidden md:block w-[44.5%] top-0 left-0 h-screen">
+      <div className="u-fixed-image-container hidden lg:block w-[44.5%] top-0 left-0 h-screen">
         {stories.map((s, i) => (
           <div
             key={i}
             ref={(el) => {
-              if (el) imageRefs.current[i] = el;
+              if (el) imageRefs.current[i] = el as HTMLDivElement;
             }}
             className="absolute inset-0 opacity-0"
           >
@@ -108,30 +103,30 @@ export default function StoryScroller({ stories, intro }: Props) {
       {/* テキスト */}
       <div className="flex-1">
         {intro && (
-          <section className="min-h-screen flex flex-col justify-center p-5 md:p-16">
+          <section className="min-h-screen flex flex-col justify-center p-5 lg:p-16">
             {/* SP用画像 */}
-            <div className="md:hidden w-full">
+            <div className="lg:hidden w-full">
               <div className="story-image w-full mb-6">
                 <Image
                   src={`/images/story/${intro.pageName}/img_${intro.pageName}-01_sp.jpg`}
-                  alt=''
+                  alt=""
                   width={800}
                   height={600}
                   className="object-cover w-full h-auto"
                 />
               </div>
             </div>
-            <div className="max-w-[651px] px-5 md:px-0">
-              <p className="u-storyHead-num garamond text-3xl md:text-5xl">{`#0${intro.num}`}</p>
+            <div className="max-w-[651px] px-5 lg:px-0">
+              <p className="u-storyHead-num garamond text-3xl lg:text-5xl">{`#0${intro.num}`}</p>
               <div className="my-4">
-                <h1 className="shippori font-medium text-3xl md:text-5xl pb-1">{intro.title}</h1>
-                {intro.subTitle && <p className="garamond text-lg md:text-[20px]">{intro.subTitle}</p>}
+                <h1 className="shippori font-medium text-3xl lg:text-5xl pb-1">{intro.title}</h1>
+                {intro.subTitle && <p className="garamond text-lg lg:text-[20px]">{intro.subTitle}</p>}
               </div>
               {intro.text && (
-                <p className="shippori text-lg md:text-xl leading-[180%] md:leading-[180%] mt-0">{intro.text}</p>
+                <p className="shippori text-lg lg:text-xl leading-[180%] lg:leading-[180%] mt-0">{intro.text}</p>
               )}
               {intro.text2 && (
-                <p className="shippori text-lg md:text-xl leading-[180%] md:leading-[180%] mt-0">{intro.text2}</p>
+                <p className="shippori text-lg lg:text-xl leading-[180%] lg:leading-[180%] mt-0">{intro.text2}</p>
               )}
             </div>
           </section>
@@ -141,12 +136,12 @@ export default function StoryScroller({ stories, intro }: Props) {
           <section
             key={i}
             ref={(el) => {
-              if (el) sectionRefs.current[i] = el;
+              if (el) sectionRefs.current[i] = el as HTMLDivElement;
             }}
-            className="u-section md:min-h-screen flex flex-col justify-start p-5 md:p-16"
+            className="u-section lg:min-h-screen flex flex-col justify-start p-5 lg:p-16"
           >
             {/* SP用画像 */}
-            <div className="md:hidden w-full">
+            <div className="lg:hidden w-full">
               {s.num !== '01' && (
                 <div key={s.num} className="story-image w-full mb-6">
                   <Image
@@ -159,12 +154,12 @@ export default function StoryScroller({ stories, intro }: Props) {
                 </div>
               )}
             </div>
-            <div className="max-w-[651px] px-5 md:px-0">
-              <h2 className="u-storyTitle max-w-[561px] shippori text-2xl md:text-4xl leading-[160%] md:leading-[160%] mb-4 md:mb-14 mt-0">
+            <div className="max-w-[651px] px-5 lg:px-0">
+              <h2 className="u-storyTitle u-fade-in max-w-[561px] shippori text-2xl lg:text-4xl leading-[160%] lg:leading-[160%] mb-4 lg:mb-14 mt-0">
                 {s.title}
               </h2>
               <div
-                className="u-storyText max-w-[461px] shippori md:text-lg font-medium leading-[180%] md:leading-[180%] md:pl-24"
+                className="u-storyText u-fade-in max-w-[461px] shippori lg:text-lg font-medium leading-[180%] lg:leading-[180%] lg:pl-24"
                 dangerouslySetInnerHTML={{ __html: s.desc }}
               />
             </div>

@@ -1,8 +1,14 @@
 .u-storyNext{
   &-okinawa{
     background: url('/images/story/img_story-okinawa_pc.jpg') no-repeat center / cover;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       background: url('/images/story/img_story-okinawa_sp.jpg') no-repeat center / cover;
+    }
+  }
+  &-therapist{
+    background: url('/images/story/img_story-therapist_pc.jpg') no-repeat center / cover;
+    @media screen and (max-width: 1024px) {
+      background: url('/images/story/img_story-therapist_sp.jpg') no-repeat center / cover;
     }
   }
 }

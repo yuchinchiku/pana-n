@@ -35,14 +35,14 @@ export default function OriginalMenu() {
 
   return (
     <ul
-      className=" md:flex md:justify-start px-5 md:gap-6 md:px-6"
+      className=" lg:flex lg:justify-start px-5 lg:gap-6 lg:px-6"
     >
       {sectionsData.map((section) => (
         <li
           key={section.id}
-          className="md:w-[33%] pb-10 md:pb-0"
+          className="u-fade-in lg:w-[33%] pb-10 lg:pb-0"
         >
-          <div className="w-full h-[250px] md:h-[450px] relative">
+          <div className="w-full h-[250px] lg:h-[450px] relative">
             <Image
               src={`/images/healing/img_menu-${section.id}.jpg`}
               alt=""
@@ -52,10 +52,10 @@ export default function OriginalMenu() {
               priority
             />
           </div>
-          <div className="u-menu-textArea w-full bg-white md:flex-shrink-0">
+          <div className="u-menu-textArea w-full bg-white lg:flex-shrink-0">
             <div className="u-menuHead pt-4 pb-2 text-center">
               <h3 className="shippori font-medium text-2xl py-2">
-                {section.subtitle && <span className="shippori text-base block md:inline">{section.subtitle}</span>}
+                {section.subtitle && <span className="shippori text-base block lg:inline">{section.subtitle}</span>}
                 {section.title}
               </h3>
             </div>

@@ -24,6 +24,8 @@
 }
 
 html{
+  scrollbar-gutter: stable;
+
   &.js-open{
     overflow: hidden;
     touch-action: none;
@@ -37,4 +39,8 @@ body{
 .u-content{
   width: calc(100vw - 180px - 80px);
   padding-left: 180px;
+}
+
+.u-bgPaper{
+  background: url('/images/common/bg-paper.png') repeat;
 }

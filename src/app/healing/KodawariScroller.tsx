@@ -62,7 +62,7 @@ export default function Story() {
   useEffect(() => {
     if (!wrapperRef.current || sectionRefs.current.length === 0) return;
 
-    const isPC = window.innerWidth >= 768;
+    const isPC = window.innerWidth >= 1024;
     if (!isPC) return;
 
     const ctx = gsap.context(() => {
@@ -88,7 +88,7 @@ export default function Story() {
 
   return (
     <section
-      className="u-kodawari-wrapper sec-white relative z-10 bg-white pb-10 md:pb-40 md:pr-32 md:pt-0"
+      className="u-kodawari-wrapper sec-white relative z-10 bg-white pb-10 lg:pb-40 lg:pr-32 lg:pt-0"
       data-header-color="#1D1112"
       ref={wrapperRef}
     >
@@ -96,9 +96,9 @@ export default function Story() {
         <section
           key={section.id}
           ref={el => { sectionRefs.current[i] = el; }}
-          className="w-full md:w-auto md:h-screen md:flex md:justify-start md:gap-12"
+          className="w-full lg:w-auto lg:h-screen lg:flex lg:justify-start lg:gap-12"
         >
-          <div className="hidden md:block w-full h-full relative">
+          <div className="hidden lg:block w-full h-full relative">
             <Image
               src={section.pc}
               alt=""
@@ -108,7 +108,7 @@ export default function Story() {
               priority
             />
           </div>
-          <div className="block md:hidden w-full h-[250px] relative">
+          <div className="block lg:hidden w-full h-[250px] relative">
             <Image
               src={section.sp}
               alt=""
@@ -117,13 +117,13 @@ export default function Story() {
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
-          <div className="u-kodawari-textArea w-full bg-white px-10 py-10 md:flex-shrink-0 md:w-[55.5%] md:pt-20 md:py-0">
-            <div className="u-kodawariHead">
-              <p className="shippori font-medium md:text-lg">#{section.number}のこだわり</p>
-              <h3 className="shippori font-medium text-xl md:text-2xl py-2">{section.title}</h3>
-              <p className="garamond md:text-lg">{section.subtitle}</p>
+          <div className="u-kodawari-textArea w-full bg-white px-10 py-10 lg:flex-shrink-0 lg:w-[55.5%] lg:pt-20 lg:py-0">
+            <div className="u-kodawariHead u-fade-in">
+              <p className="shippori font-medium lg:text-lg">#{section.number}のこだわり</p>
+              <h3 className="shippori font-medium text-xl lg:text-2xl py-2">{section.title}</h3>
+              <p className="garamond lg:text-lg">{section.subtitle}</p>
             </div>
-            <div className="shippori font-medium text-base leading-[180%] pt-2 md:pt-8 md:pr-[20%]">
+            <div className="u-fade-in shippori font-medium text-base leading-[180%] pt-2 lg:pt-8 lg:pr-[20%]">
               {section.texts.map((text, idx) => (
                 <p key={idx} className='pb-4'>{text}</p>
               ))}

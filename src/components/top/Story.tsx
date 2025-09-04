@@ -31,7 +31,7 @@ export default function Story() {
     if (!wrapperRef.current || !storyRef.current || !healingRef.current) return;
 
     // PC（md以上）かどうかを判定（768px以上をPCとする例）
-    const isPC = window.innerWidth >= 768;
+    const isPC = window.innerWidth >= 1024;
 
     if (!isPC) {
       // SPは何もしない（ピン固定しない）
@@ -63,13 +63,13 @@ export default function Story() {
 
   return (
     <section
-      className="u-story-wrapper sec-white relative z-10 bg-white pt-32 pb-[320px] md:pr-32 md:pt-0 md:pb-[300px]"
+      className="u-story-wrapper sec-white relative z-10 bg-white pt-32 pb-[320px] lg:pr-32 lg:pt-0 lg:pb-[300px]"
       data-header-color="#1D1112"
       ref={wrapperRef}
     >
       <section
         ref={storyRef}
-        className="u-story w-full block md:w-auto md:h-screen md:flex md:justify-start md:ml-[185px]"
+        className="u-story w-full block lg:w-auto lg:h-screen lg:flex lg:justify-start lg:ml-[185px]"
       >
         <Swiper
           modules={[Autoplay, EffectFade]}
@@ -77,11 +77,11 @@ export default function Story() {
           autoplay={{ delay: 8000 }}
           speed={6000}
           loop
-          className="w-full h-[450px] md:w-[44.5%] md:h-screen ml-[180px]"
+          className="w-full h-[450px] lg:w-[44.5%] lg:h-screen ml-[180px]"
         >
           {sliderStory.map((img, i) => (
             <SwiperSlide key={i}>
-              <div className="hidden md:block w-full h-full relative">
+              <div className="hidden lg:block w-full h-full relative">
                 <Image
                   src={img.pc}
                   alt={img.alt}
@@ -91,7 +91,7 @@ export default function Story() {
                   priority
                 />
               </div>
-              <div className="block md:hidden w-full h-[450px] relative">
+              <div className="block lg:hidden w-full h-[450px] relative">
                 <Image
                   src={img.sp}
                   alt={img.alt}
@@ -104,8 +104,8 @@ export default function Story() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="u-fade-in w-full py-10 px-5 md:flex-shrink-0 md:w-[55.5%] md:pt-20 md:px-0">
-          <div className="relative flex flex-row-reverse gap-6 md:gap-10">
+        <div className="u-fade-in w-full py-10 px-5 lg:flex-shrink-0 lg:w-[55.5%] lg:pt-20 lg:px-0">
+          <div className="relative flex flex-row-reverse gap-6 lg:gap-10">
             <SectionTitle
               mainTitle="パナ・ンの物語"
               subTitle="pana-n's story"
@@ -114,29 +114,29 @@ export default function Story() {
               subTitleTopSP="61px"
               subTitleRightSP="-39px"
             />
-            <div className="relative flex flex-row-reverse gap-3 md:gap-6 shippori text-base md:text-lg font-medium tracking-[2px] pt-12 md:pt-16 z-1">
+            <div className="relative flex flex-row-reverse gap-3 lg:gap-6 shippori text-base lg:text-lg font-medium tracking-[2px] pt-12 lg:pt-16 z-1">
               <div className="u-story-textBlock writing-vertical">
-                <p className="pl-[2px] md:px-1">「パナ」、八重山方言（ヤイマムニ）で「花」。</p>
-                <p className="pl-[2px] md:px-1">「ン」、原点であり、新たな始まりを告げる言葉。</p>
-                <p className="pl-[2px] md:px-1">常に新しい可能性へと続いていく 、花のように。</p>
-                <p className="pl-[2px] md:px-1">琉球の伝統を受け継いで、未来に渡していきたい。</p>
+                <p className="pl-[2px] lg:px-1">「パナ」、八重山方言（ヤイマムニ）で「花」。</p>
+                <p className="pl-[2px] lg:px-1">「ン」、原点であり、新たな始まりを告げる言葉。</p>
+                <p className="pl-[2px] lg:px-1">常に新しい可能性へと続いていく 、花のように。</p>
+                <p className="pl-[2px] lg:px-1">琉球の伝統を受け継いで、未来に渡していきたい。</p>
               </div>
               <div className="u-story-textBlock writing-vertical">
-                <p className="pl-[2px] md:px-1">先人たちから受け継いだ癒しを、</p>
-                <p className="pl-[2px] md:px-1">世界に花開かせたいという、深い願いを胸に。</p>
-                <p className="pl-[2px] md:px-1">ここに、パナ・ンの、そして私たちの物語が始まります。</p>
+                <p className="pl-[2px] lg:px-1">先人たちから受け継いだ癒しを、</p>
+                <p className="pl-[2px] lg:px-1">世界に花開かせたいという、深い願いを胸に。</p>
+                <p className="pl-[2px] lg:px-1">ここに、パナ・ンの、そして私たちの物語が始まります。</p>
               </div>
             </div>
-            <p className="absolute shippori text-120px md:text-160px font-medium text-pana-gray04 top-[-80px] md:top-0 left-[-20px] md:left-10 z-0">
+            <p className="absolute shippori text-120px lg:text-160px font-medium text-pana-gray04 top-[-80px] lg:top-0 left-[-20px] lg:left-10 z-0">
               紡
             </p>
           </div>
-          <Button href="/story" text="物語の続きへ" className="mx-auto mt-10 md:mt-16" />
+          <Button href="/story" text="物語の続きへ" className="mx-auto mt-10 lg:mt-16" />
         </div>
       </section>
       <section
         ref={healingRef}
-        className="u-healing w-full md:w-auto md:h-screen md:flex md:justify-start md:ml-[185px]"
+        className="u-healing w-full lg:w-auto lg:h-screen lg:flex lg:justify-start lg:ml-[185px]"
       >
         <Swiper
           modules={[Autoplay, EffectFade]}
@@ -144,11 +144,11 @@ export default function Story() {
           autoplay={{ delay: 8000 }}
           speed={6000}
           loop
-          className="w-full h-[450px] md:w-[44.5%] md:h-screen ml-[180px]"
+          className="w-full h-[450px] lg:w-[44.5%] lg:h-screen ml-[180px]"
         >
           {sliderHealing.map((img, i) => (
             <SwiperSlide key={i}>
-              <div className="hidden md:block w-full h-full relative">
+              <div className="hidden lg:block w-full h-full relative">
                 <Image
                   src={img.pc}
                   alt={img.alt}
@@ -158,7 +158,7 @@ export default function Story() {
                   priority
                 />
               </div>
-              <div className="block md:hidden w-full h-[450px] relative">
+              <div className="block lg:hidden w-full h-[450px] relative">
                 <Image
                   src={img.sp}
                   alt={img.alt}
@@ -171,8 +171,8 @@ export default function Story() {
           ))}
         </Swiper>
 
-        <div className="u-story-textArea w-full px-5 py-10 md:w-[55.5%] md:pt-20 md:py-0">
-          <div className="relative flex flex-row-reverse gap-2 md:gap-10 z-1">
+        <div className="u-story-textArea w-full px-5 py-10 lg:w-[55.5%] lg:pt-20 lg:py-0">
+          <div className="relative flex flex-row-reverse gap-2 lg:gap-10 z-1">
             <SectionTitle
               mainTitle="パナ・ンの癒し"
               subTitle="pana-n's healing"
@@ -181,28 +181,28 @@ export default function Story() {
               subTitleTopSP="70px"
               subTitleRightSP="-46px"
             />
-            <div className="relative flex flex-row-reverse gap-3 md:gap-4 shippori text-base md:text-lg font-medium tracking-[2px] pt-12 md:pt-16 z-1">
+            <div className="relative flex flex-row-reverse gap-3 lg:gap-4 shippori text-base lg:text-lg font-medium tracking-[2px] pt-12 lg:pt-16 z-1">
               <div className="u-story-textBlock writing-vertical">
-                <p className="pl-[2px] md:px-1">本当の意味での「癒し」とは、</p>
-                <p className="pl-[2px] md:px-1">ただ身体をほぐすだけのものではなく、</p>
-                <p className="pl-[2px] md:px-1">深く静かに、心や魂にふれるもの。</p>
+                <p className="pl-[2px] lg:px-1">本当の意味での「癒し」とは、</p>
+                <p className="pl-[2px] lg:px-1">ただ身体をほぐすだけのものではなく、</p>
+                <p className="pl-[2px] lg:px-1">深く静かに、心や魂にふれるもの。</p>
               </div>
               <div className="u-story-textBlock writing-vertical">
-                <p className="pl-[2px] md:px-1">パナ・ンでは、単なるテクニックを超えた、</p>
-                <p className="pl-[2px] md:px-1">琉球の伝統的な知恵に根ざし、</p>
-                <p className="pl-[2px] md:px-1">より本質的な魂の回復と変容を追求しています。</p>
+                <p className="pl-[2px] lg:px-1">パナ・ンでは、単なるテクニックを超えた、</p>
+                <p className="pl-[2px] lg:px-1">琉球の伝統的な知恵に根ざし、</p>
+                <p className="pl-[2px] lg:px-1">より本質的な魂の回復と変容を追求しています。</p>
               </div>
               <div className="u-story-textBlock writing-vertical">
-                <p className="pl-[2px] md:px-1">あなたの内なる輝きを呼び覚ます深遠な癒しの旅。</p>
-                <p className="pl-[2px] md:px-1">一人一人の物語に寄り添い、本来の自分を取り戻す</p>
-                <p className="pl-[2px] md:px-1">パナ・ンでの癒しを紹介します。</p>
+                <p className="pl-[2px] lg:px-1">あなたの内なる輝きを呼び覚ます深遠な癒しの旅。</p>
+                <p className="pl-[2px] lg:px-1">一人一人の物語に寄り添い、本来の自分を取り戻す</p>
+                <p className="pl-[2px] lg:px-1">パナ・ンでの癒しを紹介します。</p>
               </div>
             </div>
-            <p className="absolute shippori text-120px md:text-160px font-medium text-pana-gray04 top-[-80px] md:top-0 left-[-20px] md:left-10 z-0">
+            <p className="absolute shippori text-120px lg:text-160px font-medium text-pana-gray04 top-[-80px] lg:top-0 left-[-20px] lg:left-10 z-0">
               癒
             </p>
           </div>
-          <Button href="/healing" text="癒しの続きへ" className="mx-auto mt-10 md:mt-16" />
+          <Button href="/healing" text="癒しの続きへ" className="mx-auto mt-10 lg:mt-16" />
         </div>
       </section>
     </section>

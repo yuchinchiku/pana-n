@@ -61,19 +61,19 @@ const StoryList: Story[] = [
 
 export default function StoryLayout() {
   return (
-    <div className='md:ml-[185px] md:mr-20'>
+    <div className='lg:ml-[185px] lg:mr-20'>
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <PageIntro
-        lead="石垣から始まったパナ・ンの想い"
-        subLead="Born in Ishigaki Island, Pana-n’s journey of heartfelt intentions."
+        lead="石垣から始まった<br class='hidden lg:block' />パナ・ンの想い"
+        subLead="Born in Ishigaki Island, <br class='hidden lg:block' />Pana-n’s journey of heartfelt intentions."
         desc={
           `<p>2006年3月に石垣島で設立されたパナ・ン。</p>
-          <p>尚巴志の時代から受け継がれた琉球王国の叡智と、<br class='hidden md:block' />
+          <p>尚巴志の時代から受け継がれた琉球王国の叡智と、<br class='hidden lg:block' />
           沖縄の豊かな自然の恵みを活かした癒し。</p>
           <p>この場所を創り上げてきた先人たちの深い恩を受けてきています。</p>
-          <p>全ての命に対してする「恩返し」として、<br class='hidden md:block' />
-          エステ・ほぐしの世界で出会う様々な命との付き合いの中、<br class='hidden md:block' />
+          <p>全ての命に対してする「恩返し」として、<br class='hidden lg:block' />
+          エステ・ほぐしの世界で出会う様々な命との付き合いの中、<br class='hidden lg:block' />
           パナ・ンの恩返しを全力でしていきたい。
           </p>`}
       />

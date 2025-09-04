@@ -2,7 +2,7 @@
   .u-page-subTitle{
     top: 58px;
     left: 45px;
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 1024px){
       top: 44px;
       left: 39px;
     }
@@ -23,7 +23,7 @@
       display: block;
       background-color: rgba(29, 17, 18, 0.6);
     }
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: 1024px){
       background: url('/images/company/hero_company_pc.jpg') no-repeat center;
       background-size: cover;
     }

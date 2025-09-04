@@ -1,7 +1,6 @@
 // src/app/salon/[id]/page.tsx
 import type { Metadata } from "next";
 import { storeDetails } from "@/data/storeDetails";
-import PageHeroHor from "@/components/pages/PageHeroHor";
 import PageSecTitleHor from "@/components/pages/PageSecTitleHor";
 import PageIntro from "@/components/pages/PageIntro";
 import Notify from "@/components/pages/Notify";
@@ -11,6 +10,8 @@ import StoreGallery from "@/components/pages/StoreGallery";
 import StoreList from "@/app/salon/StoreList";
 import ButtonBack from '@/components/ButtonBack';
 import { stores } from "@/data/stores";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import HeroSection from './HeroSection';
 
 
 import '@/styles/pages/salon/salonDetails.scss';
@@ -38,8 +39,9 @@ export default async function StoreDetailPage({ params }: Props) {
   const otherStores = stores.filter((s) => s.href !== id);
 
   return (
-    <div className={`u-${id} u-pageSalonDetails md:ml-[185px] md:mr-20`}>
-      <PageHeroHor title={store.title} subTitle={store.subTitle} />
+    <div className={`u-${id} u-pageSalonDetails lg:ml-[185px] lg:mr-20`}>
+      <ScrollAnimation />
+      <HeroSection title={store.title} subTitle={store.subTitle} />
       <PageIntro lead={store.lead} subLead={store.subLead} desc={store.desc} />
       {store.notify && <Notify title={store.notify.title} desc={store.notify.desc} />}
       <StoreInfo store={store} />
@@ -48,9 +50,9 @@ export default async function StoreDetailPage({ params }: Props) {
 
 
       {otherStores.length > 0 && (
-        <section className="u-pageSalonDetails-salonList max-w-[1020px] md:w-[82.3%] mt-20 md:mt-40 md:ml-[15%] md:mr-[9%] mb-20">
+        <section className="u-pageSalonDetails-salonList max-w-[1020px] lg:w-[82.3%] mt-20 lg:mt-40 lg:ml-[15%] lg:mr-[9%] mb-20">
           <PageSecTitleHor mainTitle="その他の店舗" subTitle="others salons" />
-          <div className="px-5 md:px-0">
+          <div className="px-5 lg:px-0">
             <StoreList stores={otherStores} />
           </div>
         </section>
@@ -58,7 +60,7 @@ export default async function StoreDetailPage({ params }: Props) {
       <ButtonBack
         href="/salon"
         text="店舗一覧へ"
-        className="u-bottun-md mt-10 md:mt-16 mb-32 md:mb-60 mx-auto"
+        className="u-bottun-md u-fade-in mt-10 lg:mt-16 mb-32 lg:mb-60 mx-auto"
       />
     </div>
   );

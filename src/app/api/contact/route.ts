@@ -1,71 +1,88 @@
+// app/api/contact/route.ts
+import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { NextResponse } from 'next/server';
+import sanitizeHtml from 'sanitize-html';
+import { ContactFormData } from '@/app/contact/types';
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
-    const data = await req.json();
+    const data: ContactFormData & { recaptchaToken?: string } = await req.json();
+    const { recaptchaToken, ...rest } = data;
 
-    // --- SMTP設定 ---
+    if (!recaptchaToken) {
+      return NextResponse.json(
+        { success: false, message: 'reCAPTCHA トークンがありません' },
+        { status: 400 }
+      );
+    }
+
+    // reCAPTCHA 検証
+    const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        secret: process.env.RECAPTCHA_SECRET_KEY!,
+        response: recaptchaToken,
+      }),
+    });
+
+    const verifyJson = await verifyRes.json();
+    if (!verifyJson.success) {
+      return NextResponse.json(
+        { success: false, message: 'reCAPTCHA 検証に失敗しました' },
+        { status: 400 }
+      );
+    }
+
+    // バリデーション
+    const errors: Record<string, string> = {};
+    ['subject', 'name', 'email', 'phone', 'message'].forEach((key) => {
+      if (!rest[key as keyof FormData]) errors[key] = '必須項目です';
+    });
+
+    if (Object.keys(errors).length > 0) {
+      return NextResponse.json({ errors, success: false }, { status: 400 });
+    }
+
+    const safeData = {
+      subject: sanitizeHtml(rest.subject),
+      company: sanitizeHtml(rest.company || ''),
+      name: sanitizeHtml(rest.name),
+      email: sanitizeHtml(rest.email),
+      phone: sanitizeHtml(rest.phone),
+      message: sanitizeHtml(rest.message),
+    };
+
     const transporter = nodemailer.createTransport({
       host: process.env.MAIL_HOST,
       port: Number(process.env.MAIL_PORT),
       secure: true,
       auth: {
         user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+        pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
 
-    // --- 管理者宛メール ---
-    const mailOptionsAdmin = {
-      from: `"お問い合わせフォーム" <${process.env.MAIL_USER}>`,
-      to: process.env.MAIL_TO, // 管理者メール
-      subject: `【お問い合わせ】${data.subject}`,
-      text: `
-新しいお問い合わせが届きました。
-
-ご用件: ${data.subject}
-貴社名: ${data.company || '-'}
-お名前: ${data.name}
-メールアドレス: ${data.email}
-お電話番号: ${data.phone}
-
-お問い合わせ内容:
-${data.message}
+    await transporter.sendMail({
+      from: `"${safeData.name}" <${safeData.email}>`,
+      to: process.env.MAIL_TO,
+      subject: `[お問い合わせ] ${safeData.subject}`,
+      html: `
+        <p><strong>ご用件:</strong> ${safeData.subject}</p>
+        <p><strong>会社名:</strong> ${safeData.company}</p>
+        <p><strong>お名前:</strong> ${safeData.name}</p>
+        <p><strong>メール:</strong> ${safeData.email}</p>
+        <p><strong>電話番号:</strong> ${safeData.phone}</p>
+        <p><strong>内容:</strong><br/>${safeData.message.replace(/\n/g, '<br/>')}</p>
       `,
-    };
-
-    // --- ユーザー宛確認メール ---
-    const mailOptionsUser = {
-      from: `"パナ・ン" <${process.env.MAIL_USER}>`,
-      to: data.email, // ユーザー宛
-      subject: 'お問い合わせありがとうございます',
-      text: `
-${data.name} 様
-
-この度はお問い合わせいただきありがとうございます。
-以下の内容で受け付け致しました。
-
-ご用件: ${data.subject}
-貴社名: ${data.company || '-'}
-お名前: ${data.name}
-メールアドレス: ${data.email}
-お電話番号: ${data.phone}
-
-お問い合わせ内容:
-${data.message}
-
-後ほど担当者よりご連絡いたしますので、もうしばらくお待ちください。
-      `,
-    };
-
-    // --- メール送信 ---
-    await transporter.sendMail(mailOptionsAdmin);
-    await transporter.sendMail(mailOptionsUser);
+    });
 
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error(err);
-    return NextResponse.json({ success: false, error: 'メール送信に失敗しました' });
+    return NextResponse.json(
+      { success: false, message: '送信に失敗しました' },
+      { status: 500 }
+    );
   }
 }

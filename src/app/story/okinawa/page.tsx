@@ -64,12 +64,12 @@ const StoryList: Story[] = [
 
 export default function StoryLayout() {
   return (
-    <div className='md:ml-[185px] md:mr-20'>
+    <div className='lg:ml-[185px] lg:mr-20'>
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <PageIntro
-        lead="パナ・ンで働く人々への恩返し　ゆいまーる"
-        subLead="Giving Back to the People Who Work at Pana-n – Yui Maaru."
+        lead="パナ・ンで働く人々への恩返し　 <br class='hidden lg:block' />ゆいまーる"
+        subLead="Giving Back to the People Who Work at Pana-n <br class='hidden lg:block' /> – Yui Maaru."
         desc={
           `<p>『みんなが喜ぶ笑顔のために』</p>
           <p>ーこの言葉は、パナ・ンを訪れるお客様だけでなく、ここで働く仲間たちへの思いも込められています。</p>

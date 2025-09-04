@@ -13,7 +13,7 @@
     // background-color: white;
     background: url('/images/common/img_cloud-f_pc.png') no-repeat bottom;
     background-size: cover;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       top: -147px;
       height: 147px;
     }
@@ -27,7 +27,7 @@
 
 .u-submenu-item{
   position: relative;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1024px) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -41,7 +41,7 @@
     display: block;
     background-color: #8B8787;
     margin: 0 auto 16px;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       width: 8px;
       height: 1px;
       margin: 0;

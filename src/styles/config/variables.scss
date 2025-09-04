@@ -43,7 +43,7 @@ $breakpoints: (
   xsm: 430,
   sm: 768,
   nav: 895,
-  md: 1020,
+  lg: 1020,
   lg: 1400,
   navlg: 1408,
 ) !default;
@@ -64,7 +64,7 @@ $design-sizes: (
 /// List of Content sizes
 $content-sizes: (
   sp: 100%,
-  md: 49.4%,
+  lg: 49.4%,
   pc: 75%,
 ) !default;
 
@@ -76,8 +76,8 @@ $content-sizes: (
 $spacing-units: (
   xxs: 8,
   xs: 16,
-  md: 24,
-  md: 32,
+  lg: 24,
+  lg: 32,
   def: 40,
   lg: 64,
   xl: 80,
@@ -85,8 +85,8 @@ $spacing-units: (
 ) !default;
 
 $spacing-units-sp: (
-  md: 5.3%,
-  md: 10.6%,
+  lg: 5.3%,
+  lg: 10.6%,
   lg: 21.2%,
   side: 24.2%,
 ) !default;

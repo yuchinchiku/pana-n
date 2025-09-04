@@ -33,7 +33,7 @@ export default function SectionTitle({
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     handleResize(); // 初回チェック
@@ -47,18 +47,18 @@ export default function SectionTitle({
 
   return (
     <h2
-      className={`u-sec-title relative w-16 flex-shrink-0 md:w-20 h-fit pr-4 md:pr-12 border-r ${borderColor} ${className}`}
+      className={`u-sec-title relative w-16 flex-shrink-0 lg:w-20 h-fit pr-4 lg:pr-12 border-r ${borderColor} ${className}`}
     >
-      <i className="block mx-auto mb-2 w-3 h-3 md:w-5 md:h-5">
-        <Pana color={iconColor} className="w-3 h-3 md:w-5 md:h-5" />
+      <i className="block mx-auto mb-2 w-3 h-3 lg:w-5 lg:h-5">
+        <Pana color={iconColor} className="w-3 h-3 lg:w-5 lg:h-5" />
       </i>
       <span
-        className={`shippori text-[28px] md:text-32px font-medium leading-none writing-vertical ${textColor} pl-2 md:pl-0`}
+        className={`shippori text-[28px] lg:text-32px font-medium leading-none writing-vertical ${textColor} pl-2 lg:pl-0`}
       >
         {mainTitle}
       </span>
       <span
-        className={`garamond text-base md:text-xl tracking-wider rotate-90 whitespace-nowrap absolute ${textColor}`}
+        className={`garamond text-base lg:text-xl tracking-wider rotate-90 whitespace-nowrap absolute ${textColor}`}
         style={{ top: topValue, right: rightValue }}
       >
         {subTitle}

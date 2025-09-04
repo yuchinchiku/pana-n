@@ -17,7 +17,7 @@ export default function StoreSlider({ isTopPage = true }: StoreSliderProps) {
   const router = useRouter(); // ← ここで取得
 
   return (
-    <div className={isTopPage ? 'md:ml-[185px] md:mr-24' : 'md:ml-[11%] md:mr-0'}>
+    <div className={isTopPage ? 'lg:ml-[185px] lg:mr-24' : 'lg:ml-[11%] lg:mr-0'}>
       <Swiper
         modules={[Autoplay]}
         loop
@@ -44,9 +44,9 @@ export default function StoreSlider({ isTopPage = true }: StoreSliderProps) {
                 />
               </div>
               <div className={`u-store-text shippori font-medium text-left mt-4 ${isTopPage ? 'text-white' : 'text-black'}`}>
-                <div className='u-store-textHead flex justify-between pl-2 md:pl-4 relative'>
+                <div className='u-store-textHead flex justify-between pl-2 lg:pl-4 relative'>
                   <h3
-                    className="text-base md:text-lg"
+                    className="text-base lg:text-lg"
                     dangerouslySetInnerHTML={{ __html: store.cat }}
                   />
                   {store.hasButton && (
@@ -55,7 +55,7 @@ export default function StoreSlider({ isTopPage = true }: StoreSliderProps) {
                         e.preventDefault(); 
                         router.push(`/salon/${store.href}`);
                       }}
-                      className={`u-button u-button-store absolute top-0 right-0 text-left block w-[80px] md:w-[104px] h-[29px] border flex-shrink-0 pt-[2px] pl-[4px] ${isTopPage ? 'text-white border-white' : 'u-button-store-pages text-black border-pana' }`}
+                      className={`u-button u-button-store absolute top-0 right-0 text-left block w-[80px] lg:w-[104px] h-[29px] border flex-shrink-0 pt-[2px] pl-[4px] ${isTopPage ? 'text-white border-white' : 'u-button-store-pages text-black border-pana' }`}
                     >
                       <p className="u-button-text shippori font-medium text-sm">
                         店舗詳細
@@ -63,7 +63,7 @@ export default function StoreSlider({ isTopPage = true }: StoreSliderProps) {
                     </button>
                   )}
                 </div>
-                <p className='text-sm block mt-[6px] md:mt-2 pl-2 md:pl-4'>{store.name}</p>
+                <p className='text-sm block mt-[6px] lg:mt-2 pl-2 lg:pl-4'>{store.name}</p>
               </div>
             </Link>
           </SwiperSlide>

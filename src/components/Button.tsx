@@ -16,7 +16,7 @@ export default function Button({ href, text, className }: ButtonProps) {
         className
       )}
     >
-      <p className='u-button-text shippori font-medium text-lg md:text-22px pt-1'>{text}</p>
+      <p className='u-button-text shippori font-medium text-lg lg:text-22px pt-1'>{text}</p>
     </Link>
   );
 }

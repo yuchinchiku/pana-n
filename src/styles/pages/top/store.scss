@@ -5,7 +5,7 @@
     }
   }
   &:hover{
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: 1024px) {
       .u-store-thumb{
         img{
           transform: scale(1.05);
@@ -40,7 +40,7 @@
     transform: translateX(-50%);
     display: block;
     background: url('/images/top/bg-wh-blk_top_pc.png') no-repeat top center / cover;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       top: -140px;
       left: 50%;
       width: 100%;
@@ -65,12 +65,12 @@
   background: url('/images/top/bg_store_pc.jpg') no-repeat top center;
   background-size: cover;
   padding: 40px 0;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1024px) {
     background: none;
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .u-store-head{
     position: relative;
     &::before{
