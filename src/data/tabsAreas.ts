@@ -165,7 +165,7 @@ export const tabsAreas: TabAreaType[] = [
         titleEn: 'Polished with Okinawan sea salt and coral calcium, revealing smooth, radiant skin.',
         lead: '沖縄の海塩と珊瑚カルシウムで叶える、透明感あふれるなめらかな素肌へ。',
         desc: `<p class='pb-4'>古い角質を取り除き、透明感のあるふわふわなお肌に導きます。</p>
-        <p>スクラブの程よいマッサージは血行を促進し、内側からのくすみ対策にもなります。</p>`,
+        <p>スクラブの程よいリラクゼーションマッサージは血行を促進し、内側からのくすみ対策にもなります。</p>`,
         descriptionImages: undefined,
         table: [
           {
@@ -187,7 +187,7 @@ export const tabsAreas: TabAreaType[] = [
         title: '美ら島フェイシャル（デコルテ付）',
         titleEn: 'Okinawan botanicals and coral care for radiant, hydrated skin.',
         lead: '琉球の自然素材でお顔とデコルテをケア。透明感と潤いに満ちた、美しく健やかな素肌へ。',
-        desc: `<p class='pb-4'>クレンジングからお顔＋デコルテのアロマオイルマッサージを行ったあと、珊瑚、ゴーヤー、黒糖、モズク、クチャ（琉球粘土）など、こだわりの琉球粧材にてパックいたします。</p>
+        desc: `<p class='pb-4'>クレンジングからお顔＋デコルテのアロマオイルリラクゼーションマッサージを行ったあと、珊瑚、ゴーヤー、黒糖、モズク、クチャ（琉球粘土）など、こだわりの琉球粧材にてパックいたします。</p>
         <p>透明感のあるお肌、潤いのあるみずみずしいお肌、ハリのあるお肌、美白など様々な効果を与えてくれます。</p>`,
         descriptionImages: undefined,
         table: [
@@ -267,7 +267,7 @@ export const tabsAreas: TabAreaType[] = [
         title: 'アロマオイルマッサージ',
         titleEn: 'Relax and unwind — a gentle full-body massage with your choice of soothing oils.',
         lead: '好みの香りに包まれ、全身を優しくほぐすスタンダードメニュー',
-        desc: `<p class='pb-4'>アロマオイルによる全身のマッサージで筋肉をやさしくほぐします。</p>
+        desc: `<p class='pb-4'>アロマオイルによる全身のリラクゼーションマッサージで筋肉をやさしくほぐします。</p>
         <p class='pb-4'>心身共にアロマの香りに包まれて夢心地に誘います。</p>
         <p class='pb-4'>沖縄の人に昔から親しまれている月桃のアロマオイルやバリニーズオイルなど、多数のオイルからお好きな香りをお選びいただけます。</p>
         <p>のんびりリラックスしたいという方のスタンダードメニューです。</p>`,
@@ -293,8 +293,8 @@ export const tabsAreas: TabAreaType[] = [
         title: 'タイ式リラクゼーションマッサージ',
         titleEn: 'Experience 2,500 years of wisdom — a dynamic blend of acupressure and stretching.',
         lead: 'エネルギーラインを整え、ストレッチで全身を解きほぐす伝統の技。',
-        desc: `<p class='pb-4'>約2500年の歴史を持つタイ伝統のマッサージ。</p>
-        <p>体のエネルギーライン（セン）をマッサージで刺激し、程よいストレッチにより全身の筋肉をほぐし、血液とリンパの流れをスムーズにします。</p>`,
+        desc: `<p class='pb-4'>約2500年の歴史を持つタイ伝統のリラクゼーションマッサージ。</p>
+        <p>体のエネルギーライン（セン）をリラクゼーションマッサージで刺激し、程よいストレッチにより全身の筋肉をほぐし、血液とリンパの流れをスムーズにします。</p>`,
         descriptionImages: undefined,
         table: [
           {
