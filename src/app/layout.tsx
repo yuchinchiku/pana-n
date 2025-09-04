@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
     description: "琉球の想いと癒しをあなたへ。",
     url: "https://pana-n.jp", // 本番サイトのURL
-    siteName: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・琉球マッサージの店舗です。",
+    siteName: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・元祖琉球マッサージの店舗です。",
     images: [
       {
         url: "https://pana-n.jp/images/meta/ogp.png",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
-    description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・琉球マッサージの店舗です。",
+    description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・元祖琉球マッサージの店舗です。",
     images: ["https://pana-n.jp/images/meta/ogp.png"],
   },
 };

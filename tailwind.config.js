@@ -50,6 +50,7 @@ module.exports = {
         '.writing-vertical': {
           writingMode: 'vertical-rl',
           textOrientation: 'upright',
+          whiteSpace: 'nowrap',
         },
       });
     },
