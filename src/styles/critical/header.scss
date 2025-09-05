@@ -87,3 +87,21 @@
   }
 }
 
+
+@media screen and (max-height: 929px) {
+  .u-header-logo{
+    padding: 20px 0 !important;
+  }
+  .u-nav-item{
+    padding-bottom: 10px !important;
+  }
+}
+
+@media screen and (max-height: 929px) and (max-width: 1024px)  {
+  .u-header-logo{
+    padding: 0 !important;
+  }
+  .u-nav-item{
+    padding-bottom: 24px !important;
+  }
+}

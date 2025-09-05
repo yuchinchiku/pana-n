@@ -114,7 +114,7 @@ export default function Story() {
               subTitleTopSP="61px"
               subTitleRightSP="-39px"
             />
-            <div className="relative flex flex-row-reverse gap-3 lg:gap-6 shippori text-base lg:text-lg font-medium tracking-[2px] pt-12 lg:pt-16 z-1">
+            <div className="u-story-text relative flex flex-row-reverse gap-3 lg:gap-6 shippori text-base lg:text-lg font-medium tracking-[2px] pt-12 lg:pt-16 z-2">
               <div className="u-story-textBlock writing-vertical">
                 <p className="pl-[2px] lg:px-1">「パナ」、八重山方言（ヤイマムニ）で「花」。</p>
                 <p className="pl-[2px] lg:px-1">「ン」、原点であり、新たな始まりを告げる言葉。</p>
@@ -181,7 +181,7 @@ export default function Story() {
               subTitleTopSP="70px"
               subTitleRightSP="-46px"
             />
-            <div className="relative flex flex-row-reverse gap-3 lg:gap-4 shippori text-base lg:text-lg font-medium tracking-[2px] pt-12 lg:pt-16 z-1">
+            <div className="u-story-text relative flex flex-row-reverse gap-3 lg:gap-4 shippori text-base lg:text-lg font-medium tracking-[2px] pt-12 lg:pt-16 z-1">
               <div className="u-story-textBlock writing-vertical">
                 <p className="pl-[2px] lg:px-1">本当の意味での「癒し」とは、</p>
                 <p className="pl-[2px] lg:px-1">ただ身体をほぐすだけのものではなく、</p>
