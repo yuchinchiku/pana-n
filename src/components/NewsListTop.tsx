@@ -29,7 +29,7 @@ export default async function NewsListTop() {
   // ✅ 正しくは引数を直接渡す
   const newsList = await fetchLatestNews(5);
 
-  if (!newsList.length) return <p className="text-white">お知らせはありません。</p>;
+  if (!newsList.length) return <p className="shippori text-white">お知らせはありません。</p>;
 
   return (
     <ul className="u-newsList u-fade-in pt-4 max-w-[603px]">

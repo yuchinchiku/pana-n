@@ -54,7 +54,7 @@ export default function NewsListClient({ perPage = 10 }: { perPage?: number }) {
         }`}
       >
         {newsList.length === 0 ? (
-          <li className="text-text-pana">お知らせはありません。</li>
+          <li className="shippori text-text-pana">お知らせはありません。</li>
         ) : (
           newsList.map((news) => (
             <li
