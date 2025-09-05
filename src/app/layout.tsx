@@ -8,6 +8,7 @@ import { EB_Garamond, Shippori_Mincho_B1 } from 'next/font/google';
 import '@/styles/globals.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Script from 'next/script';
 
 const garamond = EB_Garamond({ subsets: ['latin'], variable: '--font-garamond', display: 'swap' });
 const shippori = Shippori_Mincho_B1({ subsets: ['latin'], weight: ['400','700'], variable: '--font-shippori', display: 'swap' });
@@ -30,8 +31,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
     description: "琉球の想いと癒しをあなたへ。",
-    url: "https://pana-n.jp", // 本番サイトのURL
-    siteName: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・元祖琉球マッサージの店舗です。",
+    url: "https://pana-n.jp",
+    siteName: "琉球の想いと癒しをあなたへ。元祖琉球マッサージ、パナ・ン。",
     images: [
       {
         url: "https://pana-n.jp/images/meta/ogp.png",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
-    description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンの石垣や沖縄を代表する究極のエステ・スパ・元祖琉球マッサージの店舗です。",
+    description: "琉球の想いと癒しをあなたへ。元祖琉球マッサージ、パナ・ン。",
     images: ["https://pana-n.jp/images/meta/ogp.png"],
   },
 };
@@ -56,6 +57,21 @@ gsap.registerPlugin(ScrollTrigger);
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja" className="overflow-x-hidden">
+      <head>
+        {/* Google Analytics 4 */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-184NT41R46"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-184NT41R46');
+          `}
+        </Script>
+      </head>
       <body
         suppressHydrationWarning
         className={`${garamond.variable} ${shippori.variable} overflow-x-hidden`}>
