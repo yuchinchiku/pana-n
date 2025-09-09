@@ -28,3 +28,21 @@
     }
   }
 }
+
+.u-kodawari-wrapper{
+  @media screen and (max-width: 1440px) and (min-width: 768px){
+    padding-right: 40px;
+  }
+}
+.u-kodawari-textArea{
+  @media screen and (max-width: 1440px)and (min-width: 768px){
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.u-kodawari-desc {
+  @media screen and (max-width: 1440px)and (min-width: 768px){
+    padding-right: 0;
+  }
+}
