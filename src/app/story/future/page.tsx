@@ -20,7 +20,7 @@ type Story = {
 
 const introData = {
   pageName: 'future',
-  num: '3',
+  num: '4',
   title: 'パナ・ンの夢 ',
   subTitle: "pana-n’s dream",
   text: "想いは巡りて花ひらく。",
