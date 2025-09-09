@@ -123,7 +123,7 @@ export default function Story() {
               <h3 className="shippori font-medium text-xl lg:text-2xl py-2">{section.title}</h3>
               <p className="garamond lg:text-lg">{section.subtitle}</p>
             </div>
-            <div className="u-fade-in shippori font-medium text-base leading-[180%] pt-2 lg:pt-8 lg:pr-[20%]">
+            <div className="u-kodawari-desc u-fade-in shippori font-medium text-base leading-[180%] pt-2 lg:pt-8 lg:pr-[20%]">
               {section.texts.map((text, idx) => (
                 <p key={idx} className='pb-4'>{text}</p>
               ))}
