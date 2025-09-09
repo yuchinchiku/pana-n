@@ -17,7 +17,7 @@ export default function CV() {
         ${!isHome ? 'lg:border-l border-[#1d11124d]' : ''}
       `}
     >
-      <Link href="/" className='u-cv-link block h-fit min-h-screen pt-4 px-5 lg:py-10 lg:px-8'>
+      <Link href="https://recruit.pana-n.jp/" className='u-cv-link block h-fit min-h-screen pt-4 px-5 lg:py-10 lg:px-8' target='_blank'>
         <p className="u-cv-text shippori text-sm lg:text-base font-medium tracking-[4px] lg:tracking-[6px] writing-vertical ml-[-2px] lg:ml-[-6px]">
           <i className='inline-block mx-auto'>
             <Pana color="#1D1112" className='w-[14px] h-[14px] lg:w-5 lg:h-5' />

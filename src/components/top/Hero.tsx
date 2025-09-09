@@ -14,6 +14,7 @@ export default function Hero() {
         poster="/images/top/img_hero.jpg" // ← 1フレーム目を画像にしておく
       >
         <source src="https://pana-n.jp/video/panan-01.mp4" type="video/mp4" />
+        {/* <source src="/video/panan-0909.mp4" type="video/mp4" /> */}
         Your browser does not support the video tag.
       </video>
       <div className="block md:hidden">
