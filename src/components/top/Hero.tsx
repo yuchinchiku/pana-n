@@ -6,8 +6,15 @@ import '@/styles/pages/top/hero.scss';
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [ready, setReady] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
   const [fade, setFade] = useState<'in' | 'out'>('in');
-  const [ready, setReady] = useState(false); // ローディング完了フラグ
+
+  // ローディング完了時のコールバック
+  const handleLoadingFinish = () => {
+    setReady(true);
+    setShowLoading(false);
+  };
 
   // ローディング完了後に動画再生
   useEffect(() => {
@@ -16,19 +23,7 @@ export default function Hero() {
     }
   }, [ready]);
 
-  // 再生・停止の切り替え
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (ready) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  }, [ready]);
-
-  // フェード制御（ループ時の処理含む）
+  // 動画ループ時のフェード制御
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -60,30 +55,24 @@ export default function Hero() {
   return (
     <>
       {/* ローディング */}
-      {!ready && <LoadingOverlay onFinishAction={() => setReady(true)} />}
+      {showLoading && <LoadingOverlay onFinishAction={handleLoadingFinish} />}
 
-      <section
-        className="u-hero sec-black relative w-full h-screen"
-        data-header-color="#fff"
-      >
+      <section className="u-hero sec-black relative w-full h-screen" data-header-color="#fff">
         <video
-          ref={videoRef}
-          className={`u-video fixed inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-            fade === 'out' ? 'opacity-0' : 'opacity-100'
-          }`}
-          autoPlay
-          playsInline
-          muted
-          preload="auto"
-          poster="/images/top/img_hero.jpg"
-        >
-          <source
-            src="https://pana-n.jp/video/panan-01.mp4"
-            type="video/mp4"
-          />
+        ref={videoRef}
+        className={`u-video fixed inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          ready ? 'opacity-100' : 'opacity-0'
+        }`}
+        playsInline
+        muted
+        preload="auto"
+        poster="/images/top/img_hero.jpg"
+      >
+
+          <source src="https://pana-n.jp/video/panan-01.mp4" type="video/mp4" />
         </video>
 
-        {/* スマホ用のGIF */}
+        {/* スマホ用GIF */}
         <div className="block md:hidden">
           <img
             className="u-video fixed inset-0 w-full h-full object-cover"
@@ -93,6 +82,7 @@ export default function Hero() {
         </div>
 
         <div className="u-overlay fixed inset-0 pointer-events-none"></div>
+
         <h1 className="u-hero-lead absolute shippori text-xl text-white lg:text-4xl">
           <span className="block">琉球の想いと癒しをあなたへ。</span>
           <span className="block pl-6 pt-2 lg:pl-16">心のひだに触れ、魂をほぐす</span>
@@ -100,6 +90,7 @@ export default function Hero() {
             元祖琉球マッサージ、パナ・ン。
           </span>
         </h1>
+
         <div className="u-scroll absolute bottom-24 left-1/2 -translate-x-1/2">
           <p className="u-scroll-text garamond text-base text-white text-center">
             scroll down
