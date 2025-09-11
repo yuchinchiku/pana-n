@@ -179,7 +179,7 @@ export default function Intro() {
         <div className="u-intro-textBlock writing-vertical mr-[10.6%] ml-auto lg:mx-0">
           <p className='px-1 u-fade-in'>温かな手のひら、心地よいアロマ、</p>
           <p className='px-1 u-fade-in'>島々の海の恵み、</p>
-          <p className='px-1 u-fade-in'>そして琉球の音楽に包まれ、</p>
+          <p className='px-1 u-fade-in'>そして琉球の風に包まれ、</p>
           <p className='px-1 u-fade-in'>日々の疲れを癒し</p>
           <p className='px-1 u-fade-in'>魂をほぐさせていただきます。</p>
           <div ref={deigo3SpRef} className="u-ill-deigo-3 w-[130px] lg:w-[250px] h-[135px] lg:h-[263px] absolute top-10 lg:top-0 left-4 lg:right-20 lg:left-auto">

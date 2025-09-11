@@ -22,14 +22,14 @@ const navItems = [
     href: '/salon',
     ja: 'パナ・ンの店舗',
     subMenu: [
-      { href: '/salon/hogushigatten-nahakume', ja: 'ほぐしガッテン那覇久米店' },
       { href: '/salon/hogushigatten-maezato', ja: 'ほぐしガッテン真栄里店 ' },
+      { href: '/salon/hogushigatten-nahakume', ja: 'ほぐしガッテン那覇久米店' },
       { href: '/salon/hogushigatten-omori', ja: 'ほぐしガッテン大森東口店' },
-      { href: '/salon/hoshino-okinawa', ja: '星のや沖縄スパ ' },
+      { href: '/salon/painushima', ja: 'パナ・ン石垣空港店' },
       { href: '/salon/hoshino-taketomi', ja: '星のや竹富島スパ' },
-      { href: '/salon/hoshino-iriomote', ja: '西表スパ ' },
+      { href: '/salon/hoshino-okinawa', ja: '星のや沖縄スパ ' },
       { href: '/salon/hoshino-kohama', ja: '小浜島琉球スパ' },
-      { href: '/salon/painushima', ja: 'パナ・ン南ぬ島 ' },
+      { href: '/salon/hoshino-iriomote', ja: '西表スパ ' },
       { href: '/salon/fusaki', ja: '琉球足つぼ' }
     ]
   },
