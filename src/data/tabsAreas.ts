@@ -53,7 +53,7 @@ export const tabsAreas: TabAreaType[] = [
           { src: 'original-1_1', text: '平挙' },
           { src: 'original-1_2', text: '拝み手' },
           { src: 'original-1_3', text: '正挙' },
-          { src: 'original-1_4', text: '一本挙' },
+          { src: 'original-1_4', text: '小挙' },
         ],
         table: [
           {
@@ -75,7 +75,7 @@ export const tabsAreas: TabAreaType[] = [
             items: [
               { value: 'ほぐしガッテン那覇久米店', buttonLabel: '店舗詳細', buttonHref: '/salon/hogushigatten-nahakume' },
               { value: 'ほぐしガッテン真栄里店', buttonLabel: '店舗詳細', buttonHref: '/salon/hogushigatten-maezato' },
-              { value: 'パナ・ン南ぬ島石垣空港店（南ぬ島石垣空港2F）', buttonLabel: '店舗詳細', buttonHref: '/salon/painushima' },
+              { value: 'パナ・ン石垣空港店（石垣空港2F）', buttonLabel: '店舗詳細', buttonHref: '/salon/painushima' },
             ],
           },
         ],
