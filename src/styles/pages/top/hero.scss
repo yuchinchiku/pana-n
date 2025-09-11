@@ -2,6 +2,13 @@
   background: linear-gradient(90deg, rgba(37, 36, 36, 0.6), rgba(139, 135, 135, 0));
 }
 
+// .u-video {
+//   opacity: 1;
+//   transition: opacity 0.5s ease-in-out; // ← フェード用
+// }
+.u-video {
+  transition: opacity 0.5s ease-in-out;
+}
 
 .u-hero-lead{
   line-height: 1.8;

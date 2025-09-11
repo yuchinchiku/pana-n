@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import '@/styles/pages/top/hero.scss';
 
 const loadingText = [
   "琉球の想いと癒しをあなたへ。",
@@ -10,7 +9,7 @@ const loadingText = [
   "元祖琉球マッサージ、パナ・ン。"
 ];
 
-export default function LoadingOverlay() {
+export default function LoadingOverlay({ onFinishAction }: { onFinishAction: () => void }) {
   const [mounted, setMounted] = useState(false);
   const [loading, setLoading] = useState(true);
   const [showCircle, setShowCircle] = useState(false);
@@ -19,18 +18,19 @@ export default function LoadingOverlay() {
     setMounted(true);
     const isSP = window.innerWidth <= 768;
 
-    const textTimer = setTimeout(() => setShowCircle(true), 1000); // 文字が先に出るように短め
-    const endTimer = setTimeout(
-      () => setLoading(false),
-      isSP ? 3000 : 4500 // SPは少し長めに
-    );
+    const textTimer = setTimeout(() => setShowCircle(true), 1000);
+    const endTimer = setTimeout(() => {
+      setLoading(false);
+      onFinishAction(); // ← ローディング完了を通知
+    }, isSP ? 3000 : 4500);
+
     return () => {
       clearTimeout(textTimer);
       clearTimeout(endTimer);
     };
-  }, []);
+  }, [onFinishAction]);
 
-  if (!mounted) return null;
+  if (!mounted) return 
 
   return (
     <AnimatePresence>
