@@ -1,4 +1,3 @@
-import LoadingOverlay from "@/components/top/LoadingOverlay";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Hero from "@/components/top/Hero";
 import Intro from "@/components/top/Intro";
@@ -10,7 +9,6 @@ import News from "@/components/top/News";
 export default function Home() {
   return (
     <>
-      <LoadingOverlay />
       <ScrollAnimation />
       <Hero />
       <Intro />
