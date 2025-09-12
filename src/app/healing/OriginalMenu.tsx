@@ -62,7 +62,6 @@ export default function OriginalMenu() {
               {section.texts.map((text, idx) => (
                 <p key={idx}>{text}</p>
               ))}
-              {section.note && <p className="shippori text-sm pt-2">{section.note}</p>}
             </div>
           </div>
         </li>
