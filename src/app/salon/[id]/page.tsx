@@ -41,7 +41,7 @@ export default async function StoreDetailPage({ params }: Props) {
   return (
     <div className={`u-${id} u-pageSalonDetails lg:ml-[185px] lg:mr-20`}>
       <ScrollAnimation />
-      <HeroSection title={store.title} subTitle={store.subTitle} />
+      <HeroSection title={store.title} subTitle={store.subTitle} buttonHref={store.buttonHref} />
       <PageIntro lead={store.lead} subLead={store.subLead} desc={store.desc} />
       {store.notify && <Notify title={store.notify.title} desc={store.notify.desc} />}
       <StoreInfo store={store} />

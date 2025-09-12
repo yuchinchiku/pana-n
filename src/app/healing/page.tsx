@@ -29,7 +29,7 @@ export default function HealingPage() {
       <ScrollAnimation />
       <HeroSection />
       <PageIntro
-        lead="本当の意味での「癒し」とは？"
+        lead="本当の意味での「癒し」<br>とは？"
         subLead="What is a “true healing”?"
         desc={
           `<p>ただ身体をほぐすだけのものではなく、<br class='hidden lg:block' />深く静かに、心や魂にふれるもの。</p>

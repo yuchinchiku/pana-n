@@ -30,6 +30,7 @@ export type StoreDetail = {
   name: string;
   title: string;
   subTitle: string;
+  buttonHref?: string;
   lead: string;
   subLead: string;
   desc: string;
@@ -65,6 +66,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "SNS", items: [{ value: "<a href='https://www.instagram.com/hogushigatten_ishigakijima/' target='_blank' class='u-link-blank underline'>Instagram</a>" }] },
       { label: "ご予約", items: [{ value: "<a href='https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a' target='_blank' class='u-link-blank underline'>ご予約はこちらから</a>" }] },
     ],
+    buttonHref: "https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a",
     menu: [
       {
         name: "頭爽快の秘技「頭のもみほぐしコース」",
@@ -168,6 +170,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "SNS", items: [{ value: "<a href='https://www.instagram.com/hogushigatten_nahakumeten/' target='_blank' class='u-link-blank underline'>Instagram</a>" }] },
       { label: "ご予約", items: [{ value: "<a href='https://yoyaku-beauty.jp/reserve/top?CODE=eef61cc209f842f3c0912c87d80e66e8d0d4422d8be80b6b8c0d3e5abc5a3667' target='_blank' class='u-link-blank underline'>ご予約はこちらから</a>" }] },
     ],
+    buttonHref: "https://yoyaku-beauty.jp/reserve/top?CODE=eef61cc209f842f3c0912c87d80e66e8d0d4422d8be80b6b8c0d3e5abc5a3667",
     gallery: [
       { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
       { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
