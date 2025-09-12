@@ -20,7 +20,7 @@ export default function CompanyPage() {
       <ScrollAnimation />
       <HeroSection />
       <PageIntro
-        lead="石垣島から始まり、琉球の心と技を世界へ。<br>癒しの文化を紡ぎ続ける私たちの物語。"
+        lead="石垣島から始まり、<br>琉球の心と技を世界へ。<br>癒しの文化を紡ぎ続ける<br>私たちの物語。"
         subLead="From Ishigaki Island, sharing Ryukyu’s spirit and healing art with the world."
         desc={
           `<p>私たちは、1985年に石垣島で鍼灸治療院を開院して以来、40年近くにわたり「確かな技術」と「心からの癒し」を追求してきました。</p>

@@ -46,10 +46,6 @@ export default function SalonPage() {
         <PageSecTitle mainTitleSmall="フサキビーチリゾートホテル＆ヴィラズ"  mainTitle="琉球足つぼ" subTitle="Ryukyu foot massage at Fusaki Beach Resort Hotel & Villas"/>
         <StoreList stores={footStores} />
       </section>
-      <section className="mb-20 lg:mb-40 px-5 lg:px-0">
-        <PageSecTitle mainTitleSmall="石垣空港" mainTitle="パナ・ン南ぬ島" subTitle="pana-n ishigaki airport"/>
-        <StoreList stores={pananStores} />
-      </section>
     </div>
   );
 }
