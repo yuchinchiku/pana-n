@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Pana } from '@/assets/icons/Pana';
 
@@ -8,6 +9,7 @@ type PageHeroProps = {
   titleSmall?: string;
   subTitle?: string;
   animate?: boolean;
+  buttonHref?: string;
 };
 
 // アニメーション variants
@@ -22,7 +24,7 @@ const letterVariants = {
   }),
 };
 
-export default function PageHeroHor({ title, titleSmall, subTitle, animate = false }: PageHeroProps) {
+export default function PageHeroHor({ title, titleSmall, subTitle, buttonHref, animate = false }: PageHeroProps) {
   const titleLetters = title
     .split(/(<br\s*[^>]*>|<span[^>]*>.*?<\/span>)/gi)
     .flatMap((chunk, chunkIndex) => {
@@ -93,6 +95,25 @@ export default function PageHeroHor({ title, titleSmall, subTitle, animate = fal
           >
             {subTitle}
           </motion.p>
+        )}
+        {buttonHref && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={animate ? { opacity: 1, y: 0 } : { opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="mt-5 ml-10"
+          >
+            <Link
+              href={buttonHref}
+              className="u-button u-button-white text-white block w-[244px] h-12 border border-white py-1 pl-6"
+              target="_blank"
+            >
+              <span className="u-button-text block shippori font-medium text-lg lg:text-22px mt-1">
+                予約する
+              </span>
+            </Link>
+          </motion.div>
+
         )}
       </div>
     </div>

@@ -68,7 +68,7 @@ export default function StoryLayout() {
       <ScrollAnimation />
       <StoryScroller stories={StoryList} intro={introData} />
       <PageIntro
-        lead="パナ・ンで働く人々への恩返し　 <br class='hidden lg:block' />ゆいまーる"
+        lead="パナ・ンで働く人々への<br>恩返し　ゆいまーる"
         subLead="Giving Back to the People Who Work at Pana-n <br class='hidden lg:block' /> – Yui Maaru."
         desc={
           `<p>『みんなが喜ぶ笑顔のために』</p>

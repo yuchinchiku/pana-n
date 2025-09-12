@@ -29,7 +29,7 @@ export default function HealingPage() {
       <ScrollAnimation />
       <HeroSection />
       <PageIntro
-        lead="本当の意味での「癒し」とは？"
+        lead="本当の意味での「癒し」<br>とは？"
         subLead="What is a “true healing”?"
         desc={
           `<p>ただ身体をほぐすだけのものではなく、<br class='hidden lg:block' />深く静かに、心や魂にふれるもの。</p>
@@ -60,7 +60,7 @@ export default function HealingPage() {
           subTitle="pana-n’s original therapy"
           desc={
             `<p>パナ・ンでは、沖縄の自然と文化を活かした<br class='hidden lg:block' />パナ・ン独自のオリジナルの癒しをご用意しています。</p>
-            <p>店舗ごとに異なる手技や素材を取り入れ、<br class='hidden lg:block' />琉球空手と八重山舞踊を融合した元祖琉球マッサージ「琉球ほぐし手」や<br class='hidden lg:block' />珊瑚、ゴーヤー、黒糖、モズク、クチャなど、<br class='hidden lg:block' />こだわりの琉球粧材を使用したメニュー。</p>
+            <p>店舗ごとに異なる手技や素材を取り入れ、<br class='hidden lg:block' />琉球空手と琉球・八重山舞踊を融合した元祖琉球マッサージ「琉球ほぐし手」や<br class='hidden lg:block' />珊瑚、ゴーヤー、黒糖、モズク、クチャなど、<br class='hidden lg:block' />こだわりの琉球粧材を使用したメニュー。</p>
             <p>パナ・ンでしか味わえない特別な体験をお届けします。</p>`}
         />
         <OriginalMenu />
