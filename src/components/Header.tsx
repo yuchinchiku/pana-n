@@ -8,11 +8,11 @@ import '@/styles/critical/header.scss';
 const navItems = [
   { href: '/story', ja: 'パナ・ンの物語', en: "pana-n's story" },
   { href: '/healing', ja: 'パナ・ンの癒し', en: "pana-n's healing" },
+  { href: '/healing/original', ja: '独自メニュー', en: 'original menu' },
   { href: '/salon', ja: 'パナ・ンの店舗', en: 'salon line-up' },
   { href: '/company', ja: '会社概要', en: 'company' },
   { href: '/news', ja: 'お知らせ', en: 'news' },
   { href: '/faq', ja: 'よくあるご質問', en: 'faq' },
-  { href: '/contact', ja: 'お問い合わせ', en: 'contact' },
 ];
 
 export default function Header() {
