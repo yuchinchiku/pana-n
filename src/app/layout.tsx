@@ -77,7 +77,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         suppressHydrationWarning
         className={`${garamond.variable} ${shippori.variable} overflow-x-hidden`}>
-        
         <Suspense fallback={null}>
           <ScrollToTop />
         </Suspense>
