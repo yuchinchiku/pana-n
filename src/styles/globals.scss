@@ -25,6 +25,7 @@
 
 html{
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 
   &.js-open{
     overflow: hidden;
