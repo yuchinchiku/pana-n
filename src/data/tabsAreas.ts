@@ -142,7 +142,7 @@ export const tabsAreas: TabAreaType[] = [
         desc: `<p class='pb-4'>沖縄に咲く月桃。</p>
         <p>保湿と抗菌効果がある爽やかな香りのアロマオイルで膝下から足裏まで心地よくほぐします。</p>`,
         descriptionImages: undefined,
-        rightImages: ['foot-1_3'],
+        rightImages: ['foot-1_1','foot-1_2','foot-1_3'],
         tags: [
           { text: 'むくみ', color: 'bg-tag-red' },
           { text: '保湿', color: 'bg-tag-pink' },
@@ -196,7 +196,7 @@ export const tabsAreas: TabAreaType[] = [
             ],
           },
         ],
-        rightImages: ['massage-1_3'],
+        rightImages: ['massage-1_1','massage-1_2','massage-1_3'],
         tags: [
           { text: '肩こり', color: 'bg-tag-green' },
           { text: '全身の疲れ', color: 'bg-tag-green' },
