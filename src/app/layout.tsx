@@ -3,6 +3,7 @@ import CV from '@/components/CV';
 import FooterSwitcher from '@/components/FooterSwitcher';
 import FooterCV from '@/components/FooterCV';
 import Breadcrumb from '@/components/Breadcrumb';
+import ScrollToTop from "@/components/ScrollToTop";
 import type { Metadata } from "next";
 import { EB_Garamond, Shippori_Mincho_B1 } from 'next/font/google';
 import '@/styles/globals.scss';
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         suppressHydrationWarning
         className={`${garamond.variable} ${shippori.variable} overflow-x-hidden`}>
+        <ScrollToTop />
         <div className="layout relative text-pana">
           <HeaderSwitcher />
           <CV />
