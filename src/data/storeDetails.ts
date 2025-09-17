@@ -67,76 +67,76 @@ export const storeDetails: StoreDetail[] = [
       { label: "ご予約", items: [{ value: '<a href="https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a" target="_blank" class="u-link-blank underline">ご予約はこちらから</a>' }] },
     ],
     buttonHref: "https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a",
-    menu: [
-      {
-        name: "頭爽快の秘技「頭のもみほぐしコース」",
-        description: [
-          "頭頂部～側頭部、首・肩をしっかりほぐすことで深い眠りに誘います。",
-          "パソコン・スマホの疲れが溜まっている方、睡眠不足でお悩みの方へおすすめです。満足度100％に自信有り。",
-          "極上な頭の秘技ほぐし技術を是非ご勘能ください。",
-        ],
-        image: "img_head-massage2",
-        options: [
-          {
-            items: [
-              { duration: "40分", price: "XXX円（税込XXX円）" },
-              { duration: "60分", price: "XXX円（税込XXX円）" },
-            ],
-          },
-        ],
-      },
-      {
-        name: "歩き疲れた足を軽やかに「足ツボほぐしコース」",
-        description: [
-          "膝下～足裏までしっかりとほぐします。",
-          "足ツボを押すことで全身の筋肉が緩み、疲れた足を軽やかに癒します。",
-        ],
-        image: "img_ashitsubo",
-        options: [
-          {
-            items: [
-              { duration: "40分", price: "XXX円（税込XXX円）" },
-              { duration: "60分", price: "XXX円（税込XXX円）" },
-            ],
-          },
-        ],
-      },
-      {
-        name: "究極こねり技「全身もみほぐしコース」",
-        description: [
-          "筋肉をこねりながらほぐすることにより、つらいコリもすばやくほぐれます。",
-          "ほぐれた状態が通常より長く持続し、ほぐしも快適にお過ごしいただけます。",
-        ],
-        image: "img_momihogushi",
-        options: [
-          {
-            items: [
-              { duration: "40分", price: "XXX円（税込XXX円）" },
-              { duration: "60分", price: "XXX円（税込XXX円）" },
-              { duration: "80分", price: "XXX円（税込XXX円）" },
-              { duration: "100分", price: "XXX円（税込XXX円）" },
-            ],
-          },
-        ],
-      },
-      {
-        name: "満足度No1「全身＆頭のもみほぐしコース」",
-        description: [
-          "お客様満足度No1ほぐしメニューです。",
-          "100分以上のロングほぐしコースは特にオススメ！至極の癒しを是非ご体感ください。",
-        ],
-        image: "img_fullmassage",
-        options: [
-          {
-            items: [
-              { duration: "60分", price: "XXX円（税込XXX円）" },
-              { duration: "80分", price: "XXX円（税込XXX円）" },
-              { duration: "100分", price: "XXX円（税込XXX円）" },
-            ],
-          },
-        ],
-      },
-    ],
+    // menu: [
+    //   {
+    //     name: "頭爽快の秘技「頭のもみほぐしコース」",
+    //     description: [
+    //       "頭頂部～側頭部、首・肩をしっかりほぐすことで深い眠りに誘います。",
+    //       "パソコン・スマホの疲れが溜まっている方、睡眠不足でお悩みの方へおすすめです。満足度100％に自信有り。",
+    //       "極上な頭の秘技ほぐし技術を是非ご勘能ください。",
+    //     ],
+    //     image: "img_head-massage2",
+    //     options: [
+    //       {
+    //         items: [
+    //           { duration: "40分", price: "XXX円（税込XXX円）" },
+    //           { duration: "60分", price: "XXX円（税込XXX円）" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "歩き疲れた足を軽やかに「足ツボほぐしコース」",
+    //     description: [
+    //       "膝下～足裏までしっかりとほぐします。",
+    //       "足ツボを押すことで全身の筋肉が緩み、疲れた足を軽やかに癒します。",
+    //     ],
+    //     image: "img_ashitsubo",
+    //     options: [
+    //       {
+    //         items: [
+    //           { duration: "40分", price: "XXX円（税込XXX円）" },
+    //           { duration: "60分", price: "XXX円（税込XXX円）" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "究極こねり技「全身もみほぐしコース」",
+    //     description: [
+    //       "筋肉をこねりながらほぐすることにより、つらいコリもすばやくほぐれます。",
+    //       "ほぐれた状態が通常より長く持続し、ほぐしも快適にお過ごしいただけます。",
+    //     ],
+    //     image: "img_momihogushi",
+    //     options: [
+    //       {
+    //         items: [
+    //           { duration: "40分", price: "XXX円（税込XXX円）" },
+    //           { duration: "60分", price: "XXX円（税込XXX円）" },
+    //           { duration: "80分", price: "XXX円（税込XXX円）" },
+    //           { duration: "100分", price: "XXX円（税込XXX円）" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "満足度No1「全身＆頭のもみほぐしコース」",
+    //     description: [
+    //       "お客様満足度No1ほぐしメニューです。",
+    //       "100分以上のロングほぐしコースは特にオススメ！至極の癒しを是非ご体感ください。",
+    //     ],
+    //     image: "img_fullmassage",
+    //     options: [
+    //       {
+    //         items: [
+    //           { duration: "60分", price: "XXX円（税込XXX円）" },
+    //           { duration: "80分", price: "XXX円（税込XXX円）" },
+    //           { duration: "100分", price: "XXX円（税込XXX円）" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // ],
     gallery: [
       { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
       { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
@@ -202,60 +202,60 @@ export const storeDetails: StoreDetail[] = [
       { label: "アクセス", items: [{ value: "大森駅から徒歩2分（140m）" }] },
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
     ],
-    menu: [
-      {
-        name: "頭爽快の秘技「頭のもみほぐしコース」",
-        description: [
-          "頭頂部～側頭部、首・肩をしっかりほぐすることで深い眠りに誘います。",
-          "パソコン・スマホの疲れが溜まっている方、睡眠不足でお悩みの方へおすすめです。満足度100％に自信有り。",
-          "極上な頭の秘技ほぐし技術を是非ご勘能ください。",
-        ],
-        image: "img_head-massage2",
-        options: [
-          {
-            items: [
-              { duration: "40分", price: "XXX円（税込XXX円）" },
-              { duration: "60分", price: "XXX円（税込XXX円）" },
-            ],
-          },
-        ],
-      },
-      {
-        name: "究極こねり技「全身もみほぐしコース」",
-        description: [
-          "筋肉をこねりながらほぐすことにより、つらいコリもすばやくほぐれます。",
-          "ほぐれた状態が通常より長く持続し、ほぐしも快適にお過ごしいただけます。",
-        ],
-        image: "img_momihogushi",
-        options: [
-          {
-            items: [
-              { duration: "40分", price: "XXX円（税込XXX円）" },
-              { duration: "60分", price: "XXX円（税込XXX円）" },
-              { duration: "80分", price: "XXX円（税込XXX円）" },
-              { duration: "100分", price: "XXX円（税込XXX円）" },
-            ],
-          },
-        ],
-      },
-      {
-        name: "満足度No1「全身＆頭のもみほぐしコース」",
-        description: [
-          "お客様満足度No1ほぐしメニューです。",
-          "100分以上のロングほぐしコースは特にオススメ！至極の癒しを是非ご体感ください。",
-        ],
-        image: "img_fullmassage",
-        options: [
-          {
-            items: [
-              { duration: "60分", price: "XXX円（税込XXX円）" },
-              { duration: "80分", price: "XXX円（税込XXX円）" },
-              { duration: "100分", price: "XXX円（税込XXX円）" },
-            ],
-          },
-        ],
-      },
-    ],
+    // menu: [
+    //   {
+    //     name: "頭爽快の秘技「頭のもみほぐしコース」",
+    //     description: [
+    //       "頭頂部～側頭部、首・肩をしっかりほぐすることで深い眠りに誘います。",
+    //       "パソコン・スマホの疲れが溜まっている方、睡眠不足でお悩みの方へおすすめです。満足度100％に自信有り。",
+    //       "極上な頭の秘技ほぐし技術を是非ご勘能ください。",
+    //     ],
+    //     image: "img_head-massage2",
+    //     options: [
+    //       {
+    //         items: [
+    //           { duration: "40分", price: "XXX円（税込XXX円）" },
+    //           { duration: "60分", price: "XXX円（税込XXX円）" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "究極こねり技「全身もみほぐしコース」",
+    //     description: [
+    //       "筋肉をこねりながらほぐすことにより、つらいコリもすばやくほぐれます。",
+    //       "ほぐれた状態が通常より長く持続し、ほぐしも快適にお過ごしいただけます。",
+    //     ],
+    //     image: "img_momihogushi",
+    //     options: [
+    //       {
+    //         items: [
+    //           { duration: "40分", price: "XXX円（税込XXX円）" },
+    //           { duration: "60分", price: "XXX円（税込XXX円）" },
+    //           { duration: "80分", price: "XXX円（税込XXX円）" },
+    //           { duration: "100分", price: "XXX円（税込XXX円）" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "満足度No1「全身＆頭のもみほぐしコース」",
+    //     description: [
+    //       "お客様満足度No1ほぐしメニューです。",
+    //       "100分以上のロングほぐしコースは特にオススメ！至極の癒しを是非ご体感ください。",
+    //     ],
+    //     image: "img_fullmassage",
+    //     options: [
+    //       {
+    //         items: [
+    //           { duration: "60分", price: "XXX円（税込XXX円）" },
+    //           { duration: "80分", price: "XXX円（税込XXX円）" },
+    //           { duration: "100分", price: "XXX円（税込XXX円）" },
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // ],
   },
 
   //=====パナ・ン石垣空港店===============================

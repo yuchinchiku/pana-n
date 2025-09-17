@@ -36,7 +36,6 @@ const navItems = [
   { href: '/company', ja: '会社概要' },
   { href: '/news', ja: 'お知らせ' },
   { href: '/faq', ja: 'よくあるご質問' },
-  { href: '/contact', ja: 'お問い合わせ' }
 ];
 
 type FooterProps = {

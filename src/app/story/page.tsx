@@ -64,10 +64,10 @@ export default function StoryPage() {
               u-storyList-item u-fade-in ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
               ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
               ${index % 2 === 0 ? 'lg:ml-0 lg:mr-auto' : 'ml-auto mr-0'}
-              ${index === 2 ? 'lg:-mt-[330px]' : ''}
-              ${index !== 0 && index !== 2 ? 'lg:-mt-[330px]' : ''}
+              ${index === 2 ? 'lg:-mt-[340px]' : ''}
+              ${index !== 0 && index !== 2 ? 'lg:-mt-[340px]' : ''}
               ${index === StoryList.length - 1 ? 'mb-80 lg:mb-0' : ''}
-              ${index === 0 ? 'mt-0' : 'mt-20 lg:mt-0'} 
+              ${index === 0 ? 'mt-0' : 'mt-64 lg:mt-0'} 
             `}
           >
             <Link href={`/story/${item.href}`} className='u-storyList-link block'>
