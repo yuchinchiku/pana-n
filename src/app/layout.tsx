@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import HeaderSwitcher from '@/components/HeaderSwitcher';
 import CV from '@/components/CV';
 import FooterSwitcher from '@/components/FooterSwitcher';
@@ -76,7 +77,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         suppressHydrationWarning
         className={`${garamond.variable} ${shippori.variable} overflow-x-hidden`}>
-        <ScrollToTop />
+        
+        <Suspense fallback={null}>
+          <ScrollToTop />
+        </Suspense>
         <div className="layout relative text-pana">
           <HeaderSwitcher />
           <CV />
