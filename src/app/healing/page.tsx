@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const pageItems = [
   { href: '/story', img: 'story', title: 'パナ・ンの物語', titleEn: 'pana-n’s story' },
-  { href: '/healing/original', img: 'healing', title: 'パナ・ンの独自メニュー', titleEn: 'pana-n’s original menu' }
+  { href: '/healing/original', img: 'original', title: 'パナ・ンの独自メニュー', titleEn: 'pana-n’s original menu' }
 ];
 
 
