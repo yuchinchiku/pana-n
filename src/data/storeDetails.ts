@@ -63,8 +63,8 @@ export const storeDetails: StoreDetail[] = [
       { label: "駐車場", items: [{ value: "駐車場有り<br>建物裏手に回って頂き、右側手前、車止めに黄色いプレート「ほぐしガッテン」とある所にお止め下さい。" }] },
       { label: "アクセス", items: [{ value: "石垣空港から車で約25分" }] },
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
-      { label: "SNS", items: [{ value: "<a href='https://www.instagram.com/hogushigatten_ishigakijima/' target='_blank' class='u-link-blank underline'>Instagram</a>" }] },
-      { label: "ご予約", items: [{ value: "<a href='https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a' target='_blank' class='u-link-blank underline'>ご予約はこちらから</a>" }] },
+      { label: "SNS", items: [{ value: '<a href="https://www.instagram.com/hogushigatten_ishigakijima/" target="_blank" class="u-link-blank underline">Instagram</a>' }] },
+      { label: "ご予約", items: [{ value: '<a href="https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a" target="_blank" class="u-link-blank underline">ご予約はこちらから</a>' }] },
     ],
     buttonHref: "https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a",
     menu: [
@@ -167,17 +167,13 @@ export const storeDetails: StoreDetail[] = [
       { label: "駐車場", items: [{ value: "専用駐車場はございません。<br>近隣の有料コインパーキングのご利用をお願いいたします。" }] },
       { label: "アクセス", items: [{ value: "ゆいレール「旭橋駅」より徒歩10分" }] },
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
-      { label: "SNS", items: [{ value: "<a href='https://www.instagram.com/hogushigatten_nahakumeten/' target='_blank' class='u-link-blank underline'>Instagram</a>" }] },
-      { label: "ご予約", items: [{ value: "<a href='https://yoyaku-beauty.jp/reserve/top?CODE=eef61cc209f842f3c0912c87d80e66e8d0d4422d8be80b6b8c0d3e5abc5a3667' target='_blank' class='u-link-blank underline'>ご予約はこちらから</a>" }] },
+      { label: "SNS", items: [{ value: '<a href="https://www.instagram.com/hogushigatten_nahakumeten/" target="_blank" class="u-link-blank underline">Instagram</a>' }] },
+      { label: "ご予約", items: [{ value: '<a href="https://yoyaku-beauty.jp/reserve/top?CODE=eef61cc209f842f3c0912c87d80e66e8d0d4422d8be80b6b8c0d3e5abc5a3667" target="_blank" class="u-link-blank underline">ご予約はこちらから</a>' }] },
     ],
     buttonHref: "https://yoyaku-beauty.jp/reserve/top?CODE=eef61cc209f842f3c0912c87d80e66e8d0d4422d8be80b6b8c0d3e5abc5a3667",
     gallery: [
-      { src: "gallery-1.jpg", type: "portrait", className: "u-gallery-1 lg:mr-20 lg:ml-10" },
-      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
-      { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
-      { src: "gallery-4.jpg", type: "portrait", className: "u-gallery-4 lg:mt-52 lg:mr-10 lg:ml-auto" },
-      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-5 lg:-mt-40 lg:mr-20 lg:ml-10" },
-      { src: "gallery-6.jpg", type: "landscape", className: "u-gallery-6 lg:mt-20 lg:mr-0 lg:ml-auto" },
+      { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-1 lg:mt-20 lg:mr-20 lg:ml-10" },
+      { src: "gallery-5.jpg", type: "portrait", className: "u-gallery-2 lg:mr-10 lg:ml-auto" },
     ],
 
   },
@@ -370,7 +366,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "住所", items: [{ value: "〒907-1101 沖縄県八重山郡竹富町竹富1955", mapUrl: 'https://maps.app.goo.gl/7XwXYR7AcpkhX8C49' }] },
       { label: "電話番号", items: [{ value: "0980-84-5888" }] },
       { label: "営業時間", items: [{ value: "9:00 AM～17:30 PM<br>※最終受付 15:00 PM" }] },
-      { label: "ご予約詳細", items: [{ value: "<a href='https://hoshinoresorts.com/ja/hotels/hoshinoyataketomijima/activities/13939/' target='_blank' class='u-link-blank underline'>星のや竹富島スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>" }] },
+      { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/hoshinoyataketomijima/activities/13939/" target="_blank" class="u-link-blank underline">星のや竹富島スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
     ]
   },
   //=====星のや沖縄スパ（星野リゾート星のや沖縄）===============================
@@ -391,7 +387,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "住所", items: [{ value: "〒904-0327 沖縄県中頭郡読谷村儀間474", mapUrl: 'https://maps.app.goo.gl/msqLwdfSKKWHVwnL8' }] },
       { label: "電話番号", items: [{ value: "050-3134-8091" }] },
       { label: "営業時間", items: [{ value: "14:30 PM～22:30 PM<br>※最終受付 20:00 PM" }] },
-      { label: "ご予約詳細", items: [{ value: "<a href='https://hoshinoresorts.com/ja/hotels/hoshinoyaokinawa/activities/13933/' target='_blank' class='u-link-blank underline'>星のや沖縄スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>" }] },
+      { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/hoshinoyaokinawa/activities/13933/" target="_blank" class="u-link-blank underline">星のや沖縄スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
     ]
   },
 
@@ -413,7 +409,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "住所", items: [{ value: "〒907-1221 沖縄県竹富町小浜2954", mapUrl: 'https://maps.app.goo.gl/SjL4RZ1pRXkk11uU7' }] },
       { label: "電話番号", items: [{ value: "050-3134-8093" }] },
       { label: "営業時間", items: [{ value: "14:00 PM～22:00 PM<br>※最終受付 20:00 PM" }] },
-      { label: "ご予約詳細", items: [{ value: "<a href='https://hoshinoresorts.com/ja/hotels/risonarekohamajima/sp/newspa/' target='_blank' class='u-link-blank underline'>リゾナーレ小浜島スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>" }] },
+      { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/risonarekohamajima/sp/newspa/" target="_blank" class="u-link-blank underline">リゾナーレ小浜島スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
     ]
   },
 
@@ -436,7 +432,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "住所", items: [{ value: "〒907-1541 沖縄県八重山郡竹富町上原2-2", mapUrl: 'https://maps.app.goo.gl/12troWehZB15ukb7A' }] },
       { label: "電話番号", items: [{ value: "0980-85-7111" }] },
       { label: "営業時間", items: [{ value: "14:00 PM～10:00 PM<br>※定休日あり" }] },
-      { label: "ご予約詳細", items: [{ value: "<a href='https://hoshinoresorts.com/ja/hotels/iriomote/sp/iriomotespa_/' target='_blank' class='u-link-blank underline'>西表スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>" }] },
+      { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/iriomote/sp/iriomotespa_/" target="_blank" class="u-link-blank underline">西表スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
     ]
   },
 
@@ -458,7 +454,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "電話番号", items: [{ value: "090-9785-1838" }] },
       { label: "営業時間", items: [{ value: "15:00 PM～23:00 PM<br>※最終受付 22:00 PM" }] },
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
-      { label: "ご予約詳細", items: [{ value: "<a href='https://www.fusaki.com/spa_wellness' target='_blank' class='u-link-blank underline'>フサキビーチリゾートホテル＆ヴィラズ</a>" }] },
+      { label: "ご予約詳細", items: [{ value: '<a href="https://www.fusaki.com/spa_wellness" target="_blank" class="u-link-blank underline">フサキビーチリゾートホテル＆ヴィラズ</a>' }] },
     ]
   },
 ];
