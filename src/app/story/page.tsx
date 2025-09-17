@@ -58,18 +58,31 @@ export default function StoryPage() {
       />
       <ul className='u-storyList max-w-[1124px] mx-auto mt-20 lg:mt-0 px-5 lg:px-6'>
         {StoryList.map((item, index) => (
+          // <li
+          //   key={item.href}
+          //   className={`
+          //     u-storyList-item u-fade-in ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
+          //     ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
+          //     ${index % 2 === 0 ? 'lg:ml-0 lg:mr-auto' : 'ml-auto mr-0'}
+          //     ${index === 2 ? 'mt-64 lg:-mt-[340px]' : ''}
+          //     ${index !== 0 && index !== 2 ? 'mt-64 lg:-mt-[340px]' : ''}
+          //     ${index === StoryList.length - 1 ? 'mb-80 lg:mb-0' : ''}
+          //     ${index === 0 ? 'mt-0' : 'mt-64 lg:mt-0'} 
+          //   `}
+          // >
           <li
             key={item.href}
             className={`
-              u-storyList-item u-fade-in ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
+              u-storyList-item u-fade-in
               ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'}
-              ${index % 2 === 0 ? 'lg:ml-0 lg:mr-auto' : 'ml-auto mr-0'}
-              ${index === 2 ? 'lg:-mt-[340px]' : ''}
-              ${index !== 0 && index !== 2 ? 'lg:-mt-[340px]' : ''}
-              ${index === StoryList.length - 1 ? 'mb-80 lg:mb-0' : ''}
-              ${index === 0 ? 'mt-0' : 'mt-64 lg:mt-0'} 
+              ${index % 2 === 0 ? 'is-left' : 'is-right'}
+              ${index === 0 ? 'is-first' : ''}
+              ${index === 1 ? 'is-second' : ''}
+              ${index !== 0 && index !== 1 ? 'is-middle' : ''}
+              ${index === StoryList.length - 1 ? 'is-last' : ''}
             `}
           >
+
             <Link href={`/story/${item.href}`} className='u-storyList-link block'>
               <div
                 className={`u-storyList-thumb overflow-hidden ${item.orientation === 'vertical' ? 'vertical' : 'horizontal'} relative`}

@@ -92,6 +92,54 @@
   }
 
 
+  .u-storyList-item {
+    // 並び位置
+    &.is-left {
+      @media (min-width: 1024px) {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+    &.is-right {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    // インデックスごとの条件
+    &.is-first {
+      margin-top: 0;
+    }
+
+    &.is-second {
+      margin-top: 16rem; // mt-64
+      @media (min-width: 1024px) {
+        margin-top: -380px !important;
+      }
+    }
+
+    &.is-middle {
+      margin-top: 16rem;
+      @media (min-width: 1024px) {
+        margin-top: -240px !important;
+      }
+    }
+
+    &.is-last {
+      margin-bottom: 20rem; // mb-80
+      @media (min-width: 1024px) {
+        margin-bottom: 0;
+      }
+    }
+
+    // デフォルト: mt-64 lg:mt-0
+    &:not(.is-first) {
+      margin-top: 16rem;
+      @media (min-width: 1024px) {
+        margin-top: 0;
+      }
+    }
+  }
+
   .u-storyHead-num{
     display: flex;
     align-items: center;
