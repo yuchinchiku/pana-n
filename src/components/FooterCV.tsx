@@ -14,11 +14,11 @@ export default function FooterCV() {
       className={`u-footerCv relative h-[250px] lg:h-[377px] bg-white z-10 px-5 lg:pr-20 lg:pl-[185px] 
         ${isTop ? 'w-full' : 'mx-auto'}`}
     >
-      <Link href="https://recruit.pana-n.jp/" target='_blank' className={`u-footerCv-link u-link-blank flex items-center h-[250px] lg:h-[377px]
+      <Link href="https://job-medley.com/est/1257611/" target='_blank' className={`u-footerCv-link u-link-blank flex items-center h-[250px] lg:h-[377px]
         ${isTop ? '' : 'lg:w-[90%] mx-auto'}`}
       >
         <p className="shippori font-medium text-[22px] lg:text-3xl w-full flex items-center justify-end gap-1 flex-shrink-0 lg:pl-5">
-          <span className='flex-shrink-0'>採用サイト</span>
+          <span className='flex-shrink-0'>採用情報</span>
           <Arrow />
           <span className='u-footerCv-line w-6/12 lg:w-9/12 h-[1px] bg-pana lg:ml-10'></span>
         </p>
