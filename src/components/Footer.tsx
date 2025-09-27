@@ -77,9 +77,6 @@ export default function Footer({ variant = 'default' }: FooterProps) {
       </nav>
       <div>
         <div className='flex justify-start lg:justify-end gap-10 mt-8 lg:mt-32'>
-          <Link href='privacy-policy'className='block text-white'>
-            <p className="shippori text-sm">プライバシーポリシー</p>
-          </Link>
           <small className='u-copyright garamond text-sm text-white'>&copy;pana-n LLC .</small>
         </div>
       </div>

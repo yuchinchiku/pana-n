@@ -155,7 +155,7 @@ export default function StoryScroller({ stories, intro }: Props) {
               )}
             </div>
             <div className="max-w-[651px] px-5 lg:px-0">
-              <h2 className="u-storyTitle u-fade-in max-w-[561px] shippori text-2xl lg:text-4xl leading-[160%] lg:leading-[160%] mb-4 lg:mb-14 mt-0">
+              <h2 className="u-storyTitle u-fade-in max-w-[561px] shippori text-2xl lg:text-[27px] leading-[160%] lg:leading-[160%] mb-4 lg:mb-14 mt-0">
                 {s.title}
               </h2>
               <div

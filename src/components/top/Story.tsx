@@ -127,7 +127,7 @@ export default function Story() {
                 <p className="pl-[2px] lg:px-1">ここに、パナ・ンの、そして私たちの物語が始まります。</p>
               </div>
             </div>
-            <p className="absolute shippori text-120px lg:text-160px font-medium text-pana-gray04 top-[-80px] lg:top-0 left-[-20px] lg:left-10 z-0">
+            <p className="absolute shippori text-120px lg:text-160px font-medium text-pana-gray04 top-[-80px] lg:top-0 left-[-20px] lg:left-10 z-0 opacity-50">
               紡
             </p>
           </div>
@@ -198,7 +198,7 @@ export default function Story() {
                 <p className="pl-[2px] lg:px-1">パナ・ンでの癒しを紹介します。</p>
               </div>
             </div>
-            <p className="absolute shippori text-120px lg:text-160px font-medium text-pana-gray04 top-[-80px] lg:top-0 left-[-20px] lg:left-10 z-0">
+            <p className="absolute shippori text-120px lg:text-160px font-medium text-pana-gray04 top-[-80px] lg:top-0 left-[-20px] lg:left-10 z-0 opacity-50">
               癒
             </p>
           </div>
