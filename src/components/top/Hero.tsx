@@ -69,15 +69,15 @@ export default function Hero() {
         poster="/images/top/img_hero.jpg"
       >
 
-          <source src="https://pana-n.jp/video/panan-01.mp4" type="video/mp4" />
+          <source src="https://konety.jp/video/panan-01.mp4" type="video/mp4" />
         </video>
 
         {/* スマホ用GIF */}
         <div className="block md:hidden">
           <img
             className="u-video fixed inset-0 w-full h-full object-cover"
-            src="https://pana-n.jp/video/panan-01.gif"
-            alt="Hero Animation"
+            src="https://konety.jp/video/panan-01.gif"
+            alt=""
           />
         </div>
 
