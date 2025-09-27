@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pana-n.jp/
+
+# Sitemaps
+Sitemap: https://pana-n.jp/sitemap.xml
