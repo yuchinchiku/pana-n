@@ -32,9 +32,9 @@ export default function StoreInfo({ store }: Props) {
                   <div key={i}>
                     <div className="lg:flex items-center gap-10">
                       <p className="shippori text-base py-1" dangerouslySetInnerHTML={{ __html: item.value }} />
-                      {row.label === "住所" && store.mapUrl && (
+                      {row.label === "住所" && item.mapUrl && (
                         <a
-                          href={store.mapUrl}
+                          href={item.mapUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="u-button u-button-map block w-[150px] h-[45px] border border-pana py-1 pl-2 mt-2 lg:mt-0"
