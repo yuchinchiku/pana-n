@@ -77,7 +77,7 @@ export default function Hero() {
           <img
             className="u-video fixed inset-0 w-full h-full object-cover"
             src="https://pana-n.jp/video/panan-01.gif"
-            alt="Hero Animation"
+            alt=""
           />
         </div>
 
