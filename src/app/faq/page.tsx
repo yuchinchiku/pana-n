@@ -9,8 +9,8 @@ import '@/styles/pages/faq/faq.scss';
 import '@/styles/component/button.scss';
 
 export const metadata: Metadata = {
-  title: "よくある質問 | 琉球の想いと癒しをあなたへ。",
-  description: "パナ・ンの会社情報や理念、事業内容についてご紹介。琉球の癒しを広める私たちの想いをお伝えします。",
+  title: "よくある質問 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  description: "パナ・ンの施術やご予約に関する疑問を解決。お客様からのよくある質問とその回答をご案内します。",
 };
 
 export default function FaqPage() {

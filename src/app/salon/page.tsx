@@ -10,15 +10,14 @@ import '@/styles/pages/salon/salon.scss';
 import '@/styles/component/button.scss';
 
 export const metadata: Metadata = {
-  title: "パナ・ンの店舗 | 琉球の想いと癒しをあなたへ。",
-  description: "沖縄を中心に展開するパナ・ンのサロン一覧。",
+  title: "パナ・ンの店舗 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  description: "沖縄を中心に展開するパナ・ンのサロン一覧。各店舗の特徴や施術内容をご紹介し、お客様に最適な癒しの場をご案内します。",
 };
 
 export default function SalonPage() {
   const hogushiStores = stores.filter(store => store.value === "ほぐしガッテン");
   const hoshinoyaStores = stores.filter(store => store.value === "星のや");
   const footStores = stores.filter(store => store.value === "琉球足つぼ");
-  const pananStores = stores.filter(store => store.value === "パナ・ン");
 
   return (
     <div className='u-pageSalon lg:ml-[185px] lg:mr-20'>
