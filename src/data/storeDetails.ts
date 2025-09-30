@@ -39,12 +39,16 @@ export type StoreDetail = {
   notify?: { title: string; desc: string };
   menu?: MenuItem[];
   gallery?: GalleryImage[];
+  metaTitle: string;
+  metaDesc: string;
 };
 
 export const storeDetails: StoreDetail[] = [
   //=====ほぐしガッテン真栄里店 & パナ・ン琉球スパ===============================
   {
     id: "hogushigatten-maezato",
+    metaTitle: "ほぐしガッテン真栄里店 & パナ・ン琉球スパ",
+    metaDesc: "石垣島・真栄里エリアにある癒しの空間。ほぐしガッテンと琉球スパの融合で、心と身体を芯から癒します。",
     title: "ほぐしガッテン<br class='lg:hidden'>真栄里店 & パナ・ン琉球スパ",
     name: "ほぐしガッテン真栄里店 & パナ・ン琉球スパ",
     subTitle: "hogushigatten-maezato",
@@ -149,6 +153,8 @@ export const storeDetails: StoreDetail[] = [
   //=====ほぐしガッテン那覇久米店===============================
   {
     id: "hogushigatten-nahakume",
+    metaTitle: " ほぐしガッテン那覇久米店",
+    metaDesc: "沖縄・那覇の中心地で極上のリラクゼーションを提供するほぐしガッテン那覇久米店。お仕事帰りや観光の合間にもおすすめです。",
     title: "ほぐしガッテン<br class='lg:hidden'>那覇久米店",
     name: "ほぐしガッテン那覇久米店",
     subTitle: "hogushigatten-nahakume",
@@ -183,6 +189,8 @@ export const storeDetails: StoreDetail[] = [
   //=====ほぐしガッテン大森東口店（東京品川）===============================
   {
     id: "hogushigatten-omori",
+    metaTitle: " ほぐしガッテン大森東口店（東京品川）",
+    metaDesc: "東京・品川エリアにあるほぐしガッテン大森東口店。沖縄の癒しを都心でも体験できるリラクゼーション空間です。",
     title: "ほぐしガッテン<br class='lg:hidden'>大森東口店（東京品川）",
     name: "ほぐしガッテン大森東口店（東京品川）",
     subTitle: "hogushigatten-omori",
@@ -261,6 +269,8 @@ export const storeDetails: StoreDetail[] = [
   //=====パナ・ン石垣空港店===============================
   {
     id: "painushima",
+    metaTitle: " パナ・ン石垣空港店",
+    metaDesc: "石垣島空港内にあるパナ・ン石垣空港店。旅の疲れを癒すリラックス施術で、沖縄の旅をより特別なものに。",
     title: "パナ・ン石垣空港店",
     name: "パナ・ン石垣空港店",
     subTitle: "painushima",
@@ -351,6 +361,8 @@ export const storeDetails: StoreDetail[] = [
   //=====星のや竹富島スパ（星野リゾート星のや竹富島）===============================
   {
     id: "hoshino-taketomi",
+    metaTitle: " 星のや竹富島スパ（星野リゾート星のや竹富島）",
+    metaDesc: "竹富島の豊かな自然に包まれたスパで、琉球の伝統施術を体験。非日常の空間で心身ともにリフレッシュ。",
     title: "星のや竹富島スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾート星のや竹富島）</span>",
     name: "星のや竹富島スパ（星野リゾート星のや竹富島）",
     subTitle: "hoshino-taketomi",
@@ -372,6 +384,8 @@ export const storeDetails: StoreDetail[] = [
   //=====星のや沖縄スパ（星野リゾート星のや沖縄）===============================
   {
     id: "hoshino-okinawa",
+    metaTitle: " 星のや沖縄スパ（星野リゾート星のや沖縄）",
+    metaDesc: "沖縄本島の高級リゾート「星のや沖縄」で提供する極上スパ体験。琉球の伝統を活かした施術で深い癒しをお届けします。",
     title: "星のや沖縄スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾート星のや沖縄）</span>",
     name: "星のや沖縄スパ（星野リゾート星のや沖縄）",
     subTitle: "hoshino-okinawa",
@@ -394,6 +408,8 @@ export const storeDetails: StoreDetail[] = [
   //=====小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ===============================
   {
     id: "hoshino-kohama",
+    metaTitle: " 小浜島琉球スパ（星野リゾートリゾナーレ小浜島）",
+    metaDesc: "小浜島の静かな楽園で受ける琉球スパ。極上のリラクゼーションと癒しの時間をお楽しみください。",
     title: "小浜島琉球スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾートリゾナーレ小浜島）</span>",
     name: "小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ",
     subTitle: "hoshino-kohama",
@@ -417,6 +433,8 @@ export const storeDetails: StoreDetail[] = [
   //=====西表スパ（星野リゾート西表島ホテル）===============================
   {
     id: "hoshino-iriomote",
+    metaTitle: " 西表スパ（星野リゾート西表島ホテル）",
+    metaDesc: "大自然に囲まれた西表島で、贅沢なリラックスタイムを。琉球の技法を用いた施術で心と身体のバランスを整えます。",
     title: "西表スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾート西表島ホテル）</span>",
     name: "西表スパ（星野リゾート西表島ホテル）",
     subTitle: "hoshino-iriomote",
@@ -439,6 +457,8 @@ export const storeDetails: StoreDetail[] = [
   //=====琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）  ===============================
   {
     id: "fusaki",
+    metaTitle: " 琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）",
+    metaDesc: "フサキビーチリゾートで体験できる琉球足つぼマッサージ。旅先での疲れを癒し、心地よい時間をお過ごしください。",
     title: "琉球足つぼ<span class='text-base lg:text-xl block lg:inline'>（フサキビーチリゾートホテル＆ヴィラズ）</span>",
     name: "琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）",
     subTitle: "fusaki",

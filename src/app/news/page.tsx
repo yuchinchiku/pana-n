@@ -9,7 +9,7 @@ import '@/styles/component/button.scss';
 export const metadata: Metadata = {
   title: "お知らせ | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
   description:
-    "心と身体を整えるパナ・ン独自の癒しのメソッド。伝統と最新技術を融合させた施術で、深いリラックスを体験してください。",
+    "パナ・ンの最新情報やキャンペーン、イベント情報をお届け。新メニューや新店舗のオープン情報もチェック！",
 };
 
 export default function NewsPage() {
