@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const store = storeDetails.find((s) => s.id === id);
 
   return {
-    title: store ? `${store.name} | 琉球パナ・ン` : "店舗情報 | 琉球パナ・ン",
-    description: store?.lead ?? "琉球パナ・ンの店舗情報をご覧ください。",
+    title: store ? `${store.metaTitle} | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン` : "店舗情報 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+    description: store?.metaDesc ?? "パナ・ンの店舗情報をご覧ください。",
   };
 }
 
