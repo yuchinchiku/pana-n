@@ -10,7 +10,7 @@ import '@/styles/pages/story/story.scss';
 import '@/styles/component/button.scss';
 
 export const metadata: Metadata = {
-  title: "パナ・ンの物語 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "パナ・ンの物語 | 元祖琉球マッサージ | パナ・ン",
   description: "琉球の伝統と癒しを融合させたパナ・ンの物語。歴史や想いに触れながら、心と身体を解きほぐす特別な時間をご提供します。",
 };
 

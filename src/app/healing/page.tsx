@@ -13,7 +13,7 @@ import '@/styles/pages/healing/healing.scss';
 import '@/styles/component/button.scss';
 
 export const metadata: Metadata = {
-  title: "パナ・ンの癒し | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "パナ・ンの癒し | 元祖琉球マッサージ | パナ・ン",
   description: "心と身体を整えるパナ・ン独自の癒しのメソッド。伝統と最新技術を融合させた施術で、深いリラックスを体験してください。",
 };
 

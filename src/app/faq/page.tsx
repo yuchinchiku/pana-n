@@ -9,7 +9,7 @@ import '@/styles/pages/faq/faq.scss';
 import '@/styles/component/button.scss';
 
 export const metadata: Metadata = {
-  title: "よくある質問 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "よくある質問 | 元祖琉球マッサージ | パナ・ン",
   description: "パナ・ンの施術やご予約に関する疑問を解決。お客様からのよくある質問とその回答をご案内します。",
 };
 

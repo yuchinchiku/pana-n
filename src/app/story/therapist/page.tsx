@@ -6,7 +6,7 @@ import StoryNext from '@/components/pages/StoryNext';
 import '@/styles/pages/story/story.scss';
 
 export const metadata: Metadata = {
-  title: "パナ・ンを作る人々 | パナ・ンの物語 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "パナ・ンを作る人々 | パナ・ンの物語 | 元祖琉球マッサージ | パナ・ン",
   description: "パナ・ンの施術を支えるセラピストやスタッフたちの想い。確かな技術とおもてなしの心で、癒しの時間をお届けします。",
 };
 

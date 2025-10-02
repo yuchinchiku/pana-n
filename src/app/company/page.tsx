@@ -9,7 +9,7 @@ import '@/styles/pages/company/company.scss';
 import '@/styles/component/button.scss';
 
 export const metadata: Metadata = {
-  title: "会社概要 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "会社概要 | 元祖琉球マッサージ | パナ・ン",
   description: "パナ・ンの会社情報や理念、事業内容についてご紹介。琉球の癒しを広める私たちの想いをお伝えします。",
 };
 

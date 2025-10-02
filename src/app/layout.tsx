@@ -16,7 +16,7 @@ const garamond = EB_Garamond({ subsets: ['latin'], variable: '--font-garamond', 
 const shippori = Shippori_Mincho_B1({ subsets: ['latin'], weight: ['400','700'], variable: '--font-shippori', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "元祖琉球マッサージ | パナ・ン",
   description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンは石垣や沖縄を代表する究極のエステ・スパ・琉球マッサージの店舗です。",
   icons: {
     icon: [
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   },
   manifest: '/images/meta/favicon/site.webmanifest',
   appleWebApp: {
-    title: '琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン',
+    title: '元祖琉球マッサージ | パナ・ン',
   },
   openGraph: {
-    title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+    title: "元祖琉球マッサージ | パナ・ン",
     description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンは石垣や沖縄を代表する究極のエステ・スパ・琉球マッサージの店舗です。",
     url: "https://pana-n.jp",
     siteName: "琉球の想いと癒しをあなたへ。元祖琉球マッサージ、パナ・ン。",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "https://pana-n.jp/images/meta/ogp.png",
         width: 1200,
         height: 630,
-        alt: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+        alt: "元祖琉球マッサージ | パナ・ン",
       }
     ],
     locale: "ja_JP",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+    title: "元祖琉球マッサージ | パナ・ン",
     description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンは石垣や沖縄を代表する究極のエステ・スパ・琉球マッサージの店舗です。",
     images: ["https://pana-n.jp/images/meta/ogp.png"],
   },

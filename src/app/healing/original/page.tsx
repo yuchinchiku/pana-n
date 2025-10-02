@@ -8,7 +8,7 @@ import '@/styles/pages/originalMenu/originalMenu.scss';
 import '@/styles/component/button.scss';
 
 export const metadata: Metadata = {
-  title: "パナ・ンの独自メニュー | パナ・ンの癒し | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "パナ・ンの独自メニュー | パナ・ンの癒し | 元祖琉球マッサージ | パナ・ン",
   description: "琉球の伝統と現代の技術を融合したパナ・ンの独自メニュー。心と身体を解きほぐす特別なトリートメントをご紹介します。",
 };
 const pageItems = [
