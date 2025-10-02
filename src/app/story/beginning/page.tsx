@@ -6,7 +6,7 @@ import StoryNext from '@/components/pages/StoryNext';
 import '@/styles/pages/story/story.scss';
 
 export const metadata: Metadata = {
-  title: "パナ・ンの始まり | パナ・ンの物語 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "パナ・ンの始まり | パナ・ンの物語 | 元祖琉球マッサージ | パナ・ン",
   description: "パナ・ンの誕生の背景や想いを紐解くストーリー。沖縄の自然と文化が生み出した、唯一無二の癒しの空間をご紹介します。",
 };
 
