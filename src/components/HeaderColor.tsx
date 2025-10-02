@@ -35,7 +35,7 @@ export default function HeaderColor() {
         <Link href="/" className='text-center'>
           <Image
             src="/images/common/logo-c.svg"
-            alt="琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン"
+            alt="元祖琉球マッサージ パナ・ン"
             width={120}
             height={40}
             className="lg:mx-auto w-[60px] h-[61px] lg:w-[100px] lg:h-[104px]"

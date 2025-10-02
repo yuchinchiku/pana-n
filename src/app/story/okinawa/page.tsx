@@ -6,7 +6,7 @@ import StoryNext from '@/components/pages/StoryNext';
 import '@/styles/pages/story/story.scss';
 
 export const metadata: Metadata = {
-  title: "沖縄、そして恩返し | パナ・ンの物語 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "沖縄、そして恩返し | パナ・ンの物語 | 元祖琉球マッサージ | パナ・ン",
   description: "沖縄の土地・歴史・文化と深く結びついたパナ・ン。地域社会やお客様への感謝の気持ちを込めたパナ・ンの恩返し。琉球の知恵と伝統技術を受け継ぎながら、至福の癒しを提供します。",
 };
 

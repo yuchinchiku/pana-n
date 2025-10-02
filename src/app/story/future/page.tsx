@@ -6,7 +6,7 @@ import '@/styles/pages/story/story.scss';
 import '@/styles/component/link.scss';
 
 export const metadata: Metadata = {
-  title: "パナ・ンの夢  | パナ・ンの物語 | 琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす琉球パナ・ン",
+  title: "パナ・ンの夢  | パナ・ンの物語 | 元祖琉球マッサージ | パナ・ン",
   description: "未来へと続くパナ・ンの挑戦。沖縄発の癒しを世界へ広げ、人々の心と身体を豊かにするビジョンを描きます。",
 };
 
