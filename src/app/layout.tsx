@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "元祖琉球マッサージ | パナ・ン",
     description: "琉球の想いと癒しをあなたへ。心のひだに触れ、魂をほぐす、元祖琉球マッサージ、パナ・ン。パナ・ンは石垣や沖縄を代表する究極のエステ・スパ・琉球マッサージの店舗です。",
     url: "https://pana-n.jp",
-    siteName: "琉球の想いと癒しをあなたへ。元祖琉球マッサージ、パナ・ン。",
+    siteName: "元祖琉球マッサージ | パナ・ン",
     images: [
       {
         url: "https://pana-n.jp/images/meta/ogp.png",
@@ -88,6 +88,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Breadcrumb />
           <FooterSwitcher />
         </div>
+        <Script id="ld-json" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://pana-n.jp/",
+            "name": "元祖琉球マッサージ | パナ・ン",
+            "publisher": {
+              "@type": "Organization",
+              "name": "元祖琉球マッサージ | パナ・ン",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://pana-n.jp/icon.png"
+              }
+            }
+          })}
+        </Script>
       </body>
     </html>
   );
