@@ -50,7 +50,7 @@ export default function NewsDetailClient() {
           <p className="garamond text-lg mb-1 lg:mb-2 ml-2">
             {news.date ? new Date(news.date).toLocaleDateString('ja-JP') : ''}
           </p>
-          <h1 className="shippori font-medium text-2xl lg:text-4xl mb-8 lg:mb-10">{news.title.rendered}</h1>
+          <h1 className="shippori font-medium text-2xl lg:text-4xl lg:leading-normal mb-8 lg:mb-10">{news.title.rendered}</h1>
         </div>
         <div
           className="u-news-content max-w-2xl prose prose-invert shippori mx-auto"

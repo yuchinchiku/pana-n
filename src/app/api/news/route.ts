@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const res = await fetch(
-      `https://pn.konety.jp/wp-json/wp/v2/news?per_page=${perPage}&page=${page}&orderby=date&order=desc&_embed`,
+      `http://cms.pana-n.jp/wp-json/wp/v2/news?per_page=${perPage}&page=${page}&orderby=date&order=desc&_embed`,
       {
         headers: {
           Authorization: 'Basic ' + Buffer.from(`${WP_USER}:${WP_PASS}`).toString('base64'),
