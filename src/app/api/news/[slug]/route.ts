@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const res = await fetch(
-      `https://pn.konety.jp/wp-json/wp/v2/news?slug=${encodeURIComponent(slug)}&_embed`,
+      `http://cms.pana-n.jp/wp-json/wp/v2/news?slug=${encodeURIComponent(slug)}&_embed`,
       {
         headers: {
           Authorization: 'Basic ' + Buffer.from(`${WP_USER}:${WP_PASS}`).toString('base64'),

@@ -39,10 +39,10 @@ export default function NewsListTop({ perPage = 5 }: { perPage?: number }) {
             href={`/news/${encodeURIComponent(news.slug)}`}
             className="u-news-link text-white block lg:flex lg:gap-6"
           >
-            <p className="shippori text-sm font-medium leading-relaxed lg:leading-none lg:flex-shrink-0 lg:min-w-[70px]">
+            <p className="shippori text-sm font-medium leading-relaxed lg:flex-shrink-0 lg:min-w-[70px] lg:mt-[2px]">
               {news.date ? new Date(news.date).toLocaleDateString('ja-JP') : ''}
             </p>
-            <p className="shippori font-medium leading-relaxed lg:leading-none">
+            <p className="shippori font-medium leading-relaxed">
               {news.title?.rendered ?? ''}
             </p>
           </Link>
