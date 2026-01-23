@@ -169,7 +169,7 @@ export const storeDetails: StoreDetail[] = [
     table: [
       { label: "住所", items: [{ value: "〒900-0033 沖縄県那覇市久米1-14-8-1階", mapUrl: 'https://maps.app.goo.gl/m6PgXBtFBaDfzrU77' }] },
       { label: "電話番号", items: [{ value: "098-943-1213" }] },
-      { label: "営業時間", items: [{ value: "11:00 AM～ 19:00 PM", note:"※当日の営業時間はInstagram のストーリーズで確認、またはお電話にてお問い合わせください" }] },
+      { label: "営業時間", items: [{ value: "12:00 PM～ 21:00 PM", note:"※当日の営業時間はInstagram のストーリーズで確認、またはお電話にてお問い合わせください" }] },
       { label: "駐車場", items: [{ value: "専用駐車場はございません。<br>近隣の有料コインパーキングのご利用をお願いいたします。" }] },
       { label: "アクセス", items: [{ value: "ゆいレール「旭橋駅」より徒歩10分" }] },
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
