@@ -14,7 +14,7 @@ export const stores: Store[] = [
     href: "hogushigatten-maezato",
     image: "hogushi-maesato",
     cat: "ほぐしガッテン&<br>パナ・ン琉球スパ",
-    name: "石垣 真栄里店",
+    name: "石垣島店",
     hasButton: true
   },
   {

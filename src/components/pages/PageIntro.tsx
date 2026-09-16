@@ -10,7 +10,7 @@ export default function PageIntro({
   desc,
 }: PageIntroProps) {
   return (
-    <div className="u-pageIntro max-w-[1020px] lg:w-[82.3%] lg:ml-[12%] lg:mr-[9%] px-[10.6%] lg:px-0 pt-14 lg:pt-20 lg:pb-32">
+    <div className="u-pageIntro max-w-[1020px] lg:w-[82.3%] lg:ml-[12%] lg:mr-[9%] px-[10.6%] lg:px-0 pt-14 lg:pt-20 lg:pb-32 pb-16">
       <div className="u-pageIntro-lead u-fade-in">
         <h2
           className="shippori text-2xl lg:text-[28px] leading-[180%] lg:w-[40%] pb-2 lg:pb-4"

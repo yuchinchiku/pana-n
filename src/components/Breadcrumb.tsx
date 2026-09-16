@@ -19,7 +19,7 @@ const labelMap: Record<string, string | Record<string, string>> = {
   },
   salon: {
     '': 'パナ・ンの店舗',
-    'hogushigatten-maezato': 'ほぐしガッテン真栄里店',
+    'hogushigatten-maezato': 'ほぐしガッテン石垣島店＆パナ・ン琉球スパ',
     'hogushigatten-nahakume': 'ほぐしガッテン那覇久米店',
     'hogushigatten-omori': 'ほぐしガッテン大森東口店',
     painushima: 'パナ・ン石垣空港店',

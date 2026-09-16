@@ -74,7 +74,7 @@ export const tabsAreas: TabAreaType[] = [
             label: '対応可能店舗',
             items: [
               { value: 'ほぐしガッテン那覇久米店', buttonLabel: '店舗詳細', buttonHref: '/salon/hogushigatten-nahakume' },
-              { value: 'ほぐしガッテン真栄里店', buttonLabel: '店舗詳細', buttonHref: '/salon/hogushigatten-maezato' },
+              { value: 'ほぐしガッテン石垣島店＆パナ・ン琉球スパ', buttonLabel: '店舗詳細', buttonHref: '/salon/hogushigatten-maezato' },
               { value: 'パナ・ン石垣空港店（石垣空港2F）', buttonLabel: '店舗詳細', buttonHref: '/salon/painushima' },
             ],
           },
