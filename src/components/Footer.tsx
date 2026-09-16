@@ -22,7 +22,7 @@ const navItems = [
     href: '/salon',
     ja: 'パナ・ンの店舗',
     subMenu: [
-      { href: '/salon/hogushigatten-maezato', ja: 'ほぐしガッテン真栄里店 ' },
+      { href: '/salon/hogushigatten-maezato', ja: 'ほぐしガッテン石垣島店＆パナ・ン琉球スパ ' },
       { href: '/salon/hogushigatten-nahakume', ja: 'ほぐしガッテン那覇久米店' },
       { href: '/salon/hogushigatten-omori', ja: 'ほぐしガッテン大森東口店' },
       { href: '/salon/painushima', ja: 'パナ・ン石垣空港店' },

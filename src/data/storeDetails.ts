@@ -44,14 +44,14 @@ export type StoreDetail = {
 };
 
 export const storeDetails: StoreDetail[] = [
-  //=====ほぐしガッテン真栄里店 & パナ・ン琉球スパ===============================
+  //=====ほぐしガッテン石垣島店＆パナ・ン琉球スパ＜石垣島リゾートマッサージ＞===============================
   {
     id: "hogushigatten-maezato",
-    metaTitle: "ほぐしガッテン真栄里店 & パナ・ン琉球スパ",
+    metaTitle: "ほぐしガッテン石垣島店＆パナ・ン琉球スパ＜石垣島リゾートマッサージ＞",
     metaDesc: "石垣島・真栄里エリアにある癒しの空間。ほぐしガッテンと琉球スパの融合で、心と身体を芯から癒します。",
-    title: "ほぐしガッテン<br class='lg:hidden'>真栄里店 & パナ・ン琉球スパ",
-    name: "ほぐしガッテン真栄里店 & パナ・ン琉球スパ",
-    subTitle: "hogushigatten-maezato",
+    title: "ほぐしガッテン<br>石垣島店 & パナ・ン琉球スパ",
+    name: "ほぐしガッテン石垣島店＆パナ・ン琉球スパ＜石垣島リゾートマッサージ＞",
+    subTitle: "＜石垣島リゾートマッサージ＞",
     lead: "石垣島真栄里で、訪れる人の心と体に深い安らぎを届ける",
     subLead: "In Maesato, Ishigaki Island, we bring deep relaxation to body and mind.",
     desc: `
@@ -68,9 +68,9 @@ export const storeDetails: StoreDetail[] = [
       { label: "アクセス", items: [{ value: "石垣空港から車で約25分" }] },
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
       { label: "SNS", items: [{ value: '<a href="https://www.instagram.com/hogushigatten_ishigakijima/" target="_blank" class="u-link-blank underline">Instagram</a>' }] },
-      { label: "ご予約", items: [{ value: '<a href="https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a" target="_blank" class="u-link-blank underline">ご予約はこちらから</a>' }] },
+      { label: "ご予約", items: [{ value: '<a href="https://beauty.hotpepper.jp/kr/slnH000822310/" target="_blank" class="u-link-blank underline">ご予約はこちらから</a>' }] },
     ],
-    buttonHref: "https://yoyaku-beauty.jp/reserve/top?CODE=625f9cf1705998d8f8057107166a788ff1cc1893ee6085b3989a1234a305161a",
+    buttonHref: "https://beauty.hotpepper.jp/kr/slnH000822310/",
     // menu: [
     //   {
     //     name: "頭爽快の秘技「頭のもみほぐしコース」",
