@@ -61,7 +61,7 @@ export const stores: Store[] = [
     value: "星のや",
     href: "hoshino-kohama",
     image: "hosinoya-kohama",
-    cat: "小浜島琉球スパ",
+    cat: "小浜島琉球スパ<span class='text-sm block'>※現在休業中</span>",
     name: "星野リゾートリゾナーレ小浜島",
     hasButton: true
   },

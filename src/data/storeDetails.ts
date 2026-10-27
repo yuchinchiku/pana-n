@@ -355,7 +355,6 @@ export const storeDetails: StoreDetail[] = [
       { src: "gallery-2.jpg", type: "landscape", className: "u-gallery-2 lg:mt-60 lg:mr-0 lg:ml-auto" },
       { src: "gallery-3.jpg", type: "landscape", className: "u-gallery-3 mt-20" },
     ],
-
   },
 
   //=====星のや竹富島スパ（星野リゾート星のや竹富島）===============================
@@ -379,7 +378,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "電話番号", items: [{ value: "0980-84-5888" }] },
       { label: "営業時間", items: [{ value: "9:00 AM～17:30 PM<br>※最終受付 15:00 PM" }] },
       { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/hoshinoyataketomijima/activities/13939/" target="_blank" class="u-link-blank underline">星のや竹富島スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
-    ]
+    ],
   },
   //=====星のや沖縄スパ（星野リゾート星のや沖縄）===============================
   {
@@ -402,7 +401,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "電話番号", items: [{ value: "050-3134-8091" }] },
       { label: "営業時間", items: [{ value: "14:30 PM～22:30 PM<br>※最終受付 20:00 PM" }] },
       { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/hoshinoyaokinawa/activities/13933/" target="_blank" class="u-link-blank underline">星のや沖縄スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
-    ]
+    ],
   },
 
   //=====小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ===============================
@@ -410,7 +409,7 @@ export const storeDetails: StoreDetail[] = [
     id: "hoshino-kohama",
     metaTitle: " 小浜島琉球スパ（星野リゾートリゾナーレ小浜島）",
     metaDesc: "小浜島の静かな楽園で受ける琉球スパ。極上のリラクゼーションと癒しの時間をお楽しみください。",
-    title: "小浜島琉球スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾートリゾナーレ小浜島）</span>",
+    title: "<span class='text-base lg:text-xl block'>※現在休業中</span>小浜島琉球スパ<span class='text-base lg:text-xl block lg:inline'>（星野リゾートリゾナーレ小浜島）</span>",
     name: "小浜島琉球スパ（星野リゾートリゾナーレ小浜島） ",
     subTitle: "hoshino-kohama",
     lead: "海に抱かれた小浜島で癒されて、安らぎに満ちたひととき。",
@@ -425,8 +424,9 @@ export const storeDetails: StoreDetail[] = [
       { label: "住所", items: [{ value: "〒907-1221 沖縄県竹富町小浜2954", mapUrl: 'https://maps.app.goo.gl/SjL4RZ1pRXkk11uU7' }] },
       { label: "電話番号", items: [{ value: "050-3134-8093" }] },
       { label: "営業時間", items: [{ value: "14:00 PM～22:00 PM<br>※最終受付 20:00 PM" }] },
-      { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/risonarekohamajima/sp/newspa/" target="_blank" class="u-link-blank underline">リゾナーレ小浜島スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
-    ]
+      { label: "ご予約詳細", items: [{ value: "※現在休業中となります。" }] },
+      // { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/risonarekohamajima/sp/newspa/" target="_blank" class="u-link-blank underline">リゾナーレ小浜島スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
+    ],
   },
 
 
@@ -451,7 +451,7 @@ export const storeDetails: StoreDetail[] = [
       { label: "電話番号", items: [{ value: "0980-85-7111" }] },
       { label: "営業時間", items: [{ value: "14:00 PM～10:00 PM<br>※定休日あり" }] },
       { label: "ご予約詳細", items: [{ value: '<a href="https://hoshinoresorts.com/ja/hotels/iriomote/sp/iriomotespa_/" target="_blank" class="u-link-blank underline">西表スパ</a><br><p>※宿泊者の方限定のご利用となります。</p>' }] },
-    ]
+    ],
   },
 
   //=====琉球足つぼ（フサキビーチリゾートホテル＆ヴィラズ）  ===============================
@@ -475,6 +475,6 @@ export const storeDetails: StoreDetail[] = [
       { label: "営業時間", items: [{ value: "15:00 PM～23:00 PM<br>※最終受付 22:00 PM" }] },
       { label: "お支払い方法", items: [{ value: "現金 / 各クレジットカード / 各電子マネー" }] },
       { label: "ご予約詳細", items: [{ value: '<a href="https://www.fusaki.com/spa_wellness" target="_blank" class="u-link-blank underline">フサキビーチリゾートホテル＆ヴィラズ</a>' }] },
-    ]
+    ],
   },
 ];
