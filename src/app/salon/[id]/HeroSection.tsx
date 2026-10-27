@@ -5,6 +5,7 @@ type HeroSectionProps = {
   title: string;
   subTitle?: string;
   buttonHref?: string;
+  storeClosed?: boolean;
 };
 
 export default function HeroSection({ title, subTitle,buttonHref }: HeroSectionProps) {
